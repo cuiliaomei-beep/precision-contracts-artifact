@@ -1,3 +1,5 @@
+[Repository](https://github.com/cuiliaomei-beep/precision-contracts-artifact) · [Release downloads](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/tag/artifact-20261113)
+
 The release contains both complete Tomcat relation outputs used for the one-thread and four-thread comparison.
 
 Each archive contains 71 sorted relation files, 11,618,755 tuples, and 2,076,206,212 bytes of relation data. Each compressed archive is 143,315,832 bytes.

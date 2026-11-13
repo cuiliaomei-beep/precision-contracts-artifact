@@ -1,5 +1,7 @@
 # Precision Contracts for Distributed Static Analysis
 
+[Repository](https://github.com/cuiliaomei-beep/precision-contracts-artifact) · [Data downloads](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/tag/artifact-20261113)
+
 This repository contains the implementation, example programs, inputs, and results used in the paper. It covers the finite semantic and placement experiments, the Dubbo and gRPC examples, HDFS fsync, the three Java points-to examples, Tomcat, and the Em3d worker experiment.
 
 The result files supplied here are the ones used for the paper. Reproduction commands write new output beneath runs. The implementation and data for other research directions are outside this repository.
@@ -48,7 +50,7 @@ python scripts/em3d.py check
 
 The finite verifier recomputes the semantic observations and reads every saved placement state. It checks the original equations and complete node values. RPC and points-to comparisons also use complete states. The HDFS command checks the finite source model against the supplied source inputs and runtime observations.
 
-The two full Tomcat outputs are attached to the GitHub Release artifact-20261113. Each compressed archive is about 137 MiB. GitHub CLI can obtain these assets using the account that has access to the repository.
+The two full Tomcat outputs are attached to the [artifact-20261113 release](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/tag/artifact-20261113). Each compressed archive is about 137 MiB. GitHub CLI can obtain these assets using the account that has access to the repository.
 
 ```sh
 python scripts/tomcat.py fetch

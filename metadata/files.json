@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5332,
-      "sha256": "3f822d8f016e6fe2cef2fcbc7b54046ec5916a994fd38780d49c295e242c8644"
+      "bytes": 5618,
+      "sha256": "26fa8996e3d4ccd9965abf0e40f4c91ffdbb4c95939bb648c6ec5981d4fee100"
     },
     {
       "path": "artifact/__init__.py",
@@ -15133,8 +15133,8 @@
     },
     {
       "path": "metadata/release-notes.md",
-      "bytes": 865,
-      "sha256": "ca2c111507475d8457e1db31a09d3f4b4e64dd9026805f99317894b27c25fffb"
+      "bytes": 1063,
+      "sha256": "8e8f53450f43506c035dd3808e925bcef740123e197343af653feace35e36836"
     },
     {
       "path": "metadata/reproduction.json",

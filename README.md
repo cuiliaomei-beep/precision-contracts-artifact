@@ -42,7 +42,7 @@ python scripts/hdfs.py check
 python scripts/tomcat.py summary
 ```
 
-These checks need only Python and the packages in `requirements.txt`. They verify a small finite-input selection and the supplied real-program results. A successful command exits with status zero and reports `PASS` or `passed`. Java, Maven, and Souffle are needed only for the additional executions described in the experiment guides.
+These checks need only Python and the packages in `requirements.txt`. They verify a small finite-input selection and the supplied real-program results. A successful command exits with status zero. Commands print results or the location of a detailed report under `runs/`. Java, Maven, and Souffle are needed only for the additional executions described in the experiment guides.
 
 ## Experiments
 

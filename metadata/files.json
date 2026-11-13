@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7397,
-      "sha256": "31f1da55ddbb1c5361b2627b00ccd4693b01947797d835fd8e8b7db91eb79aed"
+      "bytes": 7568,
+      "sha256": "76a60c21e768726f4552f15ea9cff52329bd5535792c4d74527d0a8b3bfb2849"
     },
     {
       "path": "artifact/__init__.py",

@@ -1,0 +1,326 @@
+{
+  "program": "RMA-07",
+  "program_sha256": "5fa0d1ef38f82fbd757a8e36670fca35f8a3ef21f59dd72358cf10e4c4c2d8a6",
+  "status": "passed",
+  "concrete": {
+    "c::read": {
+      "kind": "set",
+      "values": [
+        20
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "c::read": [
+      {
+        "value": 20,
+        "tainted": true
+      }
+    ]
+  },
+  "abstract": {
+    "c::read": {
+      "kind": "set",
+      "constants": [
+        20
+      ],
+      "tainted": true
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 1,
+  "state_count": 9,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "c::read": [
+        20
+      ]
+    },
+    "observation_outcomes": {
+      "c::read": [
+        {
+          "value": 20,
+          "tainted": true
+        }
+      ]
+    },
+    "observation_taints": {
+      "c::read": [
+        true
+      ]
+    },
+    "schedule_count": 1,
+    "state_count": 9,
+    "transition_count": 8,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 1,
+    "max_events": 8
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "a": {
+          "component": "a",
+          "values": {}
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "first": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "first": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "doubled": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            },
+            "first": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e4": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "doubled": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            },
+            "first": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "y": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e5": {
+      "reachable": true,
+      "local_states": {
+        "c": {
+          "component": "c",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e6": {
+      "reachable": true,
+      "local_states": {
+        "c": {
+          "component": "c",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e7": {
+      "reachable": true,
+      "local_states": {
+        "c": {
+          "component": "c",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                20
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          20
+        ],
+        "tainted": true
+      }
+    }
+  },
+  "abstract_state_sha256": "6815b343759b52ec1bed9184f7ece45543c5e1cca9e93d572699d99106e502c6",
+  "expected_hand_observations": {
+    "c::read": {
+      "values": [
+        20
+      ],
+      "may_tainted": true
+    }
+  },
+  "hand_expectation_match": true,
+  "expected_pending": [],
+  "pending_expectation_match": true,
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "seconds": 0.0009952999989764066,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

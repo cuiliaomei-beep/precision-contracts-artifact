@@ -1,0 +1,583 @@
+{
+  "schema_version": "e2e-valueflow-v1",
+  "nodes": [
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@0:entry_param0",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "args := @parameter0: java.lang.String[]",
+      "line": -1,
+      "unit_index": 0,
+      "context": "entry",
+      "kind": "external_parameter"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:sink",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"response\", $stack14)",
+      "line": 19,
+      "unit_index": 14,
+      "context": "entry",
+      "kind": "sink",
+      "sink_id": "response"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"response\", $stack14)",
+      "line": 19,
+      "unit_index": 14,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack14 = virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()",
+      "line": 19,
+      "unit_index": 13,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack14 = virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()",
+      "line": 19,
+      "unit_index": 13,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack14 = virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()",
+      "line": 19,
+      "unit_index": 13,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "request = virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()",
+      "line": 17,
+      "unit_index": 11,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "request = virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()",
+      "line": 17,
+      "unit_index": 11,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "request = virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()",
+      "line": 17,
+      "unit_index": 11,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack13 = virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)",
+      "line": 17,
+      "unit_index": 10,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack13 = virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)",
+      "line": 17,
+      "unit_index": 10,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "$stack13 = virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)",
+      "line": 17,
+      "unit_index": 10,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)",
+      "line": 16,
+      "unit_index": 8,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)",
+      "line": 16,
+      "unit_index": 8,
+      "context": "entry",
+      "kind": "source",
+      "seed": [
+        "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+      ]
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "rpc_request_send"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "this := @this: e2e.grpc.ConstantGreeter",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "rpc_request_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "this := @this: e2e.grpc.ConstantGreeter",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive",
+      "component": "consumer",
+      "method": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "statement": "response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)",
+      "line": 18,
+      "unit_index": 12,
+      "context": "entry",
+      "kind": "rpc_response_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "this := @this: e2e.grpc.ConstantGreeter",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "rpc_response_object"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:observer_identity",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "this := @this: e2e.grpc.ConstantGreeter",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "observer_identity"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "interfaceinvoke observer.<io.grpc.stub.StreamObserver: void onNext(java.lang.Object)>(reply)",
+      "line": 10,
+      "unit_index": 6,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "rpc_response_send"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "interfaceinvoke observer.<io.grpc.stub.StreamObserver: void onNext(java.lang.Object)>(reply)",
+      "line": 10,
+      "unit_index": 6,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "reply = virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()",
+      "line": 9,
+      "unit_index": 5,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "reply = virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()",
+      "line": 9,
+      "unit_index": 5,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "reply = virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()",
+      "line": 9,
+      "unit_index": 5,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "$stack5 = virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "$stack5 = virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[\"fixed-response\"]",
+      "component": "provider",
+      "method": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "statement": "$stack5 = virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]",
+      "kind": "constant"
+    }
+  ],
+  "edges": [
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition#assignment",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]#local_use",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]#proto_field_set:name",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]",
+      "kind": "proto_field_set:name"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition#assignment",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]#local_use",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]#proto_field:name",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]",
+      "kind": "proto_field:name"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition#assignment",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]#local_use",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object#request_payload",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object",
+      "kind": "request_payload",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send#event_payload",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive#rpc_request",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive",
+      "kind": "rpc_request",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object#event_payload",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[\"fixed-response\"]->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]#proto_field_set:message",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[\"fixed-response\"]",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]",
+      "kind": "proto_field_set:message"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition#assignment",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]#local_use",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]#proto_field:message",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]",
+      "kind": "proto_field:message"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition#assignment",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]#local_use",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext#onNext_payload",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext",
+      "kind": "onNext_payload",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext->rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object#response_payload",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext",
+      "dst": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object",
+      "kind": "response_payload",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive#rpc_response",
+      "src": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive",
+      "kind": "rpc_response",
+      "rpc_callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]#call_result",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]",
+      "kind": "call_result"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition#assignment",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]#local_use",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]#proto_field:message",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]",
+      "kind": "proto_field:message"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition#assignment",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]#local_use",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]->entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:sink#sink_argument",
+      "src": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]",
+      "dst": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:sink",
+      "kind": "sink_argument"
+    }
+  ],
+  "metadata": {
+    "deployment_validation": "registration argument reaching definitions contain configured handler allocation; closed-world target selected by deployment manifest (not automatic RPCBridge discovery)",
+    "status": "complete_within_declared_scope",
+    "entry": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+    "protocol": "grpc",
+    "source_policy": "return of e2e.shared.Inputs.source(String), source ID per real callsite and context",
+    "sink_policy": "argument 1 of e2e.shared.Outputs.sink(String,String), literal argument 0 labels query",
+    "abstraction": "finite powerset of source callsites; explicit flows; field-sensitive only for validated single-string-field protobuf types",
+    "scope": "query-projected application methods; synchronous one-argument unary RPC; normal returns; no implicit/control flows, exceptions-as-values, aliasing heap, recursion, or asynchronous streaming",
+    "local_definitions": "Soot SimpleLocalDefs on ExceptionalUnitGraph; each local assignment is a distinct definition; joins union reaching definitions",
+    "summaries": [
+      "Protobuf io.grpc.examples.helloworld.HelloReply: validated one string field message; fluent setter overwrites field, build/getter preserve it",
+      "Protobuf io.grpc.examples.helloworld.HelloRequest: validated one string field name; fluent setter overwrites field, build/getter preserve it"
+    ],
+    "rpc_calls": 1,
+    "sinks": 1,
+    "evidence": [
+      {
+        "protobuf_class": "io.grpc.examples.helloworld.HelloRequest",
+        "field": "name",
+        "java_type": "STRING",
+        "field_count": 1
+      },
+      {
+        "protobuf_class": "io.grpc.examples.helloworld.HelloReply",
+        "field": "message",
+        "java_type": "STRING",
+        "field_count": 1
+      },
+      {
+        "proto_service": "Greeter",
+        "proto_rpc": "SayHello",
+        "descriptor_types_validated": true,
+        "streaming": false
+      },
+      {
+        "registration_method": "<e2e.grpc.ConstantServerHarness: void main(java.lang.String[])>",
+        "registration_statement": "$stack7 = virtualinvoke $stack6.<io.grpc.ServerBuilder: io.grpc.ServerBuilder addService(io.grpc.BindableService)>($stack5)",
+        "registered_allocation_types": [
+          "e2e.grpc.ConstantGreeter"
+        ]
+      },
+      {
+        "callsite": "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12",
+        "rpc_signature": "<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>",
+        "handler": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+        "context": "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]"
+      }
+    ],
+    "configuration": {
+      "protocol": "grpc",
+      "classpath": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classes;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-api-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-context-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-core-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-util-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-netty-shaded-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-lite-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-stub-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\protobuf-java-3.25.3.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\guava-33.2.1-jre.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\failureaccess-1.0.2.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\perfmark-api-0.27.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\jsr305-3.0.2.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\error_prone_annotations-2.28.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\checker-qual-3.42.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\j2objc-annotations-3.0.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\animal-sniffer-annotations-1.24.jar",
+      "process_dirs": [
+        "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classes"
+      ],
+      "entry": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "handler": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "registration_class": "e2e.grpc.ConstantServerHarness",
+      "rpc_owner": "io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub",
+      "rpc_method": "sayHello",
+      "manifest_sha256": "0799af5fa0ffab70ab3538a7d5fcc8a926124603e52a9b3776ac642d2bda93ea",
+      "resolution_method": "closed-world deployment manifest, validated against compiled RPC signatures, handler class and actual bootstrap registration",
+      "protobuf": {
+        "request": {
+          "class": "io.grpc.examples.helloworld.HelloRequest",
+          "field": "name"
+        },
+        "response": {
+          "class": "io.grpc.examples.helloworld.HelloReply",
+          "field": "message"
+        },
+        "descriptor_class": "io.grpc.examples.helloworld.HelloWorldProto",
+        "service": "Greeter",
+        "method": "SayHello"
+      }
+    }
+  }
+}

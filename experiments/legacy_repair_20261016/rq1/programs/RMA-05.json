@@ -1,0 +1,215 @@
+{
+  "program": "RMA-05",
+  "program_sha256": "4ae741fd6bb2eb7bd04b4293af3fb5df59dcb1cbde630b4f5bcd6557b5923f5a",
+  "status": "passed",
+  "concrete": {
+    "b::read": {
+      "kind": "set",
+      "values": [
+        0,
+        100
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "b::read": [
+      {
+        "value": 0,
+        "tainted": false
+      },
+      {
+        "value": 100,
+        "tainted": true
+      }
+    ]
+  },
+  "abstract": {
+    "b::read": {
+      "kind": "set",
+      "constants": [
+        0,
+        100
+      ],
+      "tainted": true
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 4,
+  "state_count": 11,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "b::read": [
+        0,
+        100
+      ]
+    },
+    "observation_outcomes": {
+      "b::read": [
+        {
+          "value": 0,
+          "tainted": false
+        },
+        {
+          "value": 100,
+          "tainted": true
+        }
+      ]
+    },
+    "observation_taints": {
+      "b::read": [
+        false,
+        true
+      ]
+    },
+    "schedule_count": 4,
+    "state_count": 11,
+    "transition_count": 12,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 2,
+    "max_events": 4
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "a": {
+          "component": "a",
+          "values": {}
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                100
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                0,
+                100
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                0,
+                100
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "b": {
+          "component": "b",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                0,
+                100
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          0,
+          100
+        ],
+        "tainted": true
+      }
+    }
+  },
+  "abstract_state_sha256": "302cf00cd3f3cd1717379d6e82069a72c44f0fc61c870212bad4bdcda32d5082",
+  "expected_hand_observations": {
+    "b::read": {
+      "values": [
+        0,
+        100
+      ],
+      "may_tainted": true
+    }
+  },
+  "hand_expectation_match": true,
+  "expected_pending": [],
+  "pending_expectation_match": true,
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "seconds": 0.00106219999906898,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

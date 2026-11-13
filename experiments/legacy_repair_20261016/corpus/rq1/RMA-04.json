@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "RMA-04",
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "origin",
+      "target"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "RemoteRead",
+        "component": "origin",
+        "attributes": {
+          "region": "R",
+          "var": "x",
+          "destination": "read",
+          "target": "target"
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Observe",
+        "component": "origin",
+        "attributes": {
+          "point": "read",
+          "expr": {
+            "var": "read"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "origin": {},
+        "target": {}
+      },
+      "memory_regions": {
+        "R": {
+          "owner": "target",
+          "values": {
+            "x": 42
+          }
+        }
+      },
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {
+        "R": {
+          "x": false
+        }
+      },
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "aa3d94069659de4d4269ed1e088bce4ffd9a54ddf1eae8058a74509721dfabeb",
+  "coverage": {
+    "event_types": {
+      "RemoteRead": 1,
+      "Observe": 1
+    },
+    "rpc_present": false,
+    "rma_present": true,
+    "actual_family": "rma",
+    "branch": false,
+    "sync": false,
+    "may_alias": false,
+    "observations": 1,
+    "events": 2
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "9c7dbabcf083f44e406d440ee6c323b833ce452f70cd5e4f8aba81f9173d6c03",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "origin::read": {
+      "values": [
+        42
+      ],
+      "may_tainted": false
+    }
+  },
+  "expected_pending": [
+    "e0"
+  ]
+}

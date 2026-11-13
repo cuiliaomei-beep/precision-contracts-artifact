@@ -1,0 +1,40 @@
+{
+  "manifest": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\manifest.json",
+  "manifest_sha256": "0799af5fa0ffab70ab3538a7d5fcc8a926124603e52a9b3776ac642d2bda93ea",
+  "exporter_sha256": "fdd2693681e8cf46f30602f1d1d3fa4287744cb7b587e495f2e29167dcf29b63",
+  "results": [
+    {
+      "scenario": "positive",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\positive.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\positive.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\positive.export.log",
+      "graph_sha256": "7002cf828674ed3d60f6045b20241e9b5964d9f84a1ad01817a4b861401b2bae"
+    },
+    {
+      "scenario": "clean_sink",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\clean_sink.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\clean_sink.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\clean_sink.export.log",
+      "graph_sha256": "d8187626346165ab7f7f5c9e8570a7413f9b6cf94c941dd0c0ca133f8d2e9091"
+    },
+    {
+      "scenario": "constant_reply",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\constant_reply.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\constant_reply.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\constant_reply.export.log",
+      "graph_sha256": "402dfd64faf3c3d172d91e931a4edd75ef2f8cfc2df24945572720896278684b"
+    },
+    {
+      "scenario": "two_calls",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\two_calls.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\two_calls.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\grpc\\two_calls.export.log",
+      "graph_sha256": "c5b19a719f99b50e25611fa6b3f4f9e0d53a52e4caa907c97183e6046e8c758c"
+    }
+  ],
+  "success": true
+}

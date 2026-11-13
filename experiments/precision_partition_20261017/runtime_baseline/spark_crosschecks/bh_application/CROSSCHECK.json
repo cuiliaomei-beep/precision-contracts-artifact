@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "equal_to_spark": true,
+  "mismatches": [],
+  "scope": "fixed native Spark PAG with supplied type masks; NOT proof of wholeJava soundness",
+  "input": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\real_workloads\\runs\\bh_application\\pag.json",
+  "input_sha256": "4dbecd130e7d5fe723c558846695c41397cdc4573ac1f367df3277352f21b913",
+  "rules_sha256": "ff1ef3130dcf682c0323bf5aa7d81f6431e3c4aee87bc2730c7c91f966498748",
+  "variable_cells": 698,
+  "heap_cells_including_empty": 2232,
+  "var_points_to_tuples": 1298,
+  "heap_points_to_tuples": 93,
+  "full_state_sha256": "c1a807bd773c19f7fa440d6a7a13de934ab83e17d9f38ab31bd4f587a5680870",
+  "negative_controls": [
+    {
+      "control": "missing_key",
+      "rejected": true
+    },
+    {
+      "control": "dropped_tuple",
+      "rejected": true
+    },
+    {
+      "control": "extra_tuple",
+      "rejected": true
+    },
+    {
+      "control": "wrong_value",
+      "rejected": true
+    }
+  ],
+  "source_stable": true,
+  "execution": {
+    "name": "spark_bh_application",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/spark_bh_application/gnutime.txt",
+      "timeout",
+      "-k",
+      "3s",
+      "110s",
+      "souffle",
+      "-F",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/bh_application/facts",
+      "-D",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/bh_application/output",
+      "-j",
+      "1",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_points_to.dl"
+    ],
+    "command_shell": "/usr/bin/time -v -o /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/spark_bh_application/gnutime.txt timeout -k 3s 110s souffle -F /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/bh_application/facts -D /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/bh_application/output -j 1 /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_points_to.dl",
+    "exit_code": 0,
+    "wall_seconds": 0.8213245999941137,
+    "timebox_seconds": 110,
+    "timeout": false,
+    "peak_rss_kib": 12928,
+    "complete": true,
+    "linux_metrics": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\runtime_baseline\\runs\\spark_bh_application\\gnutime.txt"
+  }
+}

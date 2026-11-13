@@ -1,0 +1,131 @@
+{
+  "framework": "Apache Hadoop HDFS",
+  "version": "3.3.6",
+  "revision": "1be78238728da9266a4f88195058f08fd012bf9c",
+  "execution": "WSL Ubuntu pinned Linux JDK11.0.32.1+1; real MiniDFSCluster NameNode/DataNode and separate client JVM with two DFSClient instances",
+  "mocking": "No mock or spy in experiment fixture. Mockito jars satisfy pre-existing Hadoop test-utility class signatures.",
+  "original_run_record": "runs/run_003_original/run_record.json",
+  "original_run_record_sha256": "f04b1ac8364e818f93228a59a00fcd9a3c894363388fc9aada061dfcbabc2a7f",
+  "mutant_run_record": "runs/run_001_holder_check_removed/run_record.json",
+  "mutant_run_record_sha256": "6742c2d639bd09267858f9a2fda3de4c839f6c2a25a28633f7542ce1f52ae3d9",
+  "paired_cases": [
+    {
+      "id": "matching_holder_a",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "matching_holder_b",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "cross_holder",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "normal",
+      "changed": true
+    },
+    {
+      "id": "cross_valid_file_id_matching_second_holder",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "cross_valid_file_id_wrong_holder",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "normal",
+      "changed": true
+    },
+    {
+      "id": "unknown_file_id",
+      "original": "java.io.FileNotFoundException",
+      "mutant": "java.io.FileNotFoundException",
+      "changed": false
+    },
+    {
+      "id": "closed_file_rejected",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "changed": false
+    },
+    {
+      "id": "directory_rejected",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "changed": false
+    }
+  ],
+  "paired_changed_cases": [
+    "cross_holder",
+    "cross_valid_file_id_wrong_holder"
+  ],
+  "paired_expected_changed_cases": [
+    "cross_holder",
+    "cross_valid_file_id_wrong_holder"
+  ],
+  "original_cases": 8,
+  "mutant_cases": 8,
+  "original_server_off": {
+    "pid": 828,
+    "uri": "hdfs://localhost:33755",
+    "attempted_fsync": true,
+    "proxy_class": "com.sun.proxy.$Proxy13",
+    "outcome": "java.net.ConnectException",
+    "message": "Call From DESKTOP-QS2HPSB/127.0.1.1 to localhost:33755 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused",
+    "network_failure": true,
+    "remote_server_exception": false,
+    "pass": true
+  },
+  "mutant_server_off": {
+    "pid": 693,
+    "uri": "hdfs://localhost:42015",
+    "attempted_fsync": true,
+    "proxy_class": "com.sun.proxy.$Proxy13",
+    "outcome": "java.net.ConnectException",
+    "message": "Call From DESKTOP-QS2HPSB/127.0.1.1 to localhost:42015 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused",
+    "network_failure": true,
+    "remote_server_exception": false,
+    "pass": true
+  },
+  "all_pass": true,
+  "mutation_manifest": "mutation/mutation_manifest.json",
+  "mutation_manifest_sha256": "479128b29ac8599b57a3904856f1e5d5f4c6cc85c19a23894c7e4a0c790c9dbf",
+  "preserved_attempts": [
+    {
+      "path": "runs/run_001_holder_check_removed/run_record.json",
+      "sha256": "6742c2d639bd09267858f9a2fda3de4c839f6c2a25a28633f7542ce1f52ae3d9",
+      "mode": "holder_check_removed",
+      "all_pass": true,
+      "error": null,
+      "client_cases": 8
+    },
+    {
+      "path": "runs/run_001_original/run_record.json",
+      "sha256": "7150af9937beae4d947b4e53cbfeed7840abf264335634c547c4851dcf319c10",
+      "mode": "original",
+      "all_pass": false,
+      "error": "RuntimeError: Server exited before readiness",
+      "client_cases": 0
+    },
+    {
+      "path": "runs/run_002_original/run_record.json",
+      "sha256": "e122df9415bb25e99a6b1364719b12b3c1a8dab473e26ca34f8aaa2b41a2984c",
+      "mode": "original",
+      "all_pass": true,
+      "error": null,
+      "client_cases": 6
+    },
+    {
+      "path": "runs/run_003_original/run_record.json",
+      "sha256": "f04b1ac8364e818f93228a59a00fcd9a3c894363388fc9aada061dfcbabc2a7f",
+      "mode": "original",
+      "all_pass": true,
+      "error": null,
+      "client_cases": 8
+    }
+  ],
+  "scope": "Runtime ground truth for these typed requests and constructed heap states only; not a general Java/Hadoop soundness proof or a newly discovered production vulnerability."
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 693,
+  "uri": "hdfs://localhost:42015",
+  "attempted_fsync": true,
+  "proxy_class": "com.sun.proxy.$Proxy13",
+  "outcome": "java.net.ConnectException",
+  "message": "Call From DESKTOP-QS2HPSB/127.0.1.1 to localhost:42015 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused",
+  "network_failure": true,
+  "remote_server_exception": false,
+  "pass": true
+}

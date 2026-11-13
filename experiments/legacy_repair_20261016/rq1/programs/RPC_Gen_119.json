@@ -1,0 +1,462 @@
+{
+  "program": "RPC_Gen_119",
+  "program_sha256": "299095e9e5a930e9dc31b00cef654157745e2bb9b457e0b90664a67537d232ea",
+  "status": "passed",
+  "concrete": {
+    "c0::rpc_result0": {
+      "kind": "set",
+      "values": [
+        543394
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "c0::rpc_result0": [
+      {
+        "value": 543394,
+        "tainted": false
+      }
+    ]
+  },
+  "abstract": {
+    "c0::rpc_result0": {
+      "kind": "set",
+      "constants": [
+        543394
+      ],
+      "tainted": false
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 1,
+  "state_count": 11,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "c0::rpc_result0": [
+        543394
+      ]
+    },
+    "observation_outcomes": {
+      "c0::rpc_result0": [
+        {
+          "value": 543394,
+          "tainted": false
+        }
+      ]
+    },
+    "observation_taints": {
+      "c0::rpc_result0": [
+        false
+      ]
+    },
+    "schedule_count": 1,
+    "state_count": 11,
+    "transition_count": 10,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 1,
+    "max_events": 10
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "rpc0_payload": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            },
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "rpc0_payload": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            },
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e4": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "rpc0_payload": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            },
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {
+        "arg0": {
+          "kind": "set",
+          "constants": [
+            543385
+          ],
+          "tainted": false
+        }
+      },
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e5": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "arg0": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e6": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "_return_rpc4_c0_c1_generated0": {
+              "kind": "set",
+              "constants": [
+                543394
+              ],
+              "tainted": false
+            },
+            "arg0": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e7": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "_return_rpc4_c0_c1_generated0": {
+              "kind": "set",
+              "constants": [
+                543394
+              ],
+              "tainted": false
+            },
+            "arg0": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {
+        "result": {
+          "kind": "set",
+          "constants": [
+            543394
+          ],
+          "tainted": false
+        }
+      },
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e8": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "result0": {
+              "kind": "set",
+              "constants": [
+                543394
+              ],
+              "tainted": false
+            },
+            "rpc0_payload": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            },
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e9": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "result0": {
+              "kind": "set",
+              "constants": [
+                543394
+              ],
+              "tainted": false
+            },
+            "rpc0_payload": {
+              "kind": "set",
+              "constants": [
+                543385
+              ],
+              "tainted": false
+            },
+            "rpc0_source": {
+              "kind": "set",
+              "constants": [
+                543383
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {
+        "rpc0_decision": {
+          "kind": "set",
+          "constants": [
+            true
+          ],
+          "tainted": false
+        }
+      },
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          543394
+        ],
+        "tainted": false
+      }
+    }
+  },
+  "abstract_state_sha256": "72c86130634c966f7b21880eb9599eeb9bbed4e6dc24a5d3f25eba8ebbfcadca",
+  "expected_hand_observations": null,
+  "hand_expectation_match": null,
+  "expected_pending": null,
+  "pending_expectation_match": null,
+  "family": "rpc",
+  "kind": "generated",
+  "seed": 161,
+  "seconds": 0.0012425000004441245,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

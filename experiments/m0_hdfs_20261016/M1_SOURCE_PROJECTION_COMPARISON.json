@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "mode": "original",
+      "input_kind": "RUNTIME",
+      "query_rows_equal": 8,
+      "full": {
+        "program_points": 1010,
+        "local_cells_at_points": 7801,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.003628099999332335,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "strong_projection": {
+        "program_points": 1010,
+        "local_cells_at_points": 3304,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.0037156999969738536,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "compilation_seconds": 0.0012193000002298504,
+      "ir_sha256": "a0cd57035511d8cfadd44592e9e5d02f6a07a378a1ab5213297478e430f3a588",
+      "input_sha256": "8b94b128e04c26b08dee08e2e5c0654299e1e3c72d2361b9b0cb807b10d53d02",
+      "schema_sha256": "6cacca36485c6b377f90cf8211c2e2658e9e2f3c3f0216852e6d0922e199946d",
+      "same_trace_and_persisted_inode": true
+    },
+    {
+      "mode": "original",
+      "input_kind": "HELD_OUT",
+      "query_rows_equal": 252,
+      "full": {
+        "program_points": 29224,
+        "local_cells_at_points": 231076,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.06764029999976628,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "strong_projection": {
+        "program_points": 29224,
+        "local_cells_at_points": 99372,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.06988459999774932,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "compilation_seconds": 0.0012193000002298504,
+      "ir_sha256": "a0cd57035511d8cfadd44592e9e5d02f6a07a378a1ab5213297478e430f3a588",
+      "input_sha256": "708592203fa2a15c23996912647db8921780dd8b2234e30eeba0cddc02e817b8",
+      "schema_sha256": "6cacca36485c6b377f90cf8211c2e2658e9e2f3c3f0216852e6d0922e199946d",
+      "same_trace_and_persisted_inode": true
+    },
+    {
+      "mode": "holder_check_removed",
+      "input_kind": "RUNTIME",
+      "query_rows_equal": 8,
+      "full": {
+        "program_points": 1035,
+        "local_cells_at_points": 7685,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.009896800002024975,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "strong_projection": {
+        "program_points": 1035,
+        "local_cells_at_points": 3175,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.0035876999972970225,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "compilation_seconds": 0.001073699997505173,
+      "ir_sha256": "4138e744e971dccbb3d67bf89458ab2e4666e18b5bef27ce3bbb7047254e4959",
+      "input_sha256": "459b2e5576db05cf3339505aa3f55aa63e4db988140019e8b79df0a69c01c47b",
+      "schema_sha256": "4fefc2f011e15f71848570bc84a4a17605abd01ad45fbbf834cd19c4b32ac763",
+      "same_trace_and_persisted_inode": true
+    },
+    {
+      "mode": "holder_check_removed",
+      "input_kind": "HELD_OUT",
+      "query_rows_equal": 252,
+      "full": {
+        "program_points": 30216,
+        "local_cells_at_points": 230052,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.06243019999965327,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "strong_projection": {
+        "program_points": 30216,
+        "local_cells_at_points": 96972,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.07021130000066478,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "compilation_seconds": 0.001073699997505173,
+      "ir_sha256": "4138e744e971dccbb3d67bf89458ab2e4666e18b5bef27ce3bbb7047254e4959",
+      "input_sha256": "35c9529387ac5368af69491c23a27b8cf820f32f617898e559001858a71990fb",
+      "schema_sha256": "4fefc2f011e15f71848570bc84a4a17605abd01ad45fbbf834cd19c4b32ac763",
+      "same_trace_and_persisted_inode": true
+    }
+  ],
+  "total_query_rows_checked": 520,
+  "novelty_gate": "NO_NEW_ALGORITHM_NEEDED_ON_THESE_SOURCE_CASES",
+  "interpretation": "Ordinary exception-aware correlated environment projection preserves every tested query/trace. This does not prove universal optimality; no new compiler or distributed speedup is demonstrated."
+}

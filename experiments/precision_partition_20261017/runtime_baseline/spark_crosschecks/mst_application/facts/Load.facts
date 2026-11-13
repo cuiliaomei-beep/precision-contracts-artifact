@@ -1,0 +1,41 @@
+v11	<java.lang.Throwable: java.lang.Object backtrace>	v13
+v11	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>	v12
+v177	<BlueReturn: Vertex vert>	v178
+v198	<Vertex: Vertex next>	v199
+v206	<Vertex: Hashtable neighbors>	v207
+v218	<Hashtable: HashEntry[] array>	v220
+v220	<array_element>	v221
+v226	<Hashtable: HashEntry[] array>	v230
+v226	<Hashtable: HashEntry[] array>	v232
+v230	<array_element>	v231
+v243	<HashEntry: java.lang.Object key>	v244
+v247	<HashEntry: java.lang.Object entry>	v248
+v251	<HashEntry: HashEntry next>	v252
+v254	<Graph: Vertex[] nodes>	v257
+v261	<Graph: Vertex[] nodes>	v262
+v262	<array_element>	v263
+v265	<Graph: Vertex[] nodes>	v266
+v265	<Graph: Vertex[] nodes>	v268
+v266	<array_element>	v267
+v268	<array_element>	v269
+v30	<java.lang.String: char[] value>	v31
+v320	<array_element>	v321
+v320	<array_element>	v322
+v320	<array_element>	v324
+v33	<java.lang.String: char[] value>	v34
+v33	<java.lang.String: char[] value>	v37
+v40	<java.lang.String: char[] value>	v44
+v40	<java.lang.String: char[] value>	v46
+v42	<java.lang.String: char[] value>	v45
+v42	<java.lang.String: char[] value>	v47
+v50	<java.lang.String: char[] value>	v52
+v50	<java.lang.String: char[] value>	v55
+v51	<java.lang.String: char[] value>	v53
+v51	<java.lang.String: char[] value>	v54
+v61	<java.lang.String: char[] value>	v62
+v61	<java.lang.String: char[] value>	v63
+v61	<java.lang.String: char[] value>	v64
+v67	<java.lang.Class: java.lang.String name>	v68
+v78	<java.lang.Class: java.lang.ClassLoader classLoader>	v79
+v85	<java.lang.ClassLoader: java.lang.Object assertionLock>	v84
+v85	<java.lang.ClassLoader: java.util.Map classAssertionStatus>	v86

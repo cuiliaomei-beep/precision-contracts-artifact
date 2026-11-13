@@ -1,0 +1,382 @@
+{
+  "program": "RPC-01",
+  "program_sha256": "98114c13c62b5c4fe79a024041f847f5ff19b33eb64ebb310584938c794b81dc",
+  "status": "passed",
+  "concrete": {
+    "target::x": {
+      "kind": "set",
+      "values": [
+        10
+      ]
+    },
+    "origin::result": {
+      "kind": "set",
+      "values": [
+        10
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "target::x": [
+      {
+        "value": 10,
+        "tainted": true
+      }
+    ],
+    "origin::result": [
+      {
+        "value": 10,
+        "tainted": true
+      }
+    ]
+  },
+  "abstract": {
+    "target::x": {
+      "kind": "set",
+      "constants": [
+        10
+      ],
+      "tainted": true
+    },
+    "origin::result": {
+      "kind": "set",
+      "constants": [
+        10
+      ],
+      "tainted": true
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 3,
+  "state_count": 11,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "target::x": [
+        10
+      ],
+      "origin::result": [
+        10
+      ]
+    },
+    "observation_outcomes": {
+      "target::x": [
+        {
+          "value": 10,
+          "tainted": true
+        }
+      ],
+      "origin::result": [
+        {
+          "value": 10,
+          "tainted": true
+        }
+      ]
+    },
+    "observation_taints": {
+      "target::x": [
+        true
+      ],
+      "origin::result": [
+        true
+      ]
+    },
+    "schedule_count": 3,
+    "state_count": 11,
+    "transition_count": 12,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 1,
+    "max_events": 8
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {
+        "x": {
+          "kind": "set",
+          "constants": [
+            10
+          ],
+          "tainted": true
+        }
+      },
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "target": {
+          "component": "target",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "target": {
+          "component": "target",
+          "values": {
+            "_return_rpc1_origin_target_process": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e4": {
+      "reachable": true,
+      "local_states": {
+        "target": {
+          "component": "target",
+          "values": {
+            "_return_rpc1_origin_target_process": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {
+        "result": {
+          "kind": "set",
+          "constants": [
+            10
+          ],
+          "tainted": true
+        }
+      },
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e5": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "result": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e6": {
+      "reachable": true,
+      "local_states": {
+        "target": {
+          "component": "target",
+          "values": {
+            "_return_rpc1_origin_target_process": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          10
+        ],
+        "tainted": true
+      }
+    },
+    "e7": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "result": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                10
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          10
+        ],
+        "tainted": true
+      }
+    }
+  },
+  "abstract_state_sha256": "768a3f15234105bf3d47afee520e13d59b0c381932319f5b10d5727a0c1af68c",
+  "expected_hand_observations": {
+    "target::x": {
+      "values": [
+        10
+      ],
+      "may_tainted": true
+    },
+    "origin::result": {
+      "values": [
+        10
+      ],
+      "may_tainted": true
+    }
+  },
+  "hand_expectation_match": true,
+  "expected_pending": [],
+  "pending_expectation_match": true,
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "seconds": 0.0015118000010261312,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

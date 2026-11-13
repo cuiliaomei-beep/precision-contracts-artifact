@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "id": "RPC-05",
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "client",
+      "server"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "server",
+        "attributes": {
+          "var": "result",
+          "value": 10,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Send",
+        "component": "client",
+        "attributes": {
+          "destination": "server",
+          "msg_type": "REQ_get_result",
+          "data": {},
+          "message_id": "rpc1_client_server_get_result:request",
+          "call_id": "rpc1_client_server_get_result"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Receive",
+        "component": "server",
+        "attributes": {
+          "source": "client",
+          "msg_type": "REQ_get_result",
+          "message_id": "rpc1_client_server_get_result:request",
+          "bindings": {},
+          "call_id": "rpc1_client_server_get_result"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "server",
+        "attributes": {
+          "var": "_return_rpc1_client_server_get_result",
+          "value": {
+            "var": "result"
+          },
+          "tainted": false,
+          "call_id": "rpc1_client_server_get_result"
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "server",
+        "attributes": {
+          "destination": "client",
+          "msg_type": "RESP_get_result",
+          "data": {
+            "result": {
+              "var": "_return_rpc1_client_server_get_result"
+            }
+          },
+          "message_id": "rpc1_client_server_get_result:response",
+          "call_id": "rpc1_client_server_get_result"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "client",
+        "attributes": {
+          "source": "server",
+          "msg_type": "RESP_get_result",
+          "message_id": "rpc1_client_server_get_result:response",
+          "bindings": {
+            "result": "result"
+          },
+          "call_id": "rpc1_client_server_get_result"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "Branch",
+        "component": "client",
+        "attributes": {
+          "condition": {
+            "op": "gt",
+            "args": [
+              {
+                "var": "result"
+              },
+              5
+            ]
+          },
+          "decision": "return_gt_5"
+        }
+      },
+      {
+        "id": "e7",
+        "type": "LocalAssign",
+        "component": "client",
+        "attributes": {
+          "var": "z",
+          "value": 999,
+          "tainted": false,
+          "guard": {
+            "decision": "return_gt_5",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "e8",
+        "type": "LocalAssign",
+        "component": "client",
+        "attributes": {
+          "var": "z",
+          "value": 111,
+          "tainted": false,
+          "guard": {
+            "decision": "return_gt_5",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "e9",
+        "type": "Observe",
+        "component": "client",
+        "attributes": {
+          "point": "result",
+          "expr": {
+            "var": "result"
+          }
+        }
+      },
+      {
+        "id": "e10",
+        "type": "Observe",
+        "component": "client",
+        "attributes": {
+          "point": "z",
+          "expr": {
+            "var": "z"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "client": {},
+        "server": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e2"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e1",
+          "e5"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ],
+        [
+          "e9",
+          "e10"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "a58f73b0d90306ce95cc2857f08224c59f5b57052bf904ceb114a16c9c0c44ff",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 4,
+      "Send": 2,
+      "Receive": 2,
+      "Branch": 1,
+      "Observe": 2
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": true,
+    "sync": false,
+    "may_alias": false,
+    "observations": 2,
+    "events": 11
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "3e2b25aeaff643261ce6c31cb9e12cdc589b4e7e1226300c85bdc88101566009",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "client::result": {
+      "values": [
+        10
+      ],
+      "may_tainted": true
+    },
+    "client::z": {
+      "values": [
+        999
+      ],
+      "may_tainted": false
+    }
+  },
+  "expected_pending": []
+}

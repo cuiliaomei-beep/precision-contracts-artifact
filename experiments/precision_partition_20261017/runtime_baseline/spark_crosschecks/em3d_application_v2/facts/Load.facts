@@ -1,0 +1,49 @@
+v11	<java.lang.Throwable: java.lang.Object backtrace>	v13
+v11	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>	v12
+v136	<array_element>	v135
+v136	<array_element>	v146
+v136	<array_element>	v154
+v136	<array_element>	v164
+v141	<array_element>	v140
+v141	<array_element>	v150
+v141	<array_element>	v158
+v141	<array_element>	v163
+v166	<BiGraph: Node eNodes>	v167
+v166	<BiGraph: Node hNodes>	v171
+v188	<Node: Node[] toNodes>	v190
+v188	<Node: Node[] toNodes>	v193
+v188	<Node: Node[] toNodes>	v195
+v189	<array_element>	v192
+v193	<array_element>	v194
+v201	<Node: Node[] toNodes>	v202
+v201	<Node: Node[] toNodes>	v203
+v203	<array_element>	v204
+v204	<Node: Node[] fromNodes>	v205
+v204	<Node: double[] coeffs>	v206
+v209	<Node: Node[] fromNodes>	v211
+v209	<Node: double[] coeffs>	v210
+v211	<array_element>	v212
+v219	<Node: Node next>	v220
+v226	<Node$1Enumerate: Node current>	v227
+v230	<Node$1Enumerate: Node current>	v231
+v230	<Node$1Enumerate: Node current>	v232
+v250	<array_element>	v251
+v250	<array_element>	v252
+v250	<array_element>	v254
+v250	<array_element>	v257
+v250	<array_element>	v260
+v29	<java.lang.String: char[] value>	v30
+v32	<java.lang.String: char[] value>	v33
+v32	<java.lang.String: char[] value>	v36
+v39	<java.lang.String: char[] value>	v43
+v39	<java.lang.String: char[] value>	v45
+v41	<java.lang.String: char[] value>	v44
+v41	<java.lang.String: char[] value>	v46
+v49	<java.lang.String: char[] value>	v51
+v49	<java.lang.String: char[] value>	v54
+v50	<java.lang.String: char[] value>	v52
+v50	<java.lang.String: char[] value>	v53
+v61	<java.lang.Class: java.lang.String name>	v62
+v72	<java.lang.Class: java.lang.ClassLoader classLoader>	v73
+v79	<java.lang.ClassLoader: java.lang.Object assertionLock>	v78
+v79	<java.lang.ClassLoader: java.util.Map classAssertionStatus>	v80

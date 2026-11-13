@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "modes": [
+    {
+      "mode": "original",
+      "runtime_rows_matched": 8,
+      "held_out_families": 14,
+      "held_out_rows_checked": 252,
+      "actual_cfg_backedges_traversed": 72,
+      "ir_sha256": "a0cd57035511d8cfadd44592e9e5d02f6a07a378a1ab5213297478e430f3a588",
+      "negative_controls": [
+        {
+          "kind": "null_holder",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Input outside declared nonnull-holder, non-grandfather-id, nonpositive-lastBlockLength contract"
+        },
+        {
+          "kind": "positive_last_block",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Input outside declared nonnull-holder, non-grandfather-id, nonpositive-lastBlockLength contract"
+        },
+        {
+          "kind": "snapshot",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Snapshot inode outside declared heap contract"
+        },
+        {
+          "kind": "missing_field",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Absent concrete heap field <org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>"
+        },
+        {
+          "kind": "uncontracted_call",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Uncontracted invocation <untrusted.Library: void checkNNStartup()>"
+        }
+      ]
+    },
+    {
+      "mode": "holder_check_removed",
+      "runtime_rows_matched": 8,
+      "held_out_families": 14,
+      "held_out_rows_checked": 252,
+      "actual_cfg_backedges_traversed": 72,
+      "ir_sha256": "4138e744e971dccbb3d67bf89458ab2e4666e18b5bef27ce3bbb7047254e4959",
+      "negative_controls": [
+        {
+          "kind": "null_holder",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Input outside declared nonnull-holder, non-grandfather-id, nonpositive-lastBlockLength contract"
+        },
+        {
+          "kind": "positive_last_block",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Input outside declared nonnull-holder, non-grandfather-id, nonpositive-lastBlockLength contract"
+        },
+        {
+          "kind": "snapshot",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Snapshot inode outside declared heap contract"
+        },
+        {
+          "kind": "missing_field",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Absent concrete heap field <org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>"
+        },
+        {
+          "kind": "uncontracted_call",
+          "status": "rejected_as_unknown",
+          "reason": "Unsupported: Uncontracted invocation <untrusted.Library: void checkNNStartup()>"
+        }
+      ]
+    }
+  ],
+  "scope": "Restricted finite heap/library/protocol contract, actual extracted CFG; not whole-HDFS analysis",
+  "m1_status": "restricted_source_derived_reference_completed; general frontend obligations remain"
+}

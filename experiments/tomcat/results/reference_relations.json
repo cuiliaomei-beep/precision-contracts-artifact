@@ -1,0 +1,506 @@
+{
+  "relation_count": 71,
+  "total_tuples": 11618755,
+  "total_bytes": 2076206212,
+  "full_state_sha256": "dd031ac408e7ed85d1940d8a4af21ab5a933ba3fa8a7c245a4e635aee33a0fe2",
+  "method": "LC_ALL=C bytewise sort, explicit arity check, no duplicate rows, complete tuple equality.",
+  "relations": [
+    {
+      "relation": "ApplicationClass",
+      "arity": 1,
+      "tuples": 1,
+      "bytes": 29,
+      "canonical_sha256": "04b378fe3b4b8985a2f2b9c681b9c874528be30c630f73bcc801a634e2384e62"
+    },
+    {
+      "relation": "ArrayIndexPointsTo",
+      "arity": 2,
+      "tuples": 43363,
+      "bytes": 5307041,
+      "canonical_sha256": "09598686dbe76ffb015bf6e8f63c8b20fa328348458e63922ef90c02892d6857"
+    },
+    {
+      "relation": "Assign",
+      "arity": 2,
+      "tuples": 55715,
+      "bytes": 10592443,
+      "canonical_sha256": "59a60c7df254a49c2e97f4ad2860b8aec64c534da3720ec37d01cb82608b4b36"
+    },
+    {
+      "relation": "AssignCast",
+      "arity": 4,
+      "tuples": 17282,
+      "bytes": 5023801,
+      "canonical_sha256": "a5ec49faf84377ec8026186f1fe728e147b30717cbefbf2e8521528086e2a5cc"
+    },
+    {
+      "relation": "AssignCast_From",
+      "arity": 2,
+      "tuples": 17291,
+      "bytes": 3398978,
+      "canonical_sha256": "83a12635b7d939972e40e2b0f2885431bb1e7dbf818ede08d0ea1736217697e9"
+    },
+    {
+      "relation": "AssignCast_Type",
+      "arity": 2,
+      "tuples": 17291,
+      "bytes": 1994717,
+      "canonical_sha256": "4dc71e47a8023a875c78cd75cf17cf7cc7df08a50961214f51efb700401a99a6"
+    },
+    {
+      "relation": "AssignHeapAllocation",
+      "arity": 3,
+      "tuples": 60234,
+      "bytes": 14476556,
+      "canonical_sha256": "dffc752da5eefe4cd5d36ccff1a7514e95b66a86a6fe69071935808270d0ddf1"
+    },
+    {
+      "relation": "AssignHeapAllocation_Heap",
+      "arity": 2,
+      "tuples": 60262,
+      "bytes": 9793079,
+      "canonical_sha256": "9e891b17d336206a702f7cd1f8bbf8258c2fc0d287128405c91af4fa58b94d71"
+    },
+    {
+      "relation": "AssignInstruction_To",
+      "arity": 2,
+      "tuples": 155386,
+      "bytes": 30409476,
+      "canonical_sha256": "46c839e34371aa352bb185cfca409edee6ccfb2f526cc2c703f31dc2b6cdc404"
+    },
+    {
+      "relation": "AssignLocal",
+      "arity": 3,
+      "tuples": 77698,
+      "bytes": 22886227,
+      "canonical_sha256": "a93ca8ab9eb3f19c8b99b0238baad3ede6c18abbfae66b2da921886d17e832b8"
+    },
+    {
+      "relation": "AssignLocal_From",
+      "arity": 2,
+      "tuples": 77833,
+      "bytes": 15907342,
+      "canonical_sha256": "f76b64bfb6622ea0cb9584b0091a860808b5d3df04e9ce408fe81e6956ee2c59"
+    },
+    {
+      "relation": "CallGraphEdge",
+      "arity": 2,
+      "tuples": 27108,
+      "bytes": 5278966,
+      "canonical_sha256": "12e3791adf776382d93562ec6af64276544a52ced38907ec61a26d3a6d5512f4"
+    },
+    {
+      "relation": "ClassInitializer",
+      "arity": 2,
+      "tuples": 1204,
+      "bytes": 109408,
+      "canonical_sha256": "6ea86310fc7c95625e6b70dfc27fd138f5a21069a3ecfde5c42e43b18f05ada3"
+    },
+    {
+      "relation": "DirectSubclass",
+      "arity": 2,
+      "tuples": 4189,
+      "bytes": 266796,
+      "canonical_sha256": "93f49d00721b1389bc32fd71975b68cbcc9f61576273279afb05be2a3e66cbb6"
+    },
+    {
+      "relation": "FieldInstruction_Signature",
+      "arity": 2,
+      "tuples": 92293,
+      "bytes": 16117394,
+      "canonical_sha256": "168619835d1e278791dd254672e9aab295a6c3d08519a6421d88e09dc03f7e20"
+    },
+    {
+      "relation": "Field_DeclaringType",
+      "arity": 2,
+      "tuples": 16664,
+      "bytes": 1705901,
+      "canonical_sha256": "fa0fc83b1273e7838667aa4121b7ce14d59c126aa82cdd8e3a549ccd282fb02e"
+    },
+    {
+      "relation": "HeapAllocation_Type",
+      "arity": 2,
+      "tuples": 46387,
+      "bytes": 4941131,
+      "canonical_sha256": "55b425b829ddfd6c0ea0b8092c202c13045bbb7e7375f4eabc94fd05e2badd49"
+    },
+    {
+      "relation": "InitializedClass",
+      "arity": 1,
+      "tuples": 1181,
+      "bytes": 41114,
+      "canonical_sha256": "18091e937864288dbc91455d1574d6704893999f5c9510160d3ca350ef985f51"
+    },
+    {
+      "relation": "InstanceFieldPointsTo",
+      "arity": 3,
+      "tuples": 3372422,
+      "bytes": 783576838,
+      "canonical_sha256": "6675ceece9435a91618a1aa57e77ac0ef587ddd92cc044d8e483b9cc5dc0bbe1"
+    },
+    {
+      "relation": "Instruction_Method",
+      "arity": 2,
+      "tuples": 448666,
+      "bytes": 87423674,
+      "canonical_sha256": "0b57a470073a45502ee36d7c5e01690947c45d9a9af60bbc5480453fdb8cb611"
+    },
+    {
+      "relation": "LoadArrayIndex",
+      "arity": 3,
+      "tuples": 6936,
+      "bytes": 1864610,
+      "canonical_sha256": "1620af6f190f2ffffd03ed3f8bcbe9daf30847634bf88a999f4366f2502da715"
+    },
+    {
+      "relation": "LoadArrayIndex_Base",
+      "arity": 2,
+      "tuples": 7055,
+      "bytes": 1360673,
+      "canonical_sha256": "662cd7fcdd0131576f908895dc3161f552e9193b3843fb32f440b2d0d0347fba"
+    },
+    {
+      "relation": "LoadArrayIndex_To",
+      "arity": 2,
+      "tuples": 7055,
+      "bytes": 1367145,
+      "canonical_sha256": "d42c8286661e47815dfeaec2d01f429ef928db50f254b3a03adfd662234ef696"
+    },
+    {
+      "relation": "LoadInstanceField",
+      "arity": 4,
+      "tuples": 48909,
+      "bytes": 16427192,
+      "canonical_sha256": "c8d6b58ecd7270ce4cf8ddda3f04d87cc181ccc9618d474bd413c3a9548136fe"
+    },
+    {
+      "relation": "LoadInstanceField_Base",
+      "arity": 2,
+      "tuples": 48976,
+      "bytes": 9722449,
+      "canonical_sha256": "3fedccb46cedf9529b63f38c281ec04977e0df634462ee40ba9e10bea0719fa3"
+    },
+    {
+      "relation": "LoadInstanceField_To",
+      "arity": 2,
+      "tuples": 48976,
+      "bytes": 9828224,
+      "canonical_sha256": "5c25c215b795a602007fa2b933b6ec830602fed7a2479a6ca489a61e497d4dbc"
+    },
+    {
+      "relation": "LoadStaticField",
+      "arity": 3,
+      "tuples": 19845,
+      "bytes": 4930918,
+      "canonical_sha256": "47c1f9b80a8be70917904f9f89bd89a3d610c5c84d2ddb40e4bc41230277a061"
+    },
+    {
+      "relation": "LoadStaticField_To",
+      "arity": 2,
+      "tuples": 19864,
+      "bytes": 4037127,
+      "canonical_sha256": "99f57f079f538b75fb79f03f408c23f3b6ea27b6457aded4e6ece821559b87e8"
+    },
+    {
+      "relation": "MainMethodDeclaration",
+      "arity": 1,
+      "tuples": 1,
+      "bytes": 62,
+      "canonical_sha256": "dac1ec1ad41032b9840ba123582eb753260d13ccf48ba42db3caeff92d9ccfbd"
+    },
+    {
+      "relation": "MethodImplemented",
+      "arity": 4,
+      "tuples": 38501,
+      "bytes": 6108085,
+      "canonical_sha256": "c563d54886a75da04e176c2bf6d6d7ba9e63078393005eb8565b3064e8324839"
+    },
+    {
+      "relation": "MethodInvocation_Base",
+      "arity": 2,
+      "tuples": 118029,
+      "bytes": 26653477,
+      "canonical_sha256": "a273c8dfba34e16d0090c90b98e6fe97fc1cc5087d49c41fb0e32bfba02520a6"
+    },
+    {
+      "relation": "MethodInvocation_Method",
+      "arity": 2,
+      "tuples": 141224,
+      "bytes": 27797143,
+      "canonical_sha256": "82ea62bcba23d602a759359e4f58a3f0d0e6014ed9f12b0454274d9b053e22ec"
+    },
+    {
+      "relation": "MethodLookup",
+      "arity": 4,
+      "tuples": 136034,
+      "bytes": 18476802,
+      "canonical_sha256": "f411176fa248c1fdf2e9123c32e7667f0de758e166f759d7ac355375d11a8890"
+    },
+    {
+      "relation": "Method_DeclaringType",
+      "arity": 2,
+      "tuples": 41203,
+      "bytes": 4743034,
+      "canonical_sha256": "6848fe701f0284793cee7d04c766a365650d2be071c535ae45609596fbe6c554"
+    },
+    {
+      "relation": "Method_Descriptor",
+      "arity": 2,
+      "tuples": 41203,
+      "bytes": 4654813,
+      "canonical_sha256": "1e51487dcb4ad67bcabba6c7e74bb967189311ba11fda090735fdf5660541e9b"
+    },
+    {
+      "relation": "Method_ParamTypes",
+      "arity": 2,
+      "tuples": 41203,
+      "bytes": 4089095,
+      "canonical_sha256": "68fd07cdc85eeaa7b6d623dd715517b394946c848064313473a73678a1e76d78"
+    },
+    {
+      "relation": "Method_ReturnType",
+      "arity": 2,
+      "tuples": 41203,
+      "bytes": 3847190,
+      "canonical_sha256": "4d95741fa156f56e9ec6d34de4123c45c203cc3072700338fd57b9bbbe54c2c1"
+    },
+    {
+      "relation": "Method_SimpleName",
+      "arity": 2,
+      "tuples": 41203,
+      "bytes": 3769244,
+      "canonical_sha256": "36d6199f30158388da9347b02b880a02dcc20edcc4d47b041c37a627aca7cbc8"
+    },
+    {
+      "relation": "Reachable",
+      "arity": 1,
+      "tuples": 5965,
+      "bytes": 445624,
+      "canonical_sha256": "c692e87186946875bc6758b03e17c01ee8fe5a77b2d386acabb71792f3dccb43"
+    },
+    {
+      "relation": "ReturnNonvoid_Var",
+      "arity": 2,
+      "tuples": 32217,
+      "bytes": 5972875,
+      "canonical_sha256": "5e272fe64b6cf43b72fabc721151b0ce8904012c0576de2b11b4076a6156993c"
+    },
+    {
+      "relation": "ReturnVar",
+      "arity": 2,
+      "tuples": 32031,
+      "bytes": 5645351,
+      "canonical_sha256": "ecf4703ab55ce170628148387911d8abd1ddd9051f12affbe58910956230f653"
+    },
+    {
+      "relation": "SpecialMethodInvocation_Base",
+      "arity": 2,
+      "tuples": 37451,
+      "bytes": 8212005,
+      "canonical_sha256": "ee789c1007252a59901286126422ae0616fcd02600b914e48c52685fc8977e71"
+    },
+    {
+      "relation": "StaticFieldPointsTo",
+      "arity": 2,
+      "tuples": 3994,
+      "bytes": 465474,
+      "canonical_sha256": "08b4a4f97705df4803cfeec7e6012a2ad5a7eb0ddfb5023c2688f1ca04df5aee"
+    },
+    {
+      "relation": "StaticMethodInvocation",
+      "arity": 3,
+      "tuples": 23195,
+      "bytes": 6840389,
+      "canonical_sha256": "2d59f56d38a921facfa47d0cd00959e7fd07fb82fcab9de7b7364277c6952a63"
+    },
+    {
+      "relation": "StoreArrayIndex",
+      "arity": 3,
+      "tuples": 20374,
+      "bytes": 4082267,
+      "canonical_sha256": "1d7186db716d46bbae28793ae9212c9edd1919fb062b3f2a30eee762ff3749c4"
+    },
+    {
+      "relation": "StoreArrayIndex_Base",
+      "arity": 2,
+      "tuples": 20503,
+      "bytes": 3004818,
+      "canonical_sha256": "9e4c8032f0fd4f7192ab22b3cb5a372773602bfd677c857e272621991d308237"
+    },
+    {
+      "relation": "StoreArrayIndex_From",
+      "arity": 2,
+      "tuples": 20503,
+      "bytes": 3114768,
+      "canonical_sha256": "93e96f03e21a0a41aef165de4b65313d89c0190bb2440195bc785f3f64edd0d9"
+    },
+    {
+      "relation": "StoreInstanceField",
+      "arity": 4,
+      "tuples": 18025,
+      "bytes": 6399218,
+      "canonical_sha256": "67b955563032b5639d4039d5a660f181fda313eed8760f4380f32ed29d15ce98"
+    },
+    {
+      "relation": "StoreInstanceField_Base",
+      "arity": 2,
+      "tuples": 18092,
+      "bytes": 3871676,
+      "canonical_sha256": "2081361acc9a16a23ad5bc2e0fc5c6681e551a4bafd8a5c6aa54136a372b58b0"
+    },
+    {
+      "relation": "StoreInstanceField_From",
+      "arity": 2,
+      "tuples": 18092,
+      "bytes": 3913720,
+      "canonical_sha256": "2ca83641da71e1d3278e3cf23636680f23cb02d94df7e8bf533533768b03d14e"
+    },
+    {
+      "relation": "StoreStaticField",
+      "arity": 3,
+      "tuples": 5361,
+      "bytes": 1014856,
+      "canonical_sha256": "a85392a951b2e79596afbe03c9f12f4fce2ae7274501e1ea40b0e3d1367094b9"
+    },
+    {
+      "relation": "StoreStaticField_From",
+      "arity": 2,
+      "tuples": 5361,
+      "bytes": 766132,
+      "canonical_sha256": "656b53fc59c07b229c9a71446d5f7343d53f0e9815b5dead4398b981f687833c"
+    },
+    {
+      "relation": "Subclass",
+      "arity": 2,
+      "tuples": 7819,
+      "bytes": 492691,
+      "canonical_sha256": "52393310f1ce4807a1a979974116a00cd76150a1832cfa22f07f4ca5c3e88b47"
+    },
+    {
+      "relation": "SubtypeOf",
+      "arity": 2,
+      "tuples": 20267,
+      "bytes": 1343635,
+      "canonical_sha256": "93871bdb8958c8541da12ab30cec9e8b73b80a2235bcd6d768c7140f6624b18a"
+    },
+    {
+      "relation": "SubtypeOfDifferent",
+      "arity": 2,
+      "tuples": 15305,
+      "bytes": 960535,
+      "canonical_sha256": "9b0a16bb325506c181033ccb6de15d87a95b6af8fa93288a96a78ae900b59bc6"
+    },
+    {
+      "relation": "Superclass",
+      "arity": 2,
+      "tuples": 7819,
+      "bytes": 492691,
+      "canonical_sha256": "daf24f1ed1408e9485207ceb8a18fe11d917ca5974e37de34793d07b20e16e7a"
+    },
+    {
+      "relation": "Superinterface",
+      "arity": 2,
+      "tuples": 5276,
+      "bytes": 347550,
+      "canonical_sha256": "e5158c415fde8e791a244ccee3442af80d594829fbcf4640ae24a68321f652ab"
+    },
+    {
+      "relation": "SupertypeOf",
+      "arity": 2,
+      "tuples": 20267,
+      "bytes": 1343635,
+      "canonical_sha256": "82fa5b3b39cd0ff16b0ac92e30d1a1d0187882b25d3a8684cc427789fe44ff33"
+    },
+    {
+      "relation": "ThisVar",
+      "arity": 2,
+      "tuples": 33051,
+      "bytes": 5498014,
+      "canonical_sha256": "06c9922be9ff56b5554798c82d5137220afb7d9ac6d1a4bca9a77780de44def8"
+    },
+    {
+      "relation": "VarPointsTo",
+      "arity": 2,
+      "tuples": 4986481,
+      "bytes": 702274380,
+      "canonical_sha256": "70d811422a9fb6fdb9b0a337c19d8d373be2da6b154622cd5f505c527ee1ecd3"
+    },
+    {
+      "relation": "Var_DeclaringMethod",
+      "arity": 2,
+      "tuples": 461123,
+      "bytes": 84520517,
+      "canonical_sha256": "403adc34ea7ba2904ac37f3e31f95142f599b2dff0b62a92cca687956acc104a"
+    },
+    {
+      "relation": "VirtualMethodInvocation_Base",
+      "arity": 2,
+      "tuples": 80578,
+      "bytes": 18441472,
+      "canonical_sha256": "eea651f5f044d35573746c01abc5a238f9151c48a6b7352556a3a95b38ec6c6f"
+    },
+    {
+      "relation": "VirtualMethodInvocation_Descriptor",
+      "arity": 2,
+      "tuples": 80528,
+      "bytes": 12579663,
+      "canonical_sha256": "5e5c3e8b2177e791d28135d904441d72d44168b217aa4dce5d199da7d32b76fc"
+    },
+    {
+      "relation": "VirtualMethodInvocation_SimpleName",
+      "arity": 2,
+      "tuples": 80528,
+      "bytes": 11225792,
+      "canonical_sha256": "b7fbe06396bcc67032f4a2a0fd31822fb344afa1fc09532533d1eba09f341623"
+    },
+    {
+      "relation": "isArrayType",
+      "arity": 1,
+      "tuples": 313,
+      "bytes": 10758,
+      "canonical_sha256": "057f5d48456dc6cf1e3575b7102c21ac8ee635ad24a336440b4b2ce18064ed8c"
+    },
+    {
+      "relation": "isClassType",
+      "arity": 1,
+      "tuples": 4195,
+      "bytes": 165479,
+      "canonical_sha256": "e9f3593746f544943c3544f50c4263fa487c90d30f2ad5df441dc60d2ad2bf66"
+    },
+    {
+      "relation": "isInterfaceType",
+      "arity": 1,
+      "tuples": 454,
+      "bytes": 15313,
+      "canonical_sha256": "6df2114441e70c9adcfe858bd3b41ba33ecc28a03488f9ca594b107e0528bc52"
+    },
+    {
+      "relation": "isReferenceType",
+      "arity": 1,
+      "tuples": 4962,
+      "bytes": 191550,
+      "canonical_sha256": "5449968a14a8766a81050d6c2520f46af548cfbecf0c22fe2839b8a2529e00e3"
+    },
+    {
+      "relation": "isStaticMethodInvocation_Insn",
+      "arity": 1,
+      "tuples": 23195,
+      "bytes": 2973656,
+      "canonical_sha256": "14ce4303db2f96e128c5279d1cb0bd4f801689a7a59595bdbb96eb8ea88c4e99"
+    },
+    {
+      "relation": "isType",
+      "arity": 1,
+      "tuples": 4962,
+      "bytes": 191550,
+      "canonical_sha256": "5449968a14a8766a81050d6c2520f46af548cfbecf0c22fe2839b8a2529e00e3"
+    },
+    {
+      "relation": "isVirtualMethodInvocation_Insn",
+      "arity": 1,
+      "tuples": 80578,
+      "bytes": 10459964,
+      "canonical_sha256": "1f0b4cf9a58817966bd11146bd29a99ed9943043c5804158a42f1eb942962b8c"
+    }
+  ]
+}

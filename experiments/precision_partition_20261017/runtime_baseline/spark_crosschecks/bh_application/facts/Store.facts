@@ -1,0 +1,50 @@
+v10	v9	<java.lang.Throwable: java.lang.String detailMessage>
+v11	v9	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>
+v12	v9	<java.lang.Throwable: java.util.List suppressedExceptions>
+v136	v134	<java.lang.Class: java.lang.String name>
+v18	v15	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>
+v2	v2	<java.lang.Throwable: java.lang.Throwable cause>
+v229	v228	<array_element>
+v249	v248	<Tree: MathVector rmin>
+v276	v264	<Tree: Body bodyTab>
+v277	v264	<Tree: Body bodyTabRev>
+v294	v293	<Tree: Node root>
+v3	v2	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>
+v300	v293	<Tree: Node root>
+v324	v315	<Body: MathVector vel>
+v327	v315	<Body: MathVector acc>
+v339	v315	<Node: MathVector pos>
+v342	v315	<Body: MathVector vel>
+v347	v346	<Body: MathVector vel>
+v348	v346	<Body: MathVector acc>
+v349	v346	<Body: MathVector newAcc>
+v353	v352	<Body: Body next>
+v361	v360	<Body: Body procNext>
+v373	v365	<Tree: Node root>
+v375	v374	<array_element>
+v391	v396	<array_element>
+v392	v401	<array_element>
+v400	v399	<array_element>
+v43	v36	<java.lang.String: char[] value>
+v433	v425	<Body: MathVector newAcc>
+v45	v36	<java.lang.String: char[] value>
+v451	v450	<MathVector: double[] data>
+v459	v456	<MathVector: double[] data>
+v5	v2	<java.lang.Throwable: java.util.List suppressedExceptions>
+v515	v514	<Node: MathVector pos>
+v532	v531	<Node$HG: Node this$0>
+v533	v531	<Node$HG: Body pskip>
+v535	v531	<Node$HG: MathVector pos0>
+v538	v531	<Node$HG: MathVector acc0>
+v542	v541	<Body$2Enumerate: Body current>
+v542	v541	<Body$2Enumerate: Body this$0>
+v551	v548	<Body$2Enumerate: Body current>
+v554	v553	<Cell: Node[] subp>
+v561	v568	<array_element>
+v567	v566	<array_element>
+v571	v570	<Node: MathVector pos>
+v594	v593	<Body$1Enumerate: Body current>
+v594	v593	<Body$1Enumerate: Body this$0>
+v603	v600	<Body$1Enumerate: Body current>
+v9	v9	<java.lang.Throwable: java.lang.Throwable cause>
+v98	v105	<array_element>

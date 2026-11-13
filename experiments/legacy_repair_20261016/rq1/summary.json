@@ -1,0 +1,15 @@
+{
+  "planned": 450,
+  "attempted": 450,
+  "total": 450,
+  "violations": 0,
+  "exact_matches": 295,
+  "errors": 0,
+  "complete_oracles": 450,
+  "corpus_sha256": "6c4eb0faad0f92ea21967e96d16093f666700fd3854bee49b6fac0bae0445f7e",
+  "smoke_only": false,
+  "elapsed_seconds": 8.252044200000455,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045",
+  "status": "passed",
+  "source_unchanged_during_run": true
+}

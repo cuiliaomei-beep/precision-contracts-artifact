@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "id": "Program_337",
+  "family": "rma",
+  "kind": "generated",
+  "seed": 379,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "c0",
+      "c1"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "w0_source",
+          "value": 205386,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e1",
+        "type": "RemoteWrite",
+        "component": "c0",
+        "attributes": {
+          "region": "S",
+          "var": "data",
+          "value": {
+            "var": "w0_source"
+          },
+          "target": "c1",
+          "possible_regions": [
+            "R",
+            "S"
+          ]
+        }
+      },
+      {
+        "id": "e2",
+        "type": "RemoteRead",
+        "component": "c1",
+        "attributes": {
+          "region": "R",
+          "var": "data",
+          "destination": "read0",
+          "target": "c1",
+          "possible_regions": [
+            "R",
+            "S"
+          ]
+        }
+      },
+      {
+        "id": "e3",
+        "type": "Observe",
+        "component": "c1",
+        "attributes": {
+          "point": "rma_result0",
+          "expr": {
+            "var": "read0"
+          }
+        }
+      },
+      {
+        "id": "e4",
+        "type": "RemoteRead",
+        "component": "c0",
+        "attributes": {
+          "region": "R",
+          "var": "data",
+          "destination": "read1",
+          "target": "c1",
+          "possible_regions": [
+            "R",
+            "S"
+          ]
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Observe",
+        "component": "c0",
+        "attributes": {
+          "point": "rma_result1",
+          "expr": {
+            "var": "read1"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "c0": {},
+        "c1": {}
+      },
+      "memory_regions": {
+        "R": {
+          "owner": "c1",
+          "values": {
+            "data": -29
+          }
+        },
+        "S": {
+          "owner": "c1",
+          "values": {
+            "data": -36
+          }
+        }
+      },
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e4"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e4",
+          "e5"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {
+        "R": {
+          "data": false
+        },
+        "S": {
+          "data": false
+        }
+      },
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {
+      "generator": {
+        "seed": 379,
+        "family": "rma",
+        "synchronization": "nosync",
+        "alias": "may",
+        "branch": false,
+        "requested_components": 2,
+        "requested_writers": 1,
+        "requested_readers": 2
+      }
+    }
+  },
+  "program_sha256": "9501171954cfcf3f4e0e4206721b2b2bac4c2a5dc0716431b17334ec7b4fa0c9",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 1,
+      "RemoteWrite": 1,
+      "RemoteRead": 2,
+      "Observe": 2
+    },
+    "rpc_present": false,
+    "rma_present": true,
+    "actual_family": "rma",
+    "branch": false,
+    "sync": false,
+    "may_alias": true,
+    "observations": 2,
+    "events": 6
+  },
+  "generator_metadata": {
+    "seed": 379,
+    "family": "rma",
+    "synchronization": "nosync",
+    "alias": "may",
+    "branch": false,
+    "requested_components": 2,
+    "requested_writers": 1,
+    "requested_readers": 2
+  },
+  "pre_repair_reconstruction": {
+    "program_sha256": "0722bb98c9ca58c977508c2d9d6e7e922a8f03f054c6af0293850f32b6d94095",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  }
+}

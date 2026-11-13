@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "framework": "dubbo",
+  "cases": [
+    {
+      "case": "positive",
+      "server_pid": 3688,
+      "client_pid": 14600,
+      "actual": {
+        "positive": "hi, E2E_DUBBO_20261016_7f9132"
+      },
+      "expected": {
+        "positive": "hi, E2E_DUBBO_20261016_7f9132"
+      },
+      "provider_absent_exit": 1,
+      "passed": true
+    }
+  ],
+  "dependencies": {
+    "dubbo-3.3.0-beta.1.jar": "6f9a871f6eb00fcc391569da95a1d4933c63b7f69c81885e9ecc4334922749ff",
+    "fastjson2-2.0.40.jar": "0093f29ccce3949eaa9773b25db9a674d2ac7b75b5126356d05cf2da9ecc16dd",
+    "hessian-lite-3.2.13.jar": "691967b560a6bd0e4719cfbe24a47febb0a3d18ef8779f7b4f8b72537080befd",
+    "javassist-3.29.2-GA.jar": "a90ddb25135df9e57ea9bd4e224e219554929758f9bae9965f29f81d60a3293f",
+    "log4j-api-2.20.0.jar": "2f43eea679ea66f14ca0f13fec2a8600ac124f5a5231dcb4df8393eddcb97550",
+    "log4j-core-2.20.0.jar": "6137df848cdaed9f4d5076f75513c6c85da80b953f4e7acca38098b770763f55",
+    "log4j-slf4j-impl-2.20.0.jar": "776e3f6087bb82ec34ab6dd795a6dca6733b965ad0da0fa92cbe370fa9aac7bc",
+    "netty-all-4.1.97.Final.jar": "4f8f2f5a8bd3935a00cc58f3d2cebfeb75f53a68a225f172611a8658d54ffdfb",
+    "netty-buffer-4.1.97.Final.jar": "a4393f5b395486cc74d0325c9b41311abb9513ba0fd7ef8cf46e9345c3bffbea",
+    "netty-codec-4.1.97.Final.jar": "bcc96737a0f912fcf031cf8c45ebda352a90a40437db0832caad3d5a63618b38",
+    "netty-codec-dns-4.1.97.Final.jar": "c6752cb85574ac6cd54307287c2d699be8956522aa04231b07a018f2e3c42fcc",
+    "netty-codec-haproxy-4.1.97.Final.jar": "994d8cd2ae5b7d68d69836016cf9d13e906bd427fc446888fe21b5ef960485fb",
+    "netty-codec-http-4.1.97.Final.jar": "7d6cad9cbd015e41f69787ce6a34beeba032b381e32e88207908431dc812778a",
+    "netty-codec-http2-4.1.97.Final.jar": "51fabf675563b59dc51dde22d29dbc5a20f836469cf48b8d53a07d3db0d775ad",
+    "netty-codec-memcache-4.1.97.Final.jar": "5ad49017dc249e3a5bfa7143040a18cab10252256aa21ffe747c3ce14f29fbe7",
+    "netty-codec-mqtt-4.1.97.Final.jar": "99d6c40ca0719edf4bfabca0e102135de9d8452832ab3ffbf83ea638c02ae551",
+    "netty-codec-redis-4.1.97.Final.jar": "21b2275ef5dce387be5b622541067f21d7674baf56b0e97fb7252194a191ada9",
+    "netty-codec-smtp-4.1.97.Final.jar": "e49994da42b2252fc00036e568a29ab7d3ecbb36ef4524a046635d56d0629bc1",
+    "netty-codec-socks-4.1.97.Final.jar": "24081cae8a9685ff3fcde141f5050f28589c22e2ae6c447854e044df6d308028",
+    "netty-codec-stomp-4.1.97.Final.jar": "ccc224a29e727d5a89489c616da29dd8ced2fc28077bb461c3067b2c066e3ecb",
+    "netty-codec-xml-4.1.97.Final.jar": "f8144d0cd53296e023b60ab1becfa5017262c70728405ccf9dbfcf2c3ed9f32d",
+    "netty-common-4.1.97.Final.jar": "a8aca0c8e9347acc75c885ecc749195d9775369aa520b9276f2d1128210a6c17",
+    "netty-handler-4.1.97.Final.jar": "bd4771d19149cbc9c7464ed2d58035d79cdfed7adb59d38718b0d8e7a3dcc2de",
+    "netty-handler-proxy-4.1.97.Final.jar": "c789f30d0905a09b2a17c4cf397e1b57b0d63db714624eb0dec2282b9619e206",
+    "netty-handler-ssl-ocsp-4.1.97.Final.jar": "c237ef28da29170a8b9712ee9160e09c72cdb41f638f00244c01e5130b3c6215",
+    "netty-resolver-4.1.97.Final.jar": "38a018c6d9fb2cb11b72881354782b45080bbd20b9a0ad6cde28b80d431ed0b1",
+    "netty-resolver-dns-4.1.97.Final.jar": "6dd2fec118664198e502962357b22454911dfeb7eae272575ba30b059a1fcff4",
+    "netty-resolver-dns-classes-macos-4.1.97.Final.jar": "0ca34b5f2f5c80cc507104e8f5c5f0d24effc86e97d54c20bee4a7fb4294dc3a",
+    "netty-resolver-dns-native-macos-4.1.97.Final-osx-aarch_64.jar": "20770a0b2ec9010a2e1e454f3212f2beb1203b3747b832400a20ddbf578cb98d",
+    "netty-resolver-dns-native-macos-4.1.97.Final-osx-x86_64.jar": "eeb727de7d0312177741529fbd44c301420864e6a0e388bc2d3ca5cabeb4d1e2",
+    "netty-transport-4.1.97.Final.jar": "197fd2d6c6b4afe677d9e95bf2e36b49a0bcabdfce0583683fb73f29a3f5a407",
+    "netty-transport-classes-epoll-4.1.97.Final.jar": "ee65fa17fe65f18fd22269f92bddad85bfb3a263cf65eba01e116a2f30b86ff5",
+    "netty-transport-classes-kqueue-4.1.97.Final.jar": "964ef63eb24a5c979f0af473da13f9574497e11bd41543a66d10609d34013b9f",
+    "netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar": "93b5fe8f3829dcb5e033d8d40d59159366ff4cf8266c903bbd6a4aeed9e59bac",
+    "netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar": "1e83fc9f82e5415cdbb688c6a5c6bbbd7d198e9fdd6fdf64b3dc5d54dd1acfd0",
+    "netty-transport-native-kqueue-4.1.97.Final-osx-aarch_64.jar": "1a7d23ad342c8042c433b3959644cc5d3d0bf7f14d77f062529de1d29060e777",
+    "netty-transport-native-kqueue-4.1.97.Final-osx-x86_64.jar": "6870051aca7fa4dc5d0f2938036215a269504c50d2e36c4af38fd00d22ad7d95",
+    "netty-transport-native-unix-common-4.1.97.Final.jar": "412fe140257c2dda5a5e15bee911298bd61928d03ee6be4db588e82c196c5dc6",
+    "netty-transport-rxtx-4.1.97.Final.jar": "1b3b40a81b33e2bb42bd5ad044ac953e48de7a51b0f185529170ad1340fdbc4e",
+    "netty-transport-sctp-4.1.97.Final.jar": "1dfd9acee949e8bf801d0fd5a1442549c27e04499098e095f1c0f80a213a0835",
+    "netty-transport-udt-4.1.97.Final.jar": "a4a70cb66830091bb26f0bb676e599f84e39fb1d585dcc873e79c317929b8992",
+    "slf4j-api-1.7.30.jar": "cdba07964d1bb40a0761485c6b1e8c2f8fd9eb1d19c53928ac0d7f9510105c57",
+    "snakeyaml-2.2.jar": "1467931448a0817696ae2805b7b8b20bfb082652bf9c4efaed528930dc49389b",
+    "spring-aop-5.3.25.jar": "66286d471010391908e76c7248bbc877d01985f983f6bfe3733dd7078a45aafb",
+    "spring-beans-5.3.25.jar": "1f867f11e940fe7aa3959e92a1ae4e49b741e011ee063a743500f91f01b1af0b",
+    "spring-context-5.3.25.jar": "11fd1f648ac26acacf5adfdfc22a545dc25bf9bbbf894ac2c0aa2d90950d8dac",
+    "spring-context-support-1.0.11.jar": "227719b2063c0b93064ec34358d4a4e3b59d63c619ba9eb679095d287133ea92",
+    "spring-core-5.3.25.jar": "7c04129894aaf1a7b51de3afd0160469084edd5ef96dc9b516aca75de9d40627",
+    "spring-expression-5.3.25.jar": "95b4462bbce7193fc2bd2ac953d6b474b1c26b92d4a90c5a06dfc214562fa559",
+    "spring-jcl-5.3.25.jar": "21305099486ff70535d2939dc236e8ec179ae23fa9ac98b510c89d8287eba4ae"
+  }
+}

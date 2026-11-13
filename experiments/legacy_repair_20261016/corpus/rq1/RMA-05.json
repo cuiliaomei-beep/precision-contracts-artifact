@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "RMA-05",
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "a",
+      "b",
+      "c"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "RemoteWrite",
+        "component": "a",
+        "attributes": {
+          "region": "R",
+          "var": "x",
+          "value": 100,
+          "target": "c",
+          "tainted": true
+        }
+      },
+      {
+        "id": "e1",
+        "type": "RemoteRead",
+        "component": "b",
+        "attributes": {
+          "region": "R",
+          "var": "x",
+          "destination": "read",
+          "target": "c"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Sync",
+        "component": "b",
+        "attributes": {
+          "scope": "component",
+          "kind": "wait"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "Observe",
+        "component": "b",
+        "attributes": {
+          "point": "read",
+          "expr": {
+            "var": "read"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "a": {},
+        "b": {},
+        "c": {}
+      },
+      "memory_regions": {
+        "R": {
+          "owner": "c",
+          "values": {
+            "x": 0
+          }
+        }
+      },
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e2",
+          "e3"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {
+        "R": {
+          "x": false
+        }
+      },
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "4ae741fd6bb2eb7bd04b4293af3fb5df59dcb1cbde630b4f5bcd6557b5923f5a",
+  "coverage": {
+    "event_types": {
+      "RemoteWrite": 1,
+      "RemoteRead": 1,
+      "Sync": 1,
+      "Observe": 1
+    },
+    "rpc_present": false,
+    "rma_present": true,
+    "actual_family": "rma",
+    "branch": false,
+    "sync": true,
+    "may_alias": false,
+    "observations": 1,
+    "events": 4
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "8dace660dee42c810c76639c61be7c1b5c8d3e50d9b65c206c05c1ae3aa910c4",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "b::read": {
+      "values": [
+        0,
+        100
+      ],
+      "may_tainted": true
+    }
+  },
+  "expected_pending": []
+}

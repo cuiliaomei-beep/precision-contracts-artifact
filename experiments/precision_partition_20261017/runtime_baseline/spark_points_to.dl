@@ -1,0 +1,21 @@
+// Classical field-sensitive inclusion analysis over an exported Spark PAG.
+// The allocation abstraction, variable type masks, and PAG are fixed inputs.
+// AllocDotField sets in this Soot version have type=null (universal).
+.decl Alloc(obj:symbol,var:symbol)
+.input Alloc
+.decl Assign(src:symbol,dst:symbol)
+.input Assign
+.decl Store(src:symbol,base:symbol,field:symbol)
+.input Store
+.decl Load(base:symbol,field:symbol,dst:symbol)
+.input Load
+.decl Allowed(var:symbol,obj:symbol)
+.input Allowed
+.decl VarPointsTo(var:symbol,obj:symbol)
+.decl HeapPointsTo(base:symbol,field:symbol,obj:symbol)
+VarPointsTo(v,a) :- Alloc(a,v), Allowed(v,a).
+VarPointsTo(v,a) :- Assign(u,v), VarPointsTo(u,a), Allowed(v,a).
+HeapPointsTo(a,f,b) :- Store(s,v,f), VarPointsTo(v,a), VarPointsTo(s,b).
+VarPointsTo(v,b) :- Load(u,f,v), VarPointsTo(u,a), HeapPointsTo(a,f,b), Allowed(v,b).
+.output VarPointsTo
+.output HeapPointsTo

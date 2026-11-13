@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "RMA_Gen_009",
+  "family": "rma",
+  "kind": "generated",
+  "seed": 51,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "c0",
+      "c1"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "w0_source",
+          "value": 879320,
+          "tainted": false
+        }
+      },
+      {
+        "id": "e1",
+        "type": "RemoteWrite",
+        "component": "c0",
+        "attributes": {
+          "region": "R",
+          "var": "data",
+          "value": {
+            "var": "w0_source"
+          },
+          "target": "c1",
+          "possible_regions": [
+            "R",
+            "S"
+          ]
+        }
+      },
+      {
+        "id": "e2",
+        "type": "RemoteRead",
+        "component": "c1",
+        "attributes": {
+          "region": "R",
+          "var": "data",
+          "destination": "read0",
+          "target": "c1",
+          "possible_regions": [
+            "R",
+            "S"
+          ]
+        }
+      },
+      {
+        "id": "e3",
+        "type": "Observe",
+        "component": "c1",
+        "attributes": {
+          "point": "rma_result0",
+          "expr": {
+            "var": "read0"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "c0": {},
+        "c1": {}
+      },
+      "memory_regions": {
+        "R": {
+          "owner": "c1",
+          "values": {
+            "data": -15
+          }
+        },
+        "S": {
+          "owner": "",
+          "values": {
+            "data": -22
+          }
+        }
+      },
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e2",
+          "e3"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {
+        "R": {
+          "data": false
+        },
+        "S": {
+          "data": false
+        }
+      },
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {
+      "generator": {
+        "seed": 51,
+        "family": "rma",
+        "synchronization": "nosync",
+        "alias": "may",
+        "branch": false,
+        "requested_components": 2,
+        "requested_writers": 1,
+        "requested_readers": 1
+      }
+    }
+  },
+  "program_sha256": "5c0a1c19b583d4e0e3bc2124db4e561eb2ad84387739066eb3317606efeaa865",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 1,
+      "RemoteWrite": 1,
+      "RemoteRead": 1,
+      "Observe": 1
+    },
+    "rpc_present": false,
+    "rma_present": true,
+    "actual_family": "rma",
+    "branch": false,
+    "sync": false,
+    "may_alias": true,
+    "observations": 1,
+    "events": 4
+  },
+  "generator_metadata": {
+    "seed": 51,
+    "family": "rma",
+    "synchronization": "nosync",
+    "alias": "may",
+    "branch": false,
+    "requested_components": 2,
+    "requested_writers": 1,
+    "requested_readers": 1
+  },
+  "pre_repair_reconstruction": {
+    "program_sha256": "6076772421438fdb986b90c731eec07d77a04e8341f0d07a1b12241047bbeaa1",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  }
+}

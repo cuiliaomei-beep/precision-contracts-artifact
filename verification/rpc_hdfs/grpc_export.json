@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "case": "grpc/positive",
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\paper-artifact-20261113\\runs\\rpc-export-1794536070411342400\\positive.graph.json",
+      "graph_sha256": "4cda7552ee689211bf9e0284559cb13758b8baaa76145b673df74ce8c9e9ef38"
+    }
+  ],
+  "exporter_sha256": "fdd2693681e8cf46f30602f1d1d3fa4287744cb7b587e495f2e29167dcf29b63"
+}

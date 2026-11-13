@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "archives_sha256": [
+    "5a1d7e53d50590bbf6561820a7226b0520989299c5e7070dc1172556dc411b8e",
+    "3d359dfcd8270ab31fa350b12e6d80f5103bdeab199a713fdfe82a8d8d1dc190"
+  ],
+  "relation_count": 71,
+  "tuples_per_run": 11618755,
+  "all_actual_relation_bytes_equal": true,
+  "relations": [
+    {
+      "relation": "ApplicationClass",
+      "tuples": 1,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "ArrayIndexPointsTo",
+      "tuples": 43363,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Assign",
+      "tuples": 55715,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignCast",
+      "tuples": 17282,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignCast_From",
+      "tuples": 17291,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignCast_Type",
+      "tuples": 17291,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignHeapAllocation",
+      "tuples": 60234,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignHeapAllocation_Heap",
+      "tuples": 60262,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignInstruction_To",
+      "tuples": 155386,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignLocal",
+      "tuples": 77698,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "AssignLocal_From",
+      "tuples": 77833,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "CallGraphEdge",
+      "tuples": 27108,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "ClassInitializer",
+      "tuples": 1204,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "DirectSubclass",
+      "tuples": 4189,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "FieldInstruction_Signature",
+      "tuples": 92293,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Field_DeclaringType",
+      "tuples": 16664,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "HeapAllocation_Type",
+      "tuples": 46387,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "InitializedClass",
+      "tuples": 1181,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "InstanceFieldPointsTo",
+      "tuples": 3372422,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Instruction_Method",
+      "tuples": 448666,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadArrayIndex",
+      "tuples": 6936,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadArrayIndex_Base",
+      "tuples": 7055,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadArrayIndex_To",
+      "tuples": 7055,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadInstanceField",
+      "tuples": 48909,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadInstanceField_Base",
+      "tuples": 48976,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadInstanceField_To",
+      "tuples": 48976,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadStaticField",
+      "tuples": 19845,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "LoadStaticField_To",
+      "tuples": 19864,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "MainMethodDeclaration",
+      "tuples": 1,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "MethodImplemented",
+      "tuples": 38501,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "MethodInvocation_Base",
+      "tuples": 118029,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "MethodInvocation_Method",
+      "tuples": 141224,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "MethodLookup",
+      "tuples": 136034,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Method_DeclaringType",
+      "tuples": 41203,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Method_Descriptor",
+      "tuples": 41203,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Method_ParamTypes",
+      "tuples": 41203,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Method_ReturnType",
+      "tuples": 41203,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Method_SimpleName",
+      "tuples": 41203,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Reachable",
+      "tuples": 5965,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "ReturnNonvoid_Var",
+      "tuples": 32217,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "ReturnVar",
+      "tuples": 32031,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "SpecialMethodInvocation_Base",
+      "tuples": 37451,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StaticFieldPointsTo",
+      "tuples": 3994,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StaticMethodInvocation",
+      "tuples": 23195,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreArrayIndex",
+      "tuples": 20374,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreArrayIndex_Base",
+      "tuples": 20503,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreArrayIndex_From",
+      "tuples": 20503,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreInstanceField",
+      "tuples": 18025,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreInstanceField_Base",
+      "tuples": 18092,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreInstanceField_From",
+      "tuples": 18092,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreStaticField",
+      "tuples": 5361,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "StoreStaticField_From",
+      "tuples": 5361,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Subclass",
+      "tuples": 7819,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "SubtypeOf",
+      "tuples": 20267,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "SubtypeOfDifferent",
+      "tuples": 15305,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Superclass",
+      "tuples": 7819,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Superinterface",
+      "tuples": 5276,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "SupertypeOf",
+      "tuples": 20267,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "ThisVar",
+      "tuples": 33051,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "VarPointsTo",
+      "tuples": 4986481,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "Var_DeclaringMethod",
+      "tuples": 461123,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_Base",
+      "tuples": 80578,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_Descriptor",
+      "tuples": 80528,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_SimpleName",
+      "tuples": 80528,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isArrayType",
+      "tuples": 313,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isClassType",
+      "tuples": 4195,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isInterfaceType",
+      "tuples": 454,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isReferenceType",
+      "tuples": 4962,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isStaticMethodInvocation_Insn",
+      "tuples": 23195,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isType",
+      "tuples": 4962,
+      "actual_bytes_equal": true
+    },
+    {
+      "relation": "isVirtualMethodInvocation_Insn",
+      "tuples": 80578,
+      "actual_bytes_equal": true
+    }
+  ]
+}

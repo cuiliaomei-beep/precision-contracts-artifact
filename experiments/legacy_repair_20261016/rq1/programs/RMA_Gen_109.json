@@ -1,0 +1,294 @@
+{
+  "program": "RMA_Gen_109",
+  "program_sha256": "5d55f54bbe0cc31c2f47f0694847de48c70f75af64019822a1058dd890fc20f0",
+  "status": "passed",
+  "concrete": {
+    "c3::rma_result0": {
+      "kind": "set",
+      "values": [
+        15,
+        369291,
+        429615
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "c3::rma_result0": [
+      {
+        "value": 15,
+        "tainted": false
+      },
+      {
+        "value": 369291,
+        "tainted": true
+      },
+      {
+        "value": 429615,
+        "tainted": false
+      }
+    ]
+  },
+  "abstract": {
+    "c3::rma_result0": {
+      "kind": "set",
+      "constants": [
+        15,
+        369291,
+        429615
+      ],
+      "tainted": true
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 90,
+  "state_count": 46,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "c3::rma_result0": [
+        15,
+        369291,
+        429615
+      ]
+    },
+    "observation_outcomes": {
+      "c3::rma_result0": [
+        {
+          "value": 15,
+          "tainted": false
+        },
+        {
+          "value": 369291,
+          "tainted": true
+        },
+        {
+          "value": 429615,
+          "tainted": false
+        }
+      ]
+    },
+    "observation_taints": {
+      "c3::rma_result0": [
+        false,
+        true
+      ]
+    },
+    "schedule_count": 90,
+    "state_count": 46,
+    "transition_count": 72,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [
+      "e4"
+    ],
+    "terminal_state_count": 6,
+    "max_events": 6
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "w0_source": {
+              "kind": "set",
+              "constants": [
+                429615
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "w0_source": {
+              "kind": "set",
+              "constants": [
+                429615
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "data": {
+              "kind": "set",
+              "constants": [
+                429615
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "w1_source": {
+              "kind": "set",
+              "constants": [
+                369291
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "w1_source": {
+              "kind": "set",
+              "constants": [
+                369291
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "data": {
+              "kind": "set",
+              "constants": [
+                369291
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e4": {
+      "reachable": true,
+      "local_states": {
+        "c3": {
+          "component": "c3",
+          "values": {
+            "read0": {
+              "kind": "set",
+              "constants": [
+                15,
+                369291,
+                429615
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e5": {
+      "reachable": true,
+      "local_states": {
+        "c3": {
+          "component": "c3",
+          "values": {
+            "read0": {
+              "kind": "set",
+              "constants": [
+                15,
+                369291,
+                429615
+              ],
+              "tainted": true
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          15,
+          369291,
+          429615
+        ],
+        "tainted": true
+      }
+    }
+  },
+  "abstract_state_sha256": "f7cddae2979d81f7c97d05316526f6fd88c341431e68fd677eb0c4550f857eaf",
+  "expected_hand_observations": null,
+  "hand_expectation_match": null,
+  "expected_pending": null,
+  "pending_expectation_match": null,
+  "family": "rma",
+  "kind": "generated",
+  "seed": 151,
+  "seconds": 0.003187499998603016,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

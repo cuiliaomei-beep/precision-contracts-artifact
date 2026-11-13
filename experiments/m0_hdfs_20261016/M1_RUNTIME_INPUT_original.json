@@ -1,0 +1,877 @@
+{
+  "provenance": "Heap fixture contracts from executed fixture source; runtime identity/request arguments only; no outcome labels",
+  "families": [
+    {
+      "id": "runtime_matching_holder_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "matching_holder_a",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_matching_holder_b",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "matching_holder_b",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_cross_holder",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "cross_holder",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_cross_valid_file_id_matching_second_holder",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "cross_valid_file_id_matching_second_holder",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_cross_valid_file_id_wrong_holder",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "cross_valid_file_id_wrong_holder",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_unknown_file_id",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "unknown_file_id",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_closed_file_rejected",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "closed_file_rejected",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "runtime_directory_rejected",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            },
+            "16385": {
+              "ref": "root"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16385,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          },
+          "path": "/",
+          "name": "",
+          "features": {},
+          "snapshot": false
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "directory_rejected",
+          "path": "/",
+          "file_id": 16385,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        }
+      ]
+    }
+  ]
+}

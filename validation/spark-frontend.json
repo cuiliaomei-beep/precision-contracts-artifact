@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "variables": 332,
+  "allocations": 38,
+  "variable_facts": 401,
+  "heap_facts": 38,
+  "source_download_hashes_verified": true,
+  "same_memberships_as_supplied_graph": true,
+  "python_result_equals_new_spark_result": true,
+  "scope": "application-only Java8 classes, Java17 exporter, supplied Java8 runtime library",
+  "maven_dependency_recipe_executed": true,
+  "maven_export_memberships_equal": true
+}

@@ -1,0 +1,11 @@
+--- org/apache/hadoop/hdfs/server/namenode/FSNamesystem.java (official3.3.6)
++++ org/apache/hadoop/hdfs/server/namenode/FSNamesystem.java (derived holder-check removed)
+@@ -3119,7 +3119,7 @@
+           + leaseExceptionString(src, fileId, holder));
+     }
+     final String owner = file.getFileUnderConstructionFeature().getClientName();
+-    if (holder != null && !owner.equals(holder)) {
++    if (false && holder != null && !owner.equals(holder)) {
+       throw new LeaseExpiredException("Client (=" + holder
+           + ") is not the lease owner (=" + owner + ": "
+           + leaseExceptionString(src, fileId, holder));

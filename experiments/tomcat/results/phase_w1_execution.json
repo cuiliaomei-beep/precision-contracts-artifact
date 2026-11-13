@@ -1,0 +1,26 @@
+{
+  "name": "phase_w1",
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/phase_w1/gnutime.txt",
+    "timeout",
+    "-k",
+    "3s",
+    "240s",
+    "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/doop_phase_driver",
+    "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/tomcat_facts/tomcat",
+    "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/outputs/phase_w1",
+    "1",
+    "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/phase_w1_phases.json"
+  ],
+  "command_shell": "/usr/bin/time -v -o /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/phase_w1/gnutime.txt timeout -k 3s 240s /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/doop_phase_driver /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/tomcat_facts/tomcat /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/outputs/phase_w1 1 /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/phase_w1_phases.json",
+  "exit_code": 0,
+  "wall_seconds": 145.01703359998646,
+  "timebox_seconds": 240,
+  "timeout": false,
+  "peak_rss_kib": 630704,
+  "complete": true,
+  "linux_metrics": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\runtime_baseline\\runs\\phase_w1\\gnutime.txt"
+}

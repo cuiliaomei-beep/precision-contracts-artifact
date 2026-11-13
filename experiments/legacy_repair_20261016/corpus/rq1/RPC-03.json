@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "id": "RPC-03",
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "client",
+      "server"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "server",
+        "attributes": {
+          "var": "x",
+          "value": 42,
+          "tainted": false
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Send",
+        "component": "client",
+        "attributes": {
+          "destination": "server",
+          "msg_type": "REQ_get_value",
+          "data": {},
+          "message_id": "rpc1_client_server_get_value:request",
+          "call_id": "rpc1_client_server_get_value"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Receive",
+        "component": "server",
+        "attributes": {
+          "source": "client",
+          "msg_type": "REQ_get_value",
+          "message_id": "rpc1_client_server_get_value:request",
+          "bindings": {},
+          "call_id": "rpc1_client_server_get_value"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "server",
+        "attributes": {
+          "var": "_return_rpc1_client_server_get_value",
+          "value": {
+            "var": "x"
+          },
+          "tainted": false,
+          "call_id": "rpc1_client_server_get_value"
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "server",
+        "attributes": {
+          "destination": "client",
+          "msg_type": "RESP_get_value",
+          "data": {
+            "result": {
+              "var": "_return_rpc1_client_server_get_value"
+            }
+          },
+          "message_id": "rpc1_client_server_get_value:response",
+          "call_id": "rpc1_client_server_get_value"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "client",
+        "attributes": {
+          "source": "server",
+          "msg_type": "RESP_get_value",
+          "message_id": "rpc1_client_server_get_value:response",
+          "bindings": {
+            "result": "received"
+          },
+          "call_id": "rpc1_client_server_get_value"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "Observe",
+        "component": "client",
+        "attributes": {
+          "point": "received",
+          "expr": {
+            "var": "received"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "client": {},
+        "server": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e2"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e1",
+          "e5"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "765f1496ac9e79f5d5f3f7ca6e5c8208a95dd92b9895e7f5467e27dd941cefa4",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 2,
+      "Send": 2,
+      "Receive": 2,
+      "Observe": 1
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": false,
+    "sync": false,
+    "may_alias": false,
+    "observations": 1,
+    "events": 7
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "b0ccaea61690424e54d3329991cf3fa4af4c4213265dbd892c7924f339910c83",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "client::received": {
+      "values": [
+        42
+      ],
+      "may_tainted": false
+    }
+  },
+  "expected_pending": []
+}

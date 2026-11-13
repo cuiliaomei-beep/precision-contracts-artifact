@@ -1,0 +1,175 @@
+{
+  "id": "021_Random_w4_s0",
+  "strategy": "Random",
+  "workers": 4,
+  "seed": 0,
+  "schedule": "BSP",
+  "status": "passed",
+  "partition_seconds": 0.00028819999897677917,
+  "metrics": {
+    "wall_seconds": 0.5886644000001979,
+    "rounds": 12,
+    "active_workers": 4,
+    "worker_metrics": [
+      {
+        "updates": 1,
+        "records": 1,
+        "batches": 1,
+        "payload_bytes": 23,
+        "serialized_envelope_bytes": 709,
+        "control_envelopes": 35,
+        "duplicate_records": 0,
+        "rounds": 12,
+        "compute_seconds": 0.00270950000412995,
+        "peak_rss_mb": 28.594176
+      },
+      {
+        "updates": 3,
+        "records": 3,
+        "batches": 3,
+        "payload_bytes": 69,
+        "serialized_envelope_bytes": 759,
+        "control_envelopes": 33,
+        "duplicate_records": 0,
+        "rounds": 12,
+        "compute_seconds": 0.002416199999061064,
+        "peak_rss_mb": 28.667904
+      },
+      {
+        "updates": 4,
+        "records": 4,
+        "batches": 4,
+        "payload_bytes": 92,
+        "serialized_envelope_bytes": 784,
+        "control_envelopes": 32,
+        "duplicate_records": 0,
+        "rounds": 12,
+        "compute_seconds": 0.002738000001045293,
+        "peak_rss_mb": 28.48768
+      },
+      {
+        "updates": 4,
+        "records": 2,
+        "batches": 2,
+        "payload_bytes": 46,
+        "serialized_envelope_bytes": 734,
+        "control_envelopes": 34,
+        "duplicate_records": 0,
+        "rounds": 12,
+        "compute_seconds": 0.0026505999976507155,
+        "peak_rss_mb": 28.659712
+      }
+    ],
+    "residual_equations": 0,
+    "cut_edges": 24,
+    "updates": 12,
+    "records": 10,
+    "batches": 10,
+    "payload_bytes": 230,
+    "serialized_envelope_bytes": 2986,
+    "control_envelopes": 134,
+    "duplicate_records": 0,
+    "peak_worker_rss_mb": 28.667904,
+    "sum_peak_worker_rss_mb": 114.409472,
+    "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+    "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+    "coordinator_round_control_messages": 96,
+    "coordinator_final_state_messages": 4
+  },
+  "placement": {
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@0:entry_param0": 1,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition": 1,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]": 1,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]": 3,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object": 1,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive": 2,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]": 2,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]": 3,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition": 3,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]": 2,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]": 0,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:sink": 2,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]": 1,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition": 3,
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]": 0,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:observer_identity": 3,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object": 3,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive": 3,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object": 3,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition": 2,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[\"fixed-response\"]": 1,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]": 0,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition": 1,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]": 2,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]": 2,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext": 1,
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]": 2
+  },
+  "states": {
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@0:entry_param0": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:definition": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[input]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:definition": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[$stack13]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:definition": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_object": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:request_send": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:response_receive": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[request]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:definition": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[response]": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:sink": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@14:value[$stack14]": [],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:definition": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:observer_identity": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive": [
+      "entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[\"fixed-response\"]": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>(\"fixed-response\")]": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:definition": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[$stack5]": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@5:value[virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:onNext": [],
+    "rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]|<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[reply]": []
+  },
+  "states_sha256": "f9fcf07351c6c2f78acdd08e15d911879ad896274442a71f01ecd8de6336bba5",
+  "mismatched_nodes": []
+}

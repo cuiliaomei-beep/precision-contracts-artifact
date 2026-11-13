@@ -1,0 +1,102 @@
+{
+  "framework": "dubbo",
+  "timestamp_utc": "2026-10-16T05:33:33Z",
+  "scenarios": [
+    {
+      "name": "positive",
+      "provider_pid": 7656,
+      "consumer_pid": 17768,
+      "separate_jvms": true,
+      "provider_ready": true,
+      "provider_exit_before_consumer": null,
+      "consumer_exit": 0,
+      "actual_sinks": {
+        "positive": "hi, E2E_DUBBO_20261016_7f9132"
+      },
+      "expected_sinks": {
+        "positive": "hi, E2E_DUBBO_20261016_7f9132"
+      },
+      "pass": true,
+      "elapsed_consumer_seconds": 3.75,
+      "provider_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\positive_provider.log",
+      "consumer_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\positive_consumer.log"
+    },
+    {
+      "name": "clean_sink",
+      "provider_pid": 18600,
+      "consumer_pid": 11204,
+      "separate_jvms": true,
+      "provider_ready": true,
+      "provider_exit_before_consumer": null,
+      "consumer_exit": 0,
+      "actual_sinks": {
+        "clean_sink": "fixed-sink"
+      },
+      "expected_sinks": {
+        "clean_sink": "fixed-sink"
+      },
+      "pass": true,
+      "elapsed_consumer_seconds": 3.0309999999990396,
+      "provider_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\clean_sink_provider.log",
+      "consumer_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\clean_sink_consumer.log"
+    },
+    {
+      "name": "constant_reply",
+      "provider_pid": 14456,
+      "consumer_pid": 19736,
+      "separate_jvms": true,
+      "provider_ready": true,
+      "provider_exit_before_consumer": null,
+      "consumer_exit": 0,
+      "actual_sinks": {
+        "constant_reply": "fixed-reply"
+      },
+      "expected_sinks": {
+        "constant_reply": "fixed-reply"
+      },
+      "pass": true,
+      "elapsed_consumer_seconds": 3.1090000000003783,
+      "provider_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\constant_reply_provider.log",
+      "consumer_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\constant_reply_consumer.log"
+    },
+    {
+      "name": "two_calls",
+      "provider_pid": 14528,
+      "consumer_pid": 17972,
+      "separate_jvms": true,
+      "provider_ready": true,
+      "provider_exit_before_consumer": null,
+      "consumer_exit": 0,
+      "actual_sinks": {
+        "two_calls_source": "hi, E2E_DUBBO_20261016_7f9132",
+        "two_calls_clean": "hi, clean-literal"
+      },
+      "expected_sinks": {
+        "two_calls_source": "hi, E2E_DUBBO_20261016_7f9132",
+        "two_calls_clean": "hi, clean-literal"
+      },
+      "pass": true,
+      "elapsed_consumer_seconds": 2.936999999999898,
+      "provider_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\two_calls_provider.log",
+      "consumer_log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\two_calls_consumer.log"
+    }
+  ],
+  "provider_off": {
+    "command": [
+      "D:\\wsl\\realsystems\\jdk\\win\\jdk-17.0.20.1+1\\bin\\java.exe",
+      "-Djdk.net.unixdomain.tmpdir=D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\tmp",
+      "-Ddubbo.application.qos-enable=false",
+      "-Ddubbo.application.register-mode=instance",
+      "-cp",
+      "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\classes;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\dubbo-3.3.0-beta.1.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\fastjson2-2.0.40.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\hessian-lite-3.2.13.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\javassist-3.29.2-GA.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-api-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-core-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-slf4j-impl-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-all-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-buffer-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-dns-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-haproxy-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-http-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-http2-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-memcache-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-mqtt-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-redis-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-smtp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-socks-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-stomp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-xml-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-common-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-proxy-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-ssl-ocsp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-classes-macos-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-native-macos-4.1.97.Final-osx-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-native-macos-4.1.97.Final-osx-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-classes-epoll-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-classes-kqueue-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-kqueue-4.1.97.Final-osx-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-kqueue-4.1.97.Final-osx-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-unix-common-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-rxtx-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-sctp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-udt-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\slf4j-api-1.7.30.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\snakeyaml-2.2.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-aop-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-beans-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-context-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-context-support-1.0.11.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-core-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-expression-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-jcl-5.3.25.jar",
+      "e2e.dubbo.PositiveConsumer",
+      "E2E_DUBBO_20261016_7f9132",
+      "50052"
+    ],
+    "exit_code": 1,
+    "actual_sinks": {},
+    "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\logs\\provider_off_consumer.log",
+    "pass": true
+  },
+  "all_pass": true
+}

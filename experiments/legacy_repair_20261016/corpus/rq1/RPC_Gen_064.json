@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "id": "RPC_Gen_064",
+  "family": "rpc",
+  "kind": "generated",
+  "seed": 106,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "c0",
+      "c1",
+      "c2",
+      "c3"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_source",
+          "value": 745206,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Branch",
+        "component": "c0",
+        "attributes": {
+          "condition": {
+            "op": "gt",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              745205
+            ]
+          },
+          "decision": "rpc0_decision"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_payload",
+          "value": {
+            "op": "add",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              5
+            ]
+          },
+          "tainted": false,
+          "guard": {
+            "decision": "rpc0_decision",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_payload",
+          "value": {
+            "op": "sub",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              5
+            ]
+          },
+          "tainted": false,
+          "guard": {
+            "decision": "rpc0_decision",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "c0",
+        "attributes": {
+          "destination": "c1",
+          "msg_type": "REQ_generated0",
+          "data": {
+            "arg0": {
+              "var": "rpc0_payload"
+            }
+          },
+          "message_id": "rpc4_c0_c1_generated0:request",
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "c1",
+        "attributes": {
+          "source": "c0",
+          "msg_type": "REQ_generated0",
+          "message_id": "rpc4_c0_c1_generated0:request",
+          "bindings": {
+            "arg0": "arg0"
+          },
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "LocalAssign",
+        "component": "c1",
+        "attributes": {
+          "var": "_return_rpc4_c0_c1_generated0",
+          "value": {
+            "op": "add",
+            "args": [
+              {
+                "var": "arg0"
+              },
+              7
+            ]
+          },
+          "tainted": false,
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e7",
+        "type": "Send",
+        "component": "c1",
+        "attributes": {
+          "destination": "c0",
+          "msg_type": "RESP_generated0",
+          "data": {
+            "result": {
+              "var": "_return_rpc4_c0_c1_generated0"
+            }
+          },
+          "message_id": "rpc4_c0_c1_generated0:response",
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e8",
+        "type": "Receive",
+        "component": "c0",
+        "attributes": {
+          "source": "c1",
+          "msg_type": "RESP_generated0",
+          "message_id": "rpc4_c0_c1_generated0:response",
+          "bindings": {
+            "result": "result0"
+          },
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e9",
+        "type": "Observe",
+        "component": "c0",
+        "attributes": {
+          "point": "rpc_result0",
+          "expr": {
+            "var": "result0"
+          }
+        }
+      },
+      {
+        "id": "e10",
+        "type": "LocalAssign",
+        "component": "c3",
+        "attributes": {
+          "var": "rpc1_source",
+          "value": 59439,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e11",
+        "type": "Send",
+        "component": "c3",
+        "attributes": {
+          "destination": "c1",
+          "msg_type": "REQ_generated1",
+          "data": {
+            "arg1": {
+              "var": "rpc1_source"
+            }
+          },
+          "message_id": "rpc11_c3_c1_generated1:request",
+          "call_id": "rpc11_c3_c1_generated1"
+        }
+      },
+      {
+        "id": "e12",
+        "type": "Receive",
+        "component": "c1",
+        "attributes": {
+          "source": "c3",
+          "msg_type": "REQ_generated1",
+          "message_id": "rpc11_c3_c1_generated1:request",
+          "bindings": {
+            "arg1": "arg1"
+          },
+          "call_id": "rpc11_c3_c1_generated1"
+        }
+      },
+      {
+        "id": "e13",
+        "type": "LocalAssign",
+        "component": "c1",
+        "attributes": {
+          "var": "_return_rpc11_c3_c1_generated1",
+          "value": {
+            "op": "add",
+            "args": [
+              {
+                "var": "arg1"
+              },
+              -7
+            ]
+          },
+          "tainted": false,
+          "call_id": "rpc11_c3_c1_generated1"
+        }
+      },
+      {
+        "id": "e14",
+        "type": "Send",
+        "component": "c1",
+        "attributes": {
+          "destination": "c3",
+          "msg_type": "RESP_generated1",
+          "data": {
+            "result": {
+              "var": "_return_rpc11_c3_c1_generated1"
+            }
+          },
+          "message_id": "rpc11_c3_c1_generated1:response",
+          "call_id": "rpc11_c3_c1_generated1"
+        }
+      },
+      {
+        "id": "e15",
+        "type": "Receive",
+        "component": "c3",
+        "attributes": {
+          "source": "c1",
+          "msg_type": "RESP_generated1",
+          "message_id": "rpc11_c3_c1_generated1:response",
+          "bindings": {
+            "result": "result1"
+          },
+          "call_id": "rpc11_c3_c1_generated1"
+        }
+      },
+      {
+        "id": "e16",
+        "type": "Observe",
+        "component": "c3",
+        "attributes": {
+          "point": "rpc_result1",
+          "expr": {
+            "var": "result1"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "c0": {},
+        "c1": {},
+        "c2": {},
+        "c3": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e10",
+          "e11"
+        ],
+        [
+          "e11",
+          "e12"
+        ],
+        [
+          "e11",
+          "e15"
+        ],
+        [
+          "e12",
+          "e13"
+        ],
+        [
+          "e13",
+          "e14"
+        ],
+        [
+          "e14",
+          "e15"
+        ],
+        [
+          "e15",
+          "e16"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e4",
+          "e8"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e12"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {
+      "generator": {
+        "seed": 106,
+        "family": "rpc",
+        "synchronization": "nosync",
+        "alias": "may",
+        "branch": true,
+        "requested_components": 4,
+        "requested_writers": 2,
+        "requested_readers": 1
+      }
+    }
+  },
+  "program_sha256": "d0ec74a2eb0af68efd4604538d5ab5cac25a2e50350a18d53f7066bb3ed7748a",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 6,
+      "Branch": 1,
+      "Send": 4,
+      "Receive": 4,
+      "Observe": 2
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": true,
+    "sync": false,
+    "may_alias": false,
+    "observations": 2,
+    "events": 17
+  },
+  "generator_metadata": {
+    "seed": 106,
+    "family": "rpc",
+    "synchronization": "nosync",
+    "alias": "may",
+    "branch": true,
+    "requested_components": 4,
+    "requested_writers": 2,
+    "requested_readers": 1
+  },
+  "pre_repair_reconstruction": {
+    "program_sha256": "14e7e8a72f07017db0509c0088fd75095fa9f7ecc22fa8aad119df8ccc93ba44",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  }
+}

@@ -1,0 +1,631 @@
+{
+  "kind": "Fixture construction-derived input facts, separate from runtime output oracle",
+  "runs": [
+    {
+      "run": "runs/run_003_original",
+      "construction_source": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\hdfs_runtime\\runs\\run_003_original\\input_sources\\HdfsClient.java",
+      "construction_source_sha256": "06ac34a84e5538c4f46b610b2657ed1366f62987a64a3c445b42c9dd23f08aa8",
+      "input_identifiers_source": "Actual typed request arguments and DFSClient fixture identifiers; no outcome/expected/pass fields consumed.",
+      "construction_evidence": {
+        "regular_files_created_and_streams_kept_open": [
+          {
+            "line": 53,
+            "text": "try (OutputStream openedA = a.create(path1, false);"
+          },
+          {
+            "line": 54,
+            "text": "OutputStream openedB = b.create(path2, false)) {"
+          }
+        ],
+        "actual_inode_ids_read": [
+          {
+            "line": 55,
+            "text": "id1 = a.getFileInfo(path1).getFileId();"
+          },
+          {
+            "line": 56,
+            "text": "long id2 = b.getFileInfo(path2).getFileId();"
+          }
+        ],
+        "actual_client_owner_names": [
+          {
+            "line": 52,
+            "text": "String holderA = a.getClientName(), holderB = b.getClientName();"
+          }
+        ],
+        "closed_phase_call_after_try_with_resources": [
+          {
+            "line": 71,
+            "text": "cases.add(invoke(\"closed_file_rejected\", a.getNamenode(), path1, id1, holderA, leaseError));"
+          }
+        ],
+        "root_directory_id_read": [
+          {
+            "line": 72,
+            "text": "long directoryId = a.getFileInfo(\"/\").getFileId();"
+          }
+        ]
+      },
+      "assumptions": [
+        "Closed fixture has no delete operations or third-party file namespace mutations during these calls.",
+        "Successful DFSClient.create produces a regular under-construction file owned by that client until its output stream closes.",
+        "Try-with-resources closes both streams before closed-file and directory probes.",
+        "Facts describe the local test fixture only, not the general HDFS heap."
+      ],
+      "cases": [
+        {
+          "case_id": "matching_holder_a",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "matching_holder_b",
+          "request": {
+            "src": "/m0-file-b",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_valid_file_id_matching_second_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_valid_file_id_wrong_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "unknown_file_id",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 9223372036854775790,
+            "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-155440336_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-1205120317_1"
+            }
+          ],
+          "absent_file_ids": [
+            9223372036854775790
+          ]
+        },
+        {
+          "case_id": "closed_file_rejected",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+            "last_block_length": 0
+          },
+          "phase": "after_try_with_resources_closed_both_output_streams",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "directory_rejected",
+          "request": {
+            "src": "/",
+            "file_id": 16385,
+            "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+            "last_block_length": 0
+          },
+          "phase": "after_try_with_resources_closed_both_output_streams",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16385,
+              "path": "/",
+              "kind": "directory",
+              "is_file": false,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            }
+          ],
+          "absent_file_ids": []
+        }
+      ]
+    },
+    {
+      "run": "runs/run_001_holder_check_removed",
+      "construction_source": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\hdfs_runtime\\runs\\run_001_holder_check_removed\\input_sources\\HdfsClient.java",
+      "construction_source_sha256": "06ac34a84e5538c4f46b610b2657ed1366f62987a64a3c445b42c9dd23f08aa8",
+      "input_identifiers_source": "Actual typed request arguments and DFSClient fixture identifiers; no outcome/expected/pass fields consumed.",
+      "construction_evidence": {
+        "regular_files_created_and_streams_kept_open": [
+          {
+            "line": 53,
+            "text": "try (OutputStream openedA = a.create(path1, false);"
+          },
+          {
+            "line": 54,
+            "text": "OutputStream openedB = b.create(path2, false)) {"
+          }
+        ],
+        "actual_inode_ids_read": [
+          {
+            "line": 55,
+            "text": "id1 = a.getFileInfo(path1).getFileId();"
+          },
+          {
+            "line": 56,
+            "text": "long id2 = b.getFileInfo(path2).getFileId();"
+          }
+        ],
+        "actual_client_owner_names": [
+          {
+            "line": 52,
+            "text": "String holderA = a.getClientName(), holderB = b.getClientName();"
+          }
+        ],
+        "closed_phase_call_after_try_with_resources": [
+          {
+            "line": 71,
+            "text": "cases.add(invoke(\"closed_file_rejected\", a.getNamenode(), path1, id1, holderA, leaseError));"
+          }
+        ],
+        "root_directory_id_read": [
+          {
+            "line": 72,
+            "text": "long directoryId = a.getFileInfo(\"/\").getFileId();"
+          }
+        ]
+      },
+      "assumptions": [
+        "Closed fixture has no delete operations or third-party file namespace mutations during these calls.",
+        "Successful DFSClient.create produces a regular under-construction file owned by that client until its output stream closes.",
+        "Try-with-resources closes both streams before closed-file and directory probes.",
+        "Facts describe the local test fixture only, not the general HDFS heap."
+      ],
+      "cases": [
+        {
+          "case_id": "matching_holder_a",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "matching_holder_b",
+          "request": {
+            "src": "/m0-file-b",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_valid_file_id_matching_second_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "cross_valid_file_id_wrong_holder",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16387,
+            "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "unknown_file_id",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 9223372036854775790,
+            "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+            "last_block_length": 0
+          },
+          "phase": "both_output_streams_open",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-361008449_1"
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": true,
+              "lease_owner": "DFSClient_NONMAPREDUCE_-391018369_1"
+            }
+          ],
+          "absent_file_ids": [
+            9223372036854775790
+          ]
+        },
+        {
+          "case_id": "closed_file_rejected",
+          "request": {
+            "src": "/m0-file-a",
+            "file_id": 16386,
+            "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+            "last_block_length": 0
+          },
+          "phase": "after_try_with_resources_closed_both_output_streams",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            }
+          ],
+          "absent_file_ids": []
+        },
+        {
+          "case_id": "directory_rejected",
+          "request": {
+            "src": "/",
+            "file_id": 16385,
+            "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+            "last_block_length": 0
+          },
+          "phase": "after_try_with_resources_closed_both_output_streams",
+          "inode_map": [
+            {
+              "id": 16386,
+              "path": "/m0-file-a",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16387,
+              "path": "/m0-file-b",
+              "kind": "file",
+              "is_file": true,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            },
+            {
+              "id": 16385,
+              "path": "/",
+              "kind": "directory",
+              "is_file": false,
+              "deleted": false,
+              "under_construction": false,
+              "lease_owner": null
+            }
+          ],
+          "absent_file_ids": []
+        }
+      ]
+    }
+  ]
+}

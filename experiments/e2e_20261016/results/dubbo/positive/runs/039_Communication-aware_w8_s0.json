@@ -1,0 +1,201 @@
+{
+  "id": "039_Communication-aware_w8_s0",
+  "strategy": "Communication-aware",
+  "workers": 8,
+  "seed": 0,
+  "schedule": "BSP",
+  "status": "passed",
+  "partition_seconds": 0.0013094999994791579,
+  "metrics": {
+    "wall_seconds": 0.47935580000012123,
+    "rounds": 16,
+    "active_workers": 7,
+    "worker_metrics": [
+      {
+        "updates": 3,
+        "records": 2,
+        "batches": 2,
+        "payload_bytes": 46,
+        "serialized_envelope_bytes": 1874,
+        "control_envelopes": 94,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.0030225999998947373,
+        "peak_rss_mb": 28.71296
+      },
+      {
+        "updates": 3,
+        "records": 3,
+        "batches": 3,
+        "payload_bytes": 69,
+        "serialized_envelope_bytes": 1899,
+        "control_envelopes": 93,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.003396699999939301,
+        "peak_rss_mb": 28.667904
+      },
+      {
+        "updates": 0,
+        "records": 1,
+        "batches": 1,
+        "payload_bytes": 23,
+        "serialized_envelope_bytes": 1849,
+        "control_envelopes": 95,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.0031789000058779493,
+        "peak_rss_mb": 28.684288
+      },
+      {
+        "updates": 3,
+        "records": 2,
+        "batches": 2,
+        "payload_bytes": 46,
+        "serialized_envelope_bytes": 1874,
+        "control_envelopes": 94,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.003081299999394105,
+        "peak_rss_mb": 28.717056
+      },
+      {
+        "updates": 3,
+        "records": 2,
+        "batches": 2,
+        "payload_bytes": 46,
+        "serialized_envelope_bytes": 1874,
+        "control_envelopes": 94,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.0031472000027861213,
+        "peak_rss_mb": 28.75392
+      },
+      {
+        "updates": 3,
+        "records": 3,
+        "batches": 3,
+        "payload_bytes": 69,
+        "serialized_envelope_bytes": 1899,
+        "control_envelopes": 93,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.0034156000019720523,
+        "peak_rss_mb": 28.602368
+      },
+      {
+        "updates": 3,
+        "records": 2,
+        "batches": 2,
+        "payload_bytes": 46,
+        "serialized_envelope_bytes": 1874,
+        "control_envelopes": 94,
+        "duplicate_records": 0,
+        "rounds": 16,
+        "compute_seconds": 0.0035323000029165996,
+        "peak_rss_mb": 28.934144
+      }
+    ],
+    "residual_equations": 0,
+    "cut_edges": 15,
+    "updates": 18,
+    "records": 15,
+    "batches": 15,
+    "payload_bytes": 345,
+    "serialized_envelope_bytes": 13143,
+    "control_envelopes": 657,
+    "duplicate_records": 0,
+    "peak_worker_rss_mb": 28.934144,
+    "sum_peak_worker_rss_mb": 201.07264,
+    "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+    "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+    "coordinator_round_control_messages": 224,
+    "coordinator_final_state_messages": 7
+  },
+  "placement": {
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param0": 2,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param1": 2,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition": 4,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)]": 2,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition": 4,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object": 4,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send": 3,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive": 3,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]": 0,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]": 0,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:sink": 3,
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[reply]": 0,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object": 5,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive": 5,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object": 5,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition": 6,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]": 6,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition": 6,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]": 1,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]": 1,
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]": 1
+  },
+  "states": {
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param0": [],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param1": [],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:sink": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[reply]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ],
+    "rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]": [
+      "entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+    ]
+  },
+  "states_sha256": "96907f9c08de875adbb51b58ee18f51274fb4099e8fa8292900366450cbc4711",
+  "mismatched_nodes": []
+}

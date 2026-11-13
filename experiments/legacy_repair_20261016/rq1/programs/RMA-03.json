@@ -1,0 +1,167 @@
+{
+  "program": "RMA-03",
+  "program_sha256": "7010ec6615fd38935d41eb0b851fe7903c002d6aa62a884dc245da22b35ac7f5",
+  "status": "passed",
+  "concrete": {
+    "origin::read": {
+      "kind": "set",
+      "values": [
+        42
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "origin::read": [
+      {
+        "value": 42,
+        "tainted": false
+      }
+    ]
+  },
+  "abstract": {
+    "origin::read": {
+      "kind": "set",
+      "constants": [
+        42
+      ],
+      "tainted": false
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 1,
+  "state_count": 4,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "origin::read": [
+        42
+      ]
+    },
+    "observation_outcomes": {
+      "origin::read": [
+        {
+          "value": 42,
+          "tainted": false
+        }
+      ]
+    },
+    "observation_taints": {
+      "origin::read": [
+        false
+      ]
+    },
+    "schedule_count": 1,
+    "state_count": 4,
+    "transition_count": 3,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 1,
+    "max_events": 3
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "origin": {
+          "component": "origin",
+          "values": {
+            "read": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          42
+        ],
+        "tainted": false
+      }
+    }
+  },
+  "abstract_state_sha256": "31bd5d65fa005582697eb99e734d18080529d520931bf04aa09b6098438b551a",
+  "expected_hand_observations": {
+    "origin::read": {
+      "values": [
+        42
+      ],
+      "may_tainted": false
+    }
+  },
+  "hand_expectation_match": true,
+  "expected_pending": [],
+  "pending_expectation_match": true,
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "seconds": 0.0005916999998589745,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

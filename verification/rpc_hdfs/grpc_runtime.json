@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "framework": "grpc",
+  "cases": [
+    {
+      "case": "positive",
+      "server_pid": 13328,
+      "client_pid": 6716,
+      "actual": {
+        "response": "Hello E2E_GRPC_20261016_9e74b2"
+      },
+      "expected": {
+        "response": "Hello E2E_GRPC_20261016_9e74b2"
+      },
+      "provider_absent_exit": 1,
+      "passed": true
+    }
+  ],
+  "dependencies": {
+    "grpc-api-1.66.0-SNAPSHOT.jar": "3d8b4919267e1c4ff0c3763a0f01dd6956fa69e4d5ae6cd30488aa70130b151b",
+    "grpc-context-1.66.0-SNAPSHOT.jar": "25ea7b48f1c657d21fb9ff988639a6165938b1d9177e166bd90f04a8361f4d0c",
+    "grpc-core-1.66.0-SNAPSHOT.jar": "d54d37939987ecdf1db216ff37d5240f720edc6012169d46294fea4cb66dc63a",
+    "grpc-util-1.66.0-SNAPSHOT.jar": "13aded6deb1f5df31eae23f5e1004e92dea991973ef45eafc83d1d264402c46d",
+    "grpc-netty-shaded-1.66.0-SNAPSHOT.jar": "68de98b193c0c223ab9f24b9af2b10f3118c6e94398c62dc9874e7402a21b840",
+    "grpc-protobuf-1.66.0-SNAPSHOT.jar": "5233801762e9cf06ea1672d8875a4aaefcbf343d43305aa5fddf76b84eb7bec6",
+    "grpc-protobuf-lite-1.66.0-SNAPSHOT.jar": "4df7dc4d83808c0a883c1d6573c6ba71e825397b115c37df005f935589210a94",
+    "grpc-stub-1.66.0-SNAPSHOT.jar": "d7aa6b5d9ce987ce3dadec6231bc1b44a8a224715a488dd9e5a505df53415381",
+    "protobuf-java-3.25.3.jar": "e90d8ddb963b20a972a6a59b5093ade2b07cbe546cab3279aaf4383260385f58",
+    "guava-33.2.1-jre.jar": "452b2d9787b7d366fa8cf5ed9a1c40404542d05effa7a598da03bbbbb76d9f31",
+    "failureaccess-1.0.2.jar": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
+    "perfmark-api-0.27.0.jar": "c7b478503ec524e55df19b424d46d27c8a68aeb801664fadd4f069b71f52d0f6",
+    "jsr305-3.0.2.jar": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+    "error_prone_annotations-2.28.0.jar": "f3fc8a3a0a4020706a373b00e7f57c2512dd26d1f83d28c7d38768f8682b231e",
+    "checker-qual-3.42.0.jar": "ccaedd33af0b7894d9f2f3b644f4d19e43928e32902e61ac4d10777830f5aac7",
+    "j2objc-annotations-3.0.0.jar": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64",
+    "animal-sniffer-annotations-1.24.jar": "c720e6e5bcbe6b2f48ded75a47bccdb763eede79d14330102e0d352e3d89ed92"
+  }
+}

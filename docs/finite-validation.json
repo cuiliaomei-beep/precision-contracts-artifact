@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "date": "2026-11-13",
+  "copied_files": 2298,
+  "copied_bytes": 64869092,
+  "copied_file_hashes_match": true,
+  "recorded_layout_states_checked": 160000,
+  "new_layout_executions_tested": 400,
+  "new_semantic_inputs_tested": 450,
+  "semantic_and_message_tests": {
+    "command": "python -B -m unittest discover -s artifact/tests -v",
+    "tests": 60,
+    "status": "passed",
+    "seconds": 1.017
+  },
+  "executions": [
+    {
+      "record": "runs/finite-verify-20261113T020009482084Z/summary.json",
+      "sha256": "8a376774671e8439adf20c1f5c20744cde06ea7dcc54ec5327f391bbaea72e0f",
+      "command": "verify",
+      "subset": true,
+      "status": "passed",
+      "semantic": {
+        "programs": 3,
+        "exact": 3,
+        "schedules": 11
+      },
+      "layout": {
+        "programs": 3,
+        "runs": 1200,
+        "messages": 4575,
+        "duplicates": 405,
+        "cut_runs": 720
+      },
+      "address_envelopes": {
+        "programs": 3,
+        "variants": 12,
+        "schedules": 236
+      },
+      "seconds": 1.128605099991546
+    },
+    {
+      "record": "runs/finite-verify-20261113T020023293636Z/summary.json",
+      "sha256": "9738d093cd93a71b20cd4f43d00fc2de083cc0d8080ae957c10b894330299f53",
+      "command": "verify",
+      "subset": false,
+      "status": "passed",
+      "semantic": {
+        "programs": 450,
+        "exact": 295,
+        "schedules": 308895
+      },
+      "layout": {
+        "programs": 400,
+        "runs": 160000,
+        "messages": 707927,
+        "duplicates": 64130,
+        "cut_runs": 96000
+      },
+      "address_envelopes": {
+        "programs": 155,
+        "variants": 1044,
+        "schedules": 2553288
+      },
+      "seconds": 72.16245899999922
+    },
+    {
+      "record": "runs/finite-addresses-20261113T020129575907Z/summary.json",
+      "sha256": "863ef937af71db9bf0b736d722435186b267583127182ff995546fac3d692c87",
+      "command": "addresses",
+      "subset": false,
+      "status": "passed",
+      "address_envelopes": {
+        "programs": 155,
+        "variants": 1044,
+        "schedules": 2553288
+      },
+      "address_variants": {
+        "programs": 450,
+        "exact": {
+          "baseline": 295,
+          "precise_reads": 346,
+          "precise_writes": 295,
+          "precise_all": 450
+        }
+      },
+      "seconds": 10.351121300001978
+    },
+    {
+      "record": "runs/finite-layout-20261113T020140403315Z/summary.json",
+      "sha256": "97b6aa0c9aaeb60c3884e8d383098ed4553662148eb65155fa566929af9e8869",
+      "command": "layout",
+      "subset": true,
+      "status": "passed",
+      "layout": {
+        "programs": 1,
+        "runs": 400,
+        "messages": 1455,
+        "duplicates": 115,
+        "cut_runs": 240
+      },
+      "seconds": 0.9964398000010988
+    },
+    {
+      "record": "runs/finite-semantic-20261113T020141777581Z/summary.json",
+      "sha256": "0bae39b3eebb9e8da59235f55b3eaa04cd4a693558b1f53b067cf8630e1910df",
+      "command": "semantic",
+      "subset": true,
+      "status": "passed",
+      "semantic": {
+        "programs": 5,
+        "exact": 5,
+        "schedules": 27
+      },
+      "seconds": 0.3060518999991473
+    }
+  ],
+  "runtime_versions": {
+    "python": "3.13.14",
+    "numpy": "2.5.0",
+    "psutil": "7.2.2"
+  }
+}

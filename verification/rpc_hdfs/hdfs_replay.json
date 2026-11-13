@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "mode": "original",
+      "input_kind": "RUNTIME",
+      "rows": 8,
+      "input_sha256": "6d5e0ac503661e7dd051a9e0aa572f0a7492aa11530bb4ea1a11b6ea0ff7bfc7",
+      "saved_equal": true,
+      "specification_equal": true,
+      "fresh_equal": true,
+      "full": {
+        "program_points": 1010,
+        "local_cells_at_points": 7801,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.004732800007332116,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "projected": {
+        "program_points": 1010,
+        "local_cells_at_points": 3304,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.004391400012536906,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      }
+    },
+    {
+      "mode": "original",
+      "input_kind": "HELD_OUT",
+      "rows": 252,
+      "input_sha256": "7fae2e70317db4793b4fea8fcbffcca723b516676c80ee6564f8a1730a8ea44c",
+      "saved_equal": true,
+      "specification_equal": true,
+      "fresh_equal": true,
+      "full": {
+        "program_points": 29224,
+        "local_cells_at_points": 231076,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.09595479999552481,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "projected": {
+        "program_points": 29224,
+        "local_cells_at_points": 99372,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.09852040000259876,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      }
+    },
+    {
+      "mode": "holder_check_removed",
+      "input_kind": "RUNTIME",
+      "rows": 8,
+      "input_sha256": "faf9d55199ab1a0cbdba16bb0c05b0e84616d310e283e45f7295bd07c7f37b13",
+      "saved_equal": true,
+      "specification_equal": true,
+      "fresh_equal": true,
+      "full": {
+        "program_points": 1035,
+        "local_cells_at_points": 7685,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.004099199999473058,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "projected": {
+        "program_points": 1035,
+        "local_cells_at_points": 3175,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.004324900000938214,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      }
+    },
+    {
+      "mode": "holder_check_removed",
+      "input_kind": "HELD_OUT",
+      "rows": 252,
+      "input_sha256": "09c94a96beb8c01bdddcb02bd3c38bf672cc8a54ebd1ea7ce188342d973542cf",
+      "saved_equal": true,
+      "specification_equal": true,
+      "fresh_equal": true,
+      "full": {
+        "program_points": 30216,
+        "local_cells_at_points": 230052,
+        "peak_locals_in_one_frame": 27,
+        "seconds": 0.07633669998904224,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      },
+      "projected": {
+        "program_points": 30216,
+        "local_cells_at_points": 96972,
+        "peak_locals_in_one_frame": 7,
+        "seconds": 0.09204170000157319,
+        "metric_scope": "Logical local-environment cells across source points, excluding heap and caller stacks; not wire traffic or total RSS"
+      }
+    }
+  ],
+  "total_rows": 520,
+  "real_runtime_cases": 16,
+  "scope": "Restricted finite heap and explicit library contracts; not whole-HDFS analysis"
+}

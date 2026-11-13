@@ -1,0 +1,3329 @@
+{
+  "provenance": "Predeclared finite heap variants crossed with all listed request choices; no runtime answers used",
+  "families": [
+    {
+      "id": "0_live",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "1_closed_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "2_directory_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false,
+          "children": {}
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "3_detached_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": null,
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "4_replaced_child_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_b"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "5_missing_ancestor",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/audit-parent/m0-file-a",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/audit-parent/m0-file-b",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "6_extra_parent",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "extra": {
+              "ref": "extra_parent"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "extra_parent"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/extra/audit-parent/m0-file-a",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/extra/audit-parent/m0-file-b",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "extra_parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 3,
+          "name": "extra",
+          "is_root": false,
+          "parent": {
+            "ref": "root"
+          },
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            }
+          }
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "7_live",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "8_closed_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "9_directory_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {},
+          "snapshot": false,
+          "children": {}
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "10_detached_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": null,
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "11_replaced_child_a",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            },
+            "m0-file-a": {
+              "ref": "inode_b"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {}
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/m0-file-a",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/m0-file-b",
+          "parent": {
+            "ref": "root"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "12_missing_ancestor",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "root"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/audit-parent/m0-file-a",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/audit-parent/m0-file-b",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    },
+    {
+      "id": "13_extra_parent",
+      "heap": {
+        "rpc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+          "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: org.apache.hadoop.hdfs.server.namenode.FSNamesystem namesystem>": {
+            "ref": "ns"
+          }
+        },
+        "ns": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
+          "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.FSDirectory dir>": {
+            "ref": "dir"
+          }
+        },
+        "dir": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSDirectory",
+          "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodeMap inodeMap>": {
+            "ref": "inodeMap"
+          }
+        },
+        "inodeMap": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeMap",
+          "table": {
+            "16386": {
+              "ref": "inode_a"
+            },
+            "16387": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "logger": {
+          "type": "org.slf4j.Logger"
+        },
+        "pc": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker"
+        },
+        "editLog": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FSEditLog"
+        },
+        "root": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 1,
+          "parent": null,
+          "is_root": true,
+          "children": {
+            "extra": {
+              "ref": "extra_parent"
+            }
+          }
+        },
+        "parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 2,
+          "parent": {
+            "ref": "extra_parent"
+          },
+          "is_root": false,
+          "name": "audit-parent",
+          "children": {
+            "m0-file-a": {
+              "ref": "inode_a"
+            },
+            "m0-file-b": {
+              "ref": "inode_b"
+            }
+          }
+        },
+        "inode_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16386,
+          "name": "m0-file-a",
+          "path": "/extra/audit-parent/m0-file-a",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_a"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_a": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-1205120317_1"
+        },
+        "inode_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeFile",
+          "id": 16387,
+          "name": "m0-file-b",
+          "path": "/extra/audit-parent/m0-file-b",
+          "parent": {
+            "ref": "parent"
+          },
+          "features": {
+            "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature": {
+              "ref": "uc_b"
+            }
+          },
+          "snapshot": false
+        },
+        "uc_b": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature",
+          "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String clientName>": "DFSClient_NONMAPREDUCE_-155440336_1"
+        },
+        "extra_parent": {
+          "type": "org.apache.hadoop.hdfs.server.namenode.INodeDirectory",
+          "id": 3,
+          "name": "extra",
+          "is_root": false,
+          "parent": {
+            "ref": "root"
+          },
+          "children": {
+            "audit-parent": {
+              "ref": "parent"
+            }
+          }
+        }
+      },
+      "requests": [
+        {
+          "id": "ctx_0",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_1",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_2",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_3",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_4",
+          "path": "/m0-file-a",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_5",
+          "path": "/m0-file-b",
+          "file_id": 16386,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_6",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_7",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_8",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_9",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_10",
+          "path": "/m0-file-a",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_11",
+          "path": "/m0-file-b",
+          "file_id": 16387,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_12",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_13",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-155440336_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_14",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_15",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "DFSClient_NONMAPREDUCE_-1205120317_1",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_16",
+          "path": "/m0-file-a",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        },
+        {
+          "id": "ctx_17",
+          "path": "/m0-file-b",
+          "file_id": 9223372036854775790,
+          "holder": "unrelated-holder",
+          "last_block_length": 0
+        }
+      ]
+    }
+  ]
+}

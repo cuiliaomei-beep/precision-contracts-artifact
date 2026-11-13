@@ -1,0 +1,197 @@
+// context: deployment
+    public void <init>()
+    {
+        e2e.grpc.ConstantServerHarness this;
+
+        this := @this: e2e.grpc.ConstantServerHarness;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+// context: entry
+    public static void main(java.lang.String[]) throws java.lang.Exception
+    {
+        java.lang.Throwable $stack18;
+        io.grpc.ManagedChannel channel, $stack16, $stack20;
+        io.grpc.examples.helloworld.HelloRequest request;
+        java.lang.String[] args;
+        io.grpc.examples.helloworld.HelloRequest$Builder $stack12, $stack13;
+        int $stack8;
+        java.lang.String $stack7, $stack11, input, $stack14;
+        io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub stub;
+        java.util.concurrent.TimeUnit $stack15, $stack19;
+        io.grpc.ManagedChannelBuilder $stack9, $stack10;
+        io.grpc.examples.helloworld.HelloReply response;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack7 = args[0];
+
+        $stack8 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($stack7);
+
+        $stack9 = staticinvoke <io.grpc.ManagedChannelBuilder: io.grpc.ManagedChannelBuilder forAddress(java.lang.String,int)>("127.0.0.1", $stack8);
+
+        $stack10 = virtualinvoke $stack9.<io.grpc.ManagedChannelBuilder: io.grpc.ManagedChannelBuilder usePlaintext()>();
+
+        channel = virtualinvoke $stack10.<io.grpc.ManagedChannelBuilder: io.grpc.ManagedChannel build()>();
+
+     label1:
+        stub = staticinvoke <io.grpc.examples.helloworld.GreeterGrpc: io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub newBlockingStub(io.grpc.Channel)>(channel);
+
+        $stack11 = args[1];
+
+        input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11);
+
+        $stack12 = staticinvoke <io.grpc.examples.helloworld.HelloRequest: io.grpc.examples.helloworld.HelloRequest$Builder newBuilder()>();
+
+        $stack13 = virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input);
+
+        request = virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>();
+
+        response = virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request);
+
+        $stack14 = virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>();
+
+        staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>("response", $stack14);
+
+     label2:
+        $stack16 = virtualinvoke channel.<io.grpc.ManagedChannel: io.grpc.ManagedChannel shutdownNow()>();
+
+        $stack15 = <java.util.concurrent.TimeUnit: java.util.concurrent.TimeUnit SECONDS>;
+
+        virtualinvoke $stack16.<io.grpc.ManagedChannel: boolean awaitTermination(long,java.util.concurrent.TimeUnit)>(5L, $stack15);
+
+        goto label5;
+
+     label3:
+        $stack18 := @caughtexception;
+
+     label4:
+        $stack20 = virtualinvoke channel.<io.grpc.ManagedChannel: io.grpc.ManagedChannel shutdownNow()>();
+
+        $stack19 = <java.util.concurrent.TimeUnit: java.util.concurrent.TimeUnit SECONDS>;
+
+        virtualinvoke $stack20.<io.grpc.ManagedChannel: boolean awaitTermination(long,java.util.concurrent.TimeUnit)>(5L, $stack19);
+
+        throw $stack18;
+
+     label5:
+        return;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+        catch java.lang.Throwable from label3 to label4 with label3;
+    }
+
+// context: rpc[entry|<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>@12]
+    public void sayHello(io.grpc.examples.helloworld.HelloRequest, io.grpc.stub.StreamObserver)
+    {
+        e2e.grpc.ConstantGreeter this;
+        io.grpc.stub.StreamObserver observer;
+        io.grpc.examples.helloworld.HelloRequest req;
+        io.grpc.examples.helloworld.HelloReply$Builder $stack4, $stack5;
+        io.grpc.examples.helloworld.HelloReply reply;
+
+        this := @this: e2e.grpc.ConstantGreeter;
+
+        req := @parameter0: io.grpc.examples.helloworld.HelloRequest;
+
+        observer := @parameter1: io.grpc.stub.StreamObserver;
+
+        $stack4 = staticinvoke <io.grpc.examples.helloworld.HelloReply: io.grpc.examples.helloworld.HelloReply$Builder newBuilder()>();
+
+        $stack5 = virtualinvoke $stack4.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>("fixed-response");
+
+        reply = virtualinvoke $stack5.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>();
+
+        interfaceinvoke observer.<io.grpc.stub.StreamObserver: void onNext(java.lang.Object)>(reply);
+
+        interfaceinvoke observer.<io.grpc.stub.StreamObserver: void onCompleted()>();
+
+        return;
+    }
+
+// context: deployment
+    public static void main(java.lang.String[]) throws java.lang.Exception
+    {
+        java.lang.String[] args;
+        java.lang.Runnable $stack10;
+        io.grpc.ServerBuilder $stack6, $stack7;
+        java.lang.Thread $stack9;
+        int $stack4, $stack14;
+        java.lang.String $stack2, $stack17;
+        io.grpc.Server $stack8, server;
+        java.io.PrintStream $stack13, $stack18;
+        e2e.grpc.ConstantGreeter $stack5;
+        java.lang.Runtime $stack11;
+        io.grpc.ServerCredentials $stack3;
+        java.lang.StringBuilder $stack12, $stack15, $stack16;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack2 = args[0];
+
+        $stack4 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($stack2);
+
+        $stack3 = staticinvoke <io.grpc.InsecureServerCredentials: io.grpc.ServerCredentials create()>();
+
+        $stack6 = staticinvoke <io.grpc.Grpc: io.grpc.ServerBuilder newServerBuilderForPort(int,io.grpc.ServerCredentials)>($stack4, $stack3);
+
+        $stack5 = new e2e.grpc.ConstantGreeter;
+
+        specialinvoke $stack5.<e2e.grpc.ConstantGreeter: void <init>()>();
+
+        $stack7 = virtualinvoke $stack6.<io.grpc.ServerBuilder: io.grpc.ServerBuilder addService(io.grpc.BindableService)>($stack5);
+
+        $stack8 = virtualinvoke $stack7.<io.grpc.ServerBuilder: io.grpc.Server build()>();
+
+        server = virtualinvoke $stack8.<io.grpc.Server: io.grpc.Server start()>();
+
+        $stack11 = staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>();
+
+        $stack9 = new java.lang.Thread;
+
+        $stack10 = staticinvoke <e2e.grpc.ConstantServerHarness$lambda_main_0__1: java.lang.Runnable bootstrap$(io.grpc.Server)>(server);
+
+        specialinvoke $stack9.<java.lang.Thread: void <init>(java.lang.Runnable)>($stack10);
+
+        virtualinvoke $stack11.<java.lang.Runtime: void addShutdownHook(java.lang.Thread)>($stack9);
+
+        $stack13 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack12 = new java.lang.StringBuilder;
+
+        specialinvoke $stack12.<java.lang.StringBuilder: void <init>()>();
+
+        $stack15 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("READY\t");
+
+        $stack14 = virtualinvoke server.<io.grpc.Server: int getPort()>();
+
+        $stack16 = virtualinvoke $stack15.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($stack14);
+
+        $stack17 = virtualinvoke $stack16.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack13.<java.io.PrintStream: void println(java.lang.String)>($stack17);
+
+        $stack18 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack18.<java.io.PrintStream: void flush()>();
+
+        virtualinvoke server.<io.grpc.Server: void awaitTermination()>();
+
+        return;
+    }
+
+// context: deployment
+    public static void lambda$main$0(io.grpc.Server)
+    {
+        io.grpc.Server server;
+
+        server := @parameter0: io.grpc.Server;
+
+        virtualinvoke server.<io.grpc.Server: io.grpc.Server shutdownNow()>();
+
+        return;
+    }
+

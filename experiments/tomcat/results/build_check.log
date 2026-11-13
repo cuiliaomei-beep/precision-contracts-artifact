@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "commands": [
+    [
+      "wsl.exe",
+      "--",
+      "souffle",
+      "-g",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/paper-artifact-20261113/build/tomcat/doop_snapshot.cpp",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/paper-artifact-20261113/experiments/tomcat/rules/doop_all_relations.dl"
+    ],
+    [
+      "wsl.exe",
+      "--",
+      "g++",
+      "-std=c++17",
+      "-O3",
+      "-fopenmp",
+      "-DRAM_DOMAIN_SIZE=64",
+      "-DUSE_NCURSES",
+      "-DUSE_LIBZ",
+      "-DUSE_SQLITE",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/paper-artifact-20261113/build/tomcat/souffle_phase_driver.cpp",
+      "-ldl",
+      "-lsqlite3",
+      "-lz",
+      "-lncurses",
+      "-o",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/paper-artifact-20261113/build/tomcat/doop_phase_driver"
+    ]
+  ],
+  "binary": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\paper-artifact-20261113\\build\\tomcat\\doop_phase_driver"
+}

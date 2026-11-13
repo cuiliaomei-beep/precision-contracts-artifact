@@ -1,0 +1,520 @@
+{
+  "complete": true,
+  "runs": [
+    "phase_w1",
+    "phase_w4"
+  ],
+  "relation_count": 71,
+  "all_relations_equal": true,
+  "differences": [],
+  "full_state_hashes": [
+    "dd031ac408e7ed85d1940d8a4af21ab5a933ba3fa8a7c245a4e635aee33a0fe2",
+    "dd031ac408e7ed85d1940d8a4af21ab5a933ba3fa8a7c245a4e635aee33a0fe2"
+  ],
+  "canonical_byte_comparisons": [
+    {
+      "relation": "ApplicationClass",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "ArrayIndexPointsTo",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Assign",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignCast",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignCast_From",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignCast_Type",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignHeapAllocation",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignHeapAllocation_Heap",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignInstruction_To",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignLocal",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "AssignLocal_From",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "CallGraphEdge",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "ClassInitializer",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "DirectSubclass",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "FieldInstruction_Signature",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Field_DeclaringType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "HeapAllocation_Type",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "InitializedClass",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "InstanceFieldPointsTo",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Instruction_Method",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadArrayIndex",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadArrayIndex_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadArrayIndex_To",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadInstanceField",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadInstanceField_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadInstanceField_To",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadStaticField",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "LoadStaticField_To",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "MainMethodDeclaration",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "MethodImplemented",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "MethodInvocation_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "MethodInvocation_Method",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "MethodLookup",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Method_DeclaringType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Method_Descriptor",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Method_ParamTypes",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Method_ReturnType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Method_SimpleName",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Reachable",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "ReturnNonvoid_Var",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "ReturnVar",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "SpecialMethodInvocation_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StaticFieldPointsTo",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StaticMethodInvocation",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreArrayIndex",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreArrayIndex_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreArrayIndex_From",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreInstanceField",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreInstanceField_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreInstanceField_From",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreStaticField",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "StoreStaticField_From",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Subclass",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "SubtypeOf",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "SubtypeOfDifferent",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Superclass",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Superinterface",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "SupertypeOf",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "ThisVar",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "VarPointsTo",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "Var_DeclaringMethod",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_Base",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_Descriptor",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "VirtualMethodInvocation_SimpleName",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isArrayType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isClassType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isInterfaceType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isReferenceType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isStaticMethodInvocation_Insn",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isType",
+      "exit_code": 0,
+      "equal": true
+    },
+    {
+      "relation": "isVirtualMethodInvocation_Insn",
+      "exit_code": 0,
+      "equal": true
+    }
+  ],
+  "all_canonical_bytes_equal": true,
+  "original_program_count_checks": [
+    {
+      "relation": "ArrayIndexPointsTo",
+      "original_count": 43363,
+      "snapshot_count": 43363,
+      "equal": true
+    },
+    {
+      "relation": "Assign",
+      "original_count": 55715,
+      "snapshot_count": 55715,
+      "equal": true
+    },
+    {
+      "relation": "CallGraphEdge",
+      "original_count": 27108,
+      "snapshot_count": 27108,
+      "equal": true
+    },
+    {
+      "relation": "ClassInitializer",
+      "original_count": 1204,
+      "snapshot_count": 1204,
+      "equal": true
+    },
+    {
+      "relation": "DirectSubclass",
+      "original_count": 4189,
+      "snapshot_count": 4189,
+      "equal": true
+    },
+    {
+      "relation": "InitializedClass",
+      "original_count": 1181,
+      "snapshot_count": 1181,
+      "equal": true
+    },
+    {
+      "relation": "InstanceFieldPointsTo",
+      "original_count": 3372422,
+      "snapshot_count": 3372422,
+      "equal": true
+    },
+    {
+      "relation": "MainMethodDeclaration",
+      "original_count": 1,
+      "snapshot_count": 1,
+      "equal": true
+    },
+    {
+      "relation": "MethodImplemented",
+      "original_count": 38501,
+      "snapshot_count": 38501,
+      "equal": true
+    },
+    {
+      "relation": "MethodLookup",
+      "original_count": 136034,
+      "snapshot_count": 136034,
+      "equal": true
+    },
+    {
+      "relation": "Method_DeclaringType",
+      "original_count": 41203,
+      "snapshot_count": 41203,
+      "equal": true
+    },
+    {
+      "relation": "Method_Descriptor",
+      "original_count": 41203,
+      "snapshot_count": 41203,
+      "equal": true
+    },
+    {
+      "relation": "Method_ParamTypes",
+      "original_count": 41203,
+      "snapshot_count": 41203,
+      "equal": true
+    },
+    {
+      "relation": "Method_ReturnType",
+      "original_count": 41203,
+      "snapshot_count": 41203,
+      "equal": true
+    },
+    {
+      "relation": "Method_SimpleName",
+      "original_count": 41203,
+      "snapshot_count": 41203,
+      "equal": true
+    },
+    {
+      "relation": "Reachable",
+      "original_count": 5965,
+      "snapshot_count": 5965,
+      "equal": true
+    },
+    {
+      "relation": "StaticFieldPointsTo",
+      "original_count": 3994,
+      "snapshot_count": 3994,
+      "equal": true
+    },
+    {
+      "relation": "Subclass",
+      "original_count": 7819,
+      "snapshot_count": 7819,
+      "equal": true
+    },
+    {
+      "relation": "SubtypeOf",
+      "original_count": 20267,
+      "snapshot_count": 20267,
+      "equal": true
+    },
+    {
+      "relation": "SubtypeOfDifferent",
+      "original_count": 15305,
+      "snapshot_count": 15305,
+      "equal": true
+    },
+    {
+      "relation": "Superclass",
+      "original_count": 7819,
+      "snapshot_count": 7819,
+      "equal": true
+    },
+    {
+      "relation": "Superinterface",
+      "original_count": 5276,
+      "snapshot_count": 5276,
+      "equal": true
+    },
+    {
+      "relation": "SupertypeOf",
+      "original_count": 20267,
+      "snapshot_count": 20267,
+      "equal": true
+    },
+    {
+      "relation": "VarPointsTo",
+      "original_count": 4986481,
+      "snapshot_count": 4986481,
+      "equal": true
+    }
+  ],
+  "original_counts_equal": true,
+  "note": "Exact canonical whole-relation comparison relative to identical public facts/rules. Shared-host timings are functional smoke data."
+}

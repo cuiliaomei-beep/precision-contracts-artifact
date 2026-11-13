@@ -1,0 +1,20 @@
+v129	v128	<BiGraph: Node eNodes>
+v130	v128	<BiGraph: Node hNodes>
+v14	v11	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>
+v180	v178	<Node: Node[] toNodes>
+v183	v182	<array_element>
+v185	v182	<array_element>
+v185	v184	<Node: Node next>
+v192	v195	<array_element>
+v198	v197	<Node: Node[] fromNodes>
+v199	v197	<Node: double[] coeffs>
+v201	v205	<array_element>
+v224	v223	<Node$1Enumerate: Node current>
+v224	v223	<Node$1Enumerate: Node this$0>
+v233	v230	<Node$1Enumerate: Node current>
+v248	v247	<array_element>
+v3	v3	<java.lang.Throwable: java.lang.Throwable cause>
+v4	v3	<java.lang.Throwable: java.lang.String detailMessage>
+v5	v3	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>
+v63	v61	<java.lang.Class: java.lang.String name>
+v7	v3	<java.lang.Throwable: java.util.List suppressedExceptions>

@@ -1,0 +1,365 @@
+{
+  "complete": true,
+  "first": "phase_w1",
+  "second": "phase_w4",
+  "all_equal": true,
+  "relations": [
+    {
+      "relation": "ApplicationClass",
+      "equal": true,
+      "bytes_actually_compared": 29
+    },
+    {
+      "relation": "ArrayIndexPointsTo",
+      "equal": true,
+      "bytes_actually_compared": 5307041
+    },
+    {
+      "relation": "Assign",
+      "equal": true,
+      "bytes_actually_compared": 10592443
+    },
+    {
+      "relation": "AssignCast",
+      "equal": true,
+      "bytes_actually_compared": 5023801
+    },
+    {
+      "relation": "AssignCast_From",
+      "equal": true,
+      "bytes_actually_compared": 3398978
+    },
+    {
+      "relation": "AssignCast_Type",
+      "equal": true,
+      "bytes_actually_compared": 1994717
+    },
+    {
+      "relation": "AssignHeapAllocation",
+      "equal": true,
+      "bytes_actually_compared": 14476556
+    },
+    {
+      "relation": "AssignHeapAllocation_Heap",
+      "equal": true,
+      "bytes_actually_compared": 9793079
+    },
+    {
+      "relation": "AssignInstruction_To",
+      "equal": true,
+      "bytes_actually_compared": 30409476
+    },
+    {
+      "relation": "AssignLocal",
+      "equal": true,
+      "bytes_actually_compared": 22886227
+    },
+    {
+      "relation": "AssignLocal_From",
+      "equal": true,
+      "bytes_actually_compared": 15907342
+    },
+    {
+      "relation": "CallGraphEdge",
+      "equal": true,
+      "bytes_actually_compared": 5278966
+    },
+    {
+      "relation": "ClassInitializer",
+      "equal": true,
+      "bytes_actually_compared": 109408
+    },
+    {
+      "relation": "DirectSubclass",
+      "equal": true,
+      "bytes_actually_compared": 266796
+    },
+    {
+      "relation": "FieldInstruction_Signature",
+      "equal": true,
+      "bytes_actually_compared": 16117394
+    },
+    {
+      "relation": "Field_DeclaringType",
+      "equal": true,
+      "bytes_actually_compared": 1705901
+    },
+    {
+      "relation": "HeapAllocation_Type",
+      "equal": true,
+      "bytes_actually_compared": 4941131
+    },
+    {
+      "relation": "InitializedClass",
+      "equal": true,
+      "bytes_actually_compared": 41114
+    },
+    {
+      "relation": "InstanceFieldPointsTo",
+      "equal": true,
+      "bytes_actually_compared": 783576838
+    },
+    {
+      "relation": "Instruction_Method",
+      "equal": true,
+      "bytes_actually_compared": 87423674
+    },
+    {
+      "relation": "LoadArrayIndex",
+      "equal": true,
+      "bytes_actually_compared": 1864610
+    },
+    {
+      "relation": "LoadArrayIndex_Base",
+      "equal": true,
+      "bytes_actually_compared": 1360673
+    },
+    {
+      "relation": "LoadArrayIndex_To",
+      "equal": true,
+      "bytes_actually_compared": 1367145
+    },
+    {
+      "relation": "LoadInstanceField",
+      "equal": true,
+      "bytes_actually_compared": 16427192
+    },
+    {
+      "relation": "LoadInstanceField_Base",
+      "equal": true,
+      "bytes_actually_compared": 9722449
+    },
+    {
+      "relation": "LoadInstanceField_To",
+      "equal": true,
+      "bytes_actually_compared": 9828224
+    },
+    {
+      "relation": "LoadStaticField",
+      "equal": true,
+      "bytes_actually_compared": 4930918
+    },
+    {
+      "relation": "LoadStaticField_To",
+      "equal": true,
+      "bytes_actually_compared": 4037127
+    },
+    {
+      "relation": "MainMethodDeclaration",
+      "equal": true,
+      "bytes_actually_compared": 62
+    },
+    {
+      "relation": "MethodImplemented",
+      "equal": true,
+      "bytes_actually_compared": 6108085
+    },
+    {
+      "relation": "MethodInvocation_Base",
+      "equal": true,
+      "bytes_actually_compared": 26653477
+    },
+    {
+      "relation": "MethodInvocation_Method",
+      "equal": true,
+      "bytes_actually_compared": 27797143
+    },
+    {
+      "relation": "MethodLookup",
+      "equal": true,
+      "bytes_actually_compared": 18476802
+    },
+    {
+      "relation": "Method_DeclaringType",
+      "equal": true,
+      "bytes_actually_compared": 4743034
+    },
+    {
+      "relation": "Method_Descriptor",
+      "equal": true,
+      "bytes_actually_compared": 4654813
+    },
+    {
+      "relation": "Method_ParamTypes",
+      "equal": true,
+      "bytes_actually_compared": 4089095
+    },
+    {
+      "relation": "Method_ReturnType",
+      "equal": true,
+      "bytes_actually_compared": 3847190
+    },
+    {
+      "relation": "Method_SimpleName",
+      "equal": true,
+      "bytes_actually_compared": 3769244
+    },
+    {
+      "relation": "Reachable",
+      "equal": true,
+      "bytes_actually_compared": 445624
+    },
+    {
+      "relation": "ReturnNonvoid_Var",
+      "equal": true,
+      "bytes_actually_compared": 5972875
+    },
+    {
+      "relation": "ReturnVar",
+      "equal": true,
+      "bytes_actually_compared": 5645351
+    },
+    {
+      "relation": "SpecialMethodInvocation_Base",
+      "equal": true,
+      "bytes_actually_compared": 8212005
+    },
+    {
+      "relation": "StaticFieldPointsTo",
+      "equal": true,
+      "bytes_actually_compared": 465474
+    },
+    {
+      "relation": "StaticMethodInvocation",
+      "equal": true,
+      "bytes_actually_compared": 6840389
+    },
+    {
+      "relation": "StoreArrayIndex",
+      "equal": true,
+      "bytes_actually_compared": 4082267
+    },
+    {
+      "relation": "StoreArrayIndex_Base",
+      "equal": true,
+      "bytes_actually_compared": 3004818
+    },
+    {
+      "relation": "StoreArrayIndex_From",
+      "equal": true,
+      "bytes_actually_compared": 3114768
+    },
+    {
+      "relation": "StoreInstanceField",
+      "equal": true,
+      "bytes_actually_compared": 6399218
+    },
+    {
+      "relation": "StoreInstanceField_Base",
+      "equal": true,
+      "bytes_actually_compared": 3871676
+    },
+    {
+      "relation": "StoreInstanceField_From",
+      "equal": true,
+      "bytes_actually_compared": 3913720
+    },
+    {
+      "relation": "StoreStaticField",
+      "equal": true,
+      "bytes_actually_compared": 1014856
+    },
+    {
+      "relation": "StoreStaticField_From",
+      "equal": true,
+      "bytes_actually_compared": 766132
+    },
+    {
+      "relation": "Subclass",
+      "equal": true,
+      "bytes_actually_compared": 492691
+    },
+    {
+      "relation": "SubtypeOf",
+      "equal": true,
+      "bytes_actually_compared": 1343635
+    },
+    {
+      "relation": "SubtypeOfDifferent",
+      "equal": true,
+      "bytes_actually_compared": 960535
+    },
+    {
+      "relation": "Superclass",
+      "equal": true,
+      "bytes_actually_compared": 492691
+    },
+    {
+      "relation": "Superinterface",
+      "equal": true,
+      "bytes_actually_compared": 347550
+    },
+    {
+      "relation": "SupertypeOf",
+      "equal": true,
+      "bytes_actually_compared": 1343635
+    },
+    {
+      "relation": "ThisVar",
+      "equal": true,
+      "bytes_actually_compared": 5498014
+    },
+    {
+      "relation": "VarPointsTo",
+      "equal": true,
+      "bytes_actually_compared": 702274380
+    },
+    {
+      "relation": "Var_DeclaringMethod",
+      "equal": true,
+      "bytes_actually_compared": 84520517
+    },
+    {
+      "relation": "VirtualMethodInvocation_Base",
+      "equal": true,
+      "bytes_actually_compared": 18441472
+    },
+    {
+      "relation": "VirtualMethodInvocation_Descriptor",
+      "equal": true,
+      "bytes_actually_compared": 12579663
+    },
+    {
+      "relation": "VirtualMethodInvocation_SimpleName",
+      "equal": true,
+      "bytes_actually_compared": 11225792
+    },
+    {
+      "relation": "isArrayType",
+      "equal": true,
+      "bytes_actually_compared": 10758
+    },
+    {
+      "relation": "isClassType",
+      "equal": true,
+      "bytes_actually_compared": 165479
+    },
+    {
+      "relation": "isInterfaceType",
+      "equal": true,
+      "bytes_actually_compared": 15313
+    },
+    {
+      "relation": "isReferenceType",
+      "equal": true,
+      "bytes_actually_compared": 191550
+    },
+    {
+      "relation": "isStaticMethodInvocation_Insn",
+      "equal": true,
+      "bytes_actually_compared": 2973656
+    },
+    {
+      "relation": "isType",
+      "equal": true,
+      "bytes_actually_compared": 191550
+    },
+    {
+      "relation": "isVirtualMethodInvocation_Insn",
+      "equal": true,
+      "bytes_actually_compared": 10459964
+    }
+  ],
+  "method": "actual bytes equality for every2MiB block of both complete sortedfiles; not hashes alone",
+  "wall_seconds": 4.679197199991904
+}

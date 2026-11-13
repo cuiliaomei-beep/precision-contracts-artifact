@@ -1,0 +1,168 @@
+// context: deployment
+    public void <init>()
+    {
+        e2e.dubbo.Provider this;
+
+        this := @this: e2e.dubbo.Provider;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+// context: entry
+    public static void analyze(org.apache.dubbo.samples.api.GreetingsService, java.lang.String)
+    {
+        java.lang.String raw, input, reply;
+        org.apache.dubbo.samples.api.GreetingsService service;
+
+        service := @parameter0: org.apache.dubbo.samples.api.GreetingsService;
+
+        raw := @parameter1: java.lang.String;
+
+        input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw);
+
+        reply = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input);
+
+        staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>("positive", reply);
+
+        return;
+    }
+
+// context: rpc[entry|<e2e.dubbo.PositiveConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]
+    public java.lang.String sayHi(java.lang.String)
+    {
+        org.apache.dubbo.samples.provider.GreetingsServiceImpl this;
+        java.lang.String name, $stack2;
+
+        this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl;
+
+        name := @parameter0: java.lang.String;
+
+        $stack2 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("hi, \u0001");
+
+        return $stack2;
+    }
+
+// context: deployment
+    public static void main(java.lang.String[]) throws java.lang.Exception
+    {
+        java.lang.Throwable $stack43;
+        org.apache.dubbo.config.ApplicationConfig $u5;
+        java.lang.String[] args;
+        long $stack21;
+        org.apache.dubbo.samples.provider.GreetingsServiceImpl $u1;
+        org.apache.dubbo.config.ServiceConfig $u2;
+        java.lang.ProcessHandle $stack20;
+        org.apache.dubbo.config.RegistryConfig $u3;
+        int $stack13;
+        java.lang.String $stack6, $stack12, $stack22;
+        org.apache.dubbo.samples.api.GreetingsService $stack8;
+        boolean $stack7;
+        e2e.dubbo.ConstantGreetingsService $u0;
+        java.io.PrintStream $stack19, $stack23;
+        org.apache.dubbo.config.bootstrap.DubboBootstrap $stack15, $stack16, $stack17, $stack18, $stack41;
+        org.apache.dubbo.config.ProtocolConfig $u4;
+        java.io.InputStream $stack24;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack6 = args[0];
+
+        $stack7 = virtualinvoke $stack6.<java.lang.String: boolean equals(java.lang.Object)>("constant");
+
+        if $stack7 == 0 goto label1;
+
+        $u0 = new e2e.dubbo.ConstantGreetingsService;
+
+        $stack8 = $u0;
+
+        specialinvoke $u0.<e2e.dubbo.ConstantGreetingsService: void <init>()>();
+
+        goto label2;
+
+     label1:
+        $u1 = new org.apache.dubbo.samples.provider.GreetingsServiceImpl;
+
+        $stack8 = $u1;
+
+        specialinvoke $u1.<org.apache.dubbo.samples.provider.GreetingsServiceImpl: void <init>()>();
+
+     label2:
+        $u2 = new org.apache.dubbo.config.ServiceConfig;
+
+        specialinvoke $u2.<org.apache.dubbo.config.ServiceConfig: void <init>()>();
+
+        virtualinvoke $u2.<org.apache.dubbo.config.ServiceConfig: void setInterface(java.lang.Class)>(class "Lorg/apache/dubbo/samples/api/GreetingsService;");
+
+        virtualinvoke $u2.<org.apache.dubbo.config.ServiceConfig: void setRef(java.lang.Object)>($stack8);
+
+        $u3 = new org.apache.dubbo.config.RegistryConfig;
+
+        specialinvoke $u3.<org.apache.dubbo.config.RegistryConfig: void <init>(java.lang.String)>("N/A");
+
+        virtualinvoke $u2.<org.apache.dubbo.config.ServiceConfig: void setRegistry(org.apache.dubbo.config.RegistryConfig)>($u3);
+
+        $u4 = new org.apache.dubbo.config.ProtocolConfig;
+
+        $stack12 = args[1];
+
+        $stack13 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($stack12);
+
+        specialinvoke $u4.<org.apache.dubbo.config.ProtocolConfig: void <init>(java.lang.String,int)>("tri", $stack13);
+
+        virtualinvoke $u4.<org.apache.dubbo.config.ProtocolConfig: void setHost(java.lang.String)>("127.0.0.1");
+
+        $stack15 = staticinvoke <org.apache.dubbo.config.bootstrap.DubboBootstrap: org.apache.dubbo.config.bootstrap.DubboBootstrap getInstance()>();
+
+        $u5 = new org.apache.dubbo.config.ApplicationConfig;
+
+        specialinvoke $u5.<org.apache.dubbo.config.ApplicationConfig: void <init>(java.lang.String)>("e2e-dubbo-provider");
+
+        $stack16 = virtualinvoke $stack15.<org.apache.dubbo.config.bootstrap.DubboBootstrap: org.apache.dubbo.config.bootstrap.DubboBootstrap application(org.apache.dubbo.config.ApplicationConfig)>($u5);
+
+        $stack17 = virtualinvoke $stack16.<org.apache.dubbo.config.bootstrap.DubboBootstrap: org.apache.dubbo.config.bootstrap.DubboBootstrap protocol(org.apache.dubbo.config.ProtocolConfig)>($u4);
+
+        $stack18 = virtualinvoke $stack17.<org.apache.dubbo.config.bootstrap.DubboBootstrap: org.apache.dubbo.config.bootstrap.DubboBootstrap service(org.apache.dubbo.config.ServiceConfig)>($u2);
+
+        $stack41 = virtualinvoke $stack18.<org.apache.dubbo.config.bootstrap.DubboBootstrap: org.apache.dubbo.config.bootstrap.DubboBootstrap start()>();
+
+        $stack19 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack20 = staticinvoke <java.lang.ProcessHandle: java.lang.ProcessHandle current()>();
+
+        $stack21 = interfaceinvoke $stack20.<java.lang.ProcessHandle: long pid()>();
+
+        $stack22 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (long)>($stack21) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("E2E_PROVIDER_READY\t\u0001");
+
+        virtualinvoke $stack19.<java.io.PrintStream: void println(java.lang.String)>($stack22);
+
+        $stack23 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack23.<java.io.PrintStream: void flush()>();
+
+     label3:
+        $stack24 = <java.lang.System: java.io.InputStream in>;
+
+        virtualinvoke $stack24.<java.io.InputStream: int read()>();
+
+     label4:
+        virtualinvoke $stack41.<org.apache.dubbo.config.bootstrap.DubboBootstrap: void destroy()>();
+
+        goto label7;
+
+     label5:
+        $stack43 := @caughtexception;
+
+     label6:
+        virtualinvoke $stack41.<org.apache.dubbo.config.bootstrap.DubboBootstrap: void destroy()>();
+
+        throw $stack43;
+
+     label7:
+        return;
+
+        catch java.lang.Throwable from label3 to label4 with label5;
+        catch java.lang.Throwable from label5 to label6 with label5;
+    }
+

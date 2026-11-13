@@ -1,0 +1,10 @@
+{
+  "pid": 494,
+  "uri": "hdfs://localhost:42015",
+  "rpc_address": "localhost/127.0.0.1:42015",
+  "name_node_class": "org.apache.hadoop.hdfs.server.namenode.NameNode",
+  "rpc_server_class": "org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer",
+  "fsnamesystem_code_source": "file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/mutation/classes/",
+  "hadoop_version": "3.3.6",
+  "hadoop_revision": "1be78238728da9266a4f88195058f08fd012bf9c"
+}

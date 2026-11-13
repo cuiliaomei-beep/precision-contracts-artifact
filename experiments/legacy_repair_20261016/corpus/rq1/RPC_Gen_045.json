@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "id": "RPC_Gen_045",
+  "family": "rpc",
+  "kind": "generated",
+  "seed": 87,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "c0",
+      "c1"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_source",
+          "value": 153045,
+          "tainted": false
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Send",
+        "component": "c0",
+        "attributes": {
+          "destination": "c1",
+          "msg_type": "REQ_generated0",
+          "data": {
+            "arg0": {
+              "var": "rpc0_source"
+            }
+          },
+          "message_id": "rpc1_c0_c1_generated0:request",
+          "call_id": "rpc1_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Receive",
+        "component": "c1",
+        "attributes": {
+          "source": "c0",
+          "msg_type": "REQ_generated0",
+          "message_id": "rpc1_c0_c1_generated0:request",
+          "bindings": {
+            "arg0": "arg0"
+          },
+          "call_id": "rpc1_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "c1",
+        "attributes": {
+          "var": "_return_rpc1_c0_c1_generated0",
+          "value": -29,
+          "tainted": false,
+          "call_id": "rpc1_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "c1",
+        "attributes": {
+          "destination": "c0",
+          "msg_type": "RESP_generated0",
+          "data": {
+            "result": {
+              "var": "_return_rpc1_c0_c1_generated0"
+            }
+          },
+          "message_id": "rpc1_c0_c1_generated0:response",
+          "call_id": "rpc1_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "c0",
+        "attributes": {
+          "source": "c1",
+          "msg_type": "RESP_generated0",
+          "message_id": "rpc1_c0_c1_generated0:response",
+          "bindings": {
+            "result": "result0"
+          },
+          "call_id": "rpc1_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "Observe",
+        "component": "c0",
+        "attributes": {
+          "point": "rpc_result0",
+          "expr": {
+            "var": "result0"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "c0": {},
+        "c1": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e1",
+          "e5"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {
+      "generator": {
+        "seed": 87,
+        "family": "rpc",
+        "synchronization": "nosync",
+        "alias": "must",
+        "branch": false,
+        "requested_components": 2,
+        "requested_writers": 1,
+        "requested_readers": 1
+      }
+    }
+  },
+  "program_sha256": "ce2ba55d7841d431ea049d904f05e58821fb66f619befec83a8ea1b58e32cbaa",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 2,
+      "Send": 2,
+      "Receive": 2,
+      "Observe": 1
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": false,
+    "sync": false,
+    "may_alias": false,
+    "observations": 1,
+    "events": 7
+  },
+  "generator_metadata": {
+    "seed": 87,
+    "family": "rpc",
+    "synchronization": "nosync",
+    "alias": "must",
+    "branch": false,
+    "requested_components": 2,
+    "requested_writers": 1,
+    "requested_readers": 1
+  },
+  "pre_repair_reconstruction": {
+    "program_sha256": "0722bb98c9ca58c977508c2d9d6e7e922a8f03f054c6af0293850f32b6d94095",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  }
+}

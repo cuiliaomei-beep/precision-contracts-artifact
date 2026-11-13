@@ -1,0 +1,644 @@
+{
+  "dataset": "tomcat public DOOP facts",
+  "dataset_url": "https://huggingface.co/datasets/NemoYuu/flowlog_benchmark/resolve/da9e91b3ff75d94604f57ba2b21ef3aa97e241ec/dataset/csv/tomcat.zip?download=true",
+  "dataset_revision": "da9e91b3ff75d94604f57ba2b21ef3aa97e241ec",
+  "archive_sha256": "4756ac77f7e858df528d7707ff8dc238f85f4c3ab6870afdee7704dcab2185c5",
+  "archive_bytes": 36750964,
+  "dataset_license": "apache-2.0",
+  "dataset_license_source": "https://huggingface.co/datasets/NemoYuu/flowlog_benchmark/blob/da9e91b3ff75d94604f57ba2b21ef3aa97e241ec/README.md",
+  "rules_repository": "https://github.com/flowlog-rs/flowlog-bench",
+  "rules_revision": "ccf29c3ff828b1286be25481e0547b896be8c733",
+  "rules_url": "https://raw.githubusercontent.com/flowlog-rs/flowlog-bench/ccf29c3ff828b1286be25481e0547b896be8c733/programs/oracle/souffle/doop.dl",
+  "rules_sha256": "10747db411b1cdd13adef8b802e63a5470c61ca4ba00c0c0dc6b7f5f59404cf0",
+  "all_output_rules_sha256": "0b3cb3baa9577c073be6e9a3c2590afeae1f3e9fd4fc14f3fcef506389b6f0d4",
+  "rules_change": "All71 output directives are appended to the same source rules.",
+  "rules_license": "No license file was present in the supplied upstream checkout; no license is inferred here.",
+  "input_files": [
+    {
+      "path": "tomcat\\Activity.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\ActualParam.facts",
+      "bytes": 32714589,
+      "sha256": "3fd61fc60356170d72bdb758d56c0d9ba780071ee1bd8f78b20dd4e154507e53"
+    },
+    {
+      "path": "tomcat\\AndroidApplication.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\AndroidCallbackMethodName.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\AndroidEntryPoint.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\AndroidId.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\AndroidIncludeXML.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\AnnotationElement.facts",
+      "bytes": 4049,
+      "sha256": "2749a37d3aa538cb335b416767626c8172c30ead1d3f32cda5e34ed24768764c"
+    },
+    {
+      "path": "tomcat\\ApplicationClass.facts",
+      "bytes": 29,
+      "sha256": "04b378fe3b4b8985a2f2b9c681b9c874528be30c630f73bcc801a634e2384e62"
+    },
+    {
+      "path": "tomcat\\ApplicationPackage.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\ArrayAllocation.facts",
+      "bytes": 216740,
+      "sha256": "6ac2996d48d9083ad0d5fb01db357cdbdbaf6832f1a15b9636bc911cf37e6634"
+    },
+    {
+      "path": "tomcat\\ArrayAllocationConstSize.facts",
+      "bytes": 353001,
+      "sha256": "b19912db9fbd644b11d994c0586fbac9d6980fb6a9c337c31a671e9bb3a071d7"
+    },
+    {
+      "path": "tomcat\\ArrayInitialValueFromConst.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\ArrayInitialValueFromLocal.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\ArrayInsnIndex.facts",
+      "bytes": 1544912,
+      "sha256": "c0fe22483fa51ddc5d58e0e572b28f3c4ea8fa37b79a4bf02225674e395f2ae4"
+    },
+    {
+      "path": "tomcat\\ArrayNumIndex.facts",
+      "bytes": 1566916,
+      "sha256": "e753610d7ca495c7541c140fa207f22eb2f9705440ba9f14b2e927f05cdba284"
+    },
+    {
+      "path": "tomcat\\ArrayType.facts",
+      "bytes": 743137,
+      "sha256": "7fd562e23adbe07fb4c5f7fbbef75c2c300c2d98a4a6a3e99a9d8d2f760acd29"
+    },
+    {
+      "path": "tomcat\\AssignBinop.facts",
+      "bytes": 7165071,
+      "sha256": "858ad15bca60ee58feb8c6d889ed435263a4385572cd0cd06ff77cfe228b5dad"
+    },
+    {
+      "path": "tomcat\\AssignCast.facts",
+      "bytes": 6825646,
+      "sha256": "a98816754a66b3a7f002f95f78a4cd708bb34766a42bbf428b7eb5eda134617b"
+    },
+    {
+      "path": "tomcat\\AssignCastNull.facts",
+      "bytes": 11281,
+      "sha256": "e6326494155411eae7117c5931d2c6baea994948b3772c01619324a777d56cac"
+    },
+    {
+      "path": "tomcat\\AssignCastNumConstant.facts",
+      "bytes": 1078144,
+      "sha256": "1b037d7ae1578b9251e922d0598ad90a14ceb5ade16fb35c24f7de45bbd2e3e1"
+    },
+    {
+      "path": "tomcat\\AssignHeapAllocation.facts",
+      "bytes": 20657050,
+      "sha256": "65dd9b3954ab660a6b9214198e19408fd492baeea14c0db09c60f996006bc7d0"
+    },
+    {
+      "path": "tomcat\\AssignInstanceOf.facts",
+      "bytes": 818127,
+      "sha256": "6aac33f658acefda1af0cad478dbaa43156d047df461c128cd8e358662c6e23b"
+    },
+    {
+      "path": "tomcat\\AssignLocal.facts",
+      "bytes": 31033896,
+      "sha256": "f1f9fe2fbb7f0d4f4c3eb8d2a08769903575f6cba3ddbff8ced3f07aa72b05e0"
+    },
+    {
+      "path": "tomcat\\AssignNull.facts",
+      "bytes": 2208204,
+      "sha256": "d889f0a8974f03e7997ac217189a987e8e120272ee30d5f09e92e5a85e8ffc07"
+    },
+    {
+      "path": "tomcat\\AssignNumConstant.facts",
+      "bytes": 10543670,
+      "sha256": "07dc9fb5d54ca32764619ecab56a8b99c0cfe98355a1de4160a6a7911b826f95"
+    },
+    {
+      "path": "tomcat\\AssignOperFrom.facts",
+      "bytes": 7555650,
+      "sha256": "7992448ce3f5c8494fd8f544f51885a96648f3b7875a79cc22cd334ec0722203"
+    },
+    {
+      "path": "tomcat\\AssignOperFromConstant.facts",
+      "bytes": 1701045,
+      "sha256": "5a21b6c796b2d786ce8578fd55fe5473a69c0ee0a6bcfe78e98921e65d6a2494"
+    },
+    {
+      "path": "tomcat\\AssignPhantomInvoke.facts",
+      "bytes": 4772,
+      "sha256": "2aa4a029c0f1405dce21ca2dd3d6ce5e2d7f13e5302700e10e693539d9437b94"
+    },
+    {
+      "path": "tomcat\\AssignReturnValue.facts",
+      "bytes": 19518723,
+      "sha256": "3d5ec6df9e9504561bb46fb75ecfabb71749feef1f40455f627db560670a7147"
+    },
+    {
+      "path": "tomcat\\AssignUnop.facts",
+      "bytes": 1342326,
+      "sha256": "cf1dc89926758ea2a8dbe0b4244fc8cc6faefc565f331b2c35c8a5699700228d"
+    },
+    {
+      "path": "tomcat\\BootstrapParam.facts",
+      "bytes": 309799,
+      "sha256": "8f6eaf0a003dd2a49fb21f088d24a979c976a2f7f9560d08ace7e840d8f74310"
+    },
+    {
+      "path": "tomcat\\BreakpointStmt.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\BroadcastReceiver.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\Class-Artifact.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\ClassHeap.facts",
+      "bytes": 483574,
+      "sha256": "03cd885da4374df828ca1cfd7469689c59dd048d847232bfb1d743d97aa360d1"
+    },
+    {
+      "path": "tomcat\\ClassModifier.facts",
+      "bytes": 223563,
+      "sha256": "f909350deb071303ce37a413610c4c21d6a5836f86603bd161810267bd6c65d7"
+    },
+    {
+      "path": "tomcat\\ClassType.facts",
+      "bytes": 165479,
+      "sha256": "69e5cf6994105f152b0a965e26c6adf498f76de188385a93e85a53c7d156908c"
+    },
+    {
+      "path": "tomcat\\ComponentType.facts",
+      "bytes": 1392216,
+      "sha256": "7ca94f308a52d3b645bda03a5f44290490a396aa60a5618c5f6086de14e0f006"
+    },
+    {
+      "path": "tomcat\\ContentProvider.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\DexInstructionAddressMap.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\DirectSuperclass.facts",
+      "bytes": 266796,
+      "sha256": "a49439291afff10a7d5c5224c4eee1af191ea1d5b9586bf2f8307ad4419a973f"
+    },
+    {
+      "path": "tomcat\\DirectSuperinterface.facts",
+      "bytes": 148930,
+      "sha256": "e7f12acb3860e44ca197ba164ae94407de1526ded78e0bb3096cac89ee278446"
+    },
+    {
+      "path": "tomcat\\DummyIfVar.facts",
+      "bytes": 15719340,
+      "sha256": "d5225273a3d4a39d2018df689dde6be4356a9dfd3871fbc53c8b667974213a01"
+    },
+    {
+      "path": "tomcat\\DynamicMethodInvocation-ParamType.facts",
+      "bytes": 49348,
+      "sha256": "9a0e19630430920c06477ac6188f715f41c2d20bcf21133d59deaeb4480bd1c5"
+    },
+    {
+      "path": "tomcat\\DynamicMethodInvocation.facts",
+      "bytes": 215889,
+      "sha256": "06bb8dafb99c2be131cf2653d58410c12d7f4d827249304ac6b9f841ac312bdc"
+    },
+    {
+      "path": "tomcat\\EmptyArray.facts",
+      "bytes": 108662,
+      "sha256": "a0559ae83180df3bb2853d4866ab155534aa54f660f2b272d061a93f018ad064"
+    },
+    {
+      "path": "tomcat\\EnterMonitor.facts",
+      "bytes": 209985,
+      "sha256": "3be50e7adeb6e45a4417093b3dbb41efa3874f48729e036442a44d9ed9b1a537"
+    },
+    {
+      "path": "tomcat\\ExceptionHandler-FormalParam.facts",
+      "bytes": 1377789,
+      "sha256": "902041e9fdfc64dc0344929f006c61ed2fd11980397eaa83f842682be80bc538"
+    },
+    {
+      "path": "tomcat\\ExceptionHandler-Previous.facts",
+      "bytes": 850601,
+      "sha256": "6e80e102a1be09ae8f6edd951e286d755873174a7d2cfb5769e87a841199cd0f"
+    },
+    {
+      "path": "tomcat\\ExceptionHandler.facts",
+      "bytes": 1537460,
+      "sha256": "8d9fecd97e4167593ef038a85a5b559d6eac7a4dd82ac813bbcab620537c6462"
+    },
+    {
+      "path": "tomcat\\ExitMonitor.facts",
+      "bytes": 486869,
+      "sha256": "786e7ed33301d2fb202607dcdbd869dbb6e43c3af69ff3086b1af28c9bf92e46"
+    },
+    {
+      "path": "tomcat\\Field-Annotation.facts",
+      "bytes": 28767,
+      "sha256": "5e376579063ab0ff5b45b64902e8abc83f0ed2eb8c72bd07425cea0e58969e8c"
+    },
+    {
+      "path": "tomcat\\Field-Modifier.facts",
+      "bytes": 2781201,
+      "sha256": "0261002452754546bfe1d600e5a3de50d1d7d25a237cc8eb05c767f7038d9eda"
+    },
+    {
+      "path": "tomcat\\Field.facts",
+      "bytes": 14251911,
+      "sha256": "f19bcb2ab3d77308db39f906589440b596c70408446c42b9ae7fffe3515039dd"
+    },
+    {
+      "path": "tomcat\\FieldInitialValue.facts",
+      "bytes": 267408,
+      "sha256": "8f193caa33cf9a5afec528a58b698fe1ca3dc798640340d8f0bdb765945d869f"
+    },
+    {
+      "path": "tomcat\\FormalParam.facts",
+      "bytes": 9567242,
+      "sha256": "1fd76097251e3add4020f0934b9b4e97f35331d05500e0a6e79f746655fd633e"
+    },
+    {
+      "path": "tomcat\\GenericField.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\GenericType-ErasedType.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\GenericTypeParameters.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\Goto.facts",
+      "bytes": 4033893,
+      "sha256": "5e916cb3194d4e32f4c8792a50d0256b5df39b8d4e706d578fe084c3458085bd"
+    },
+    {
+      "path": "tomcat\\If.facts",
+      "bytes": 10588033,
+      "sha256": "4165b1fac48411c209f0c64cb1a678893db590733b54f32c73cfbb7ada4ec71c"
+    },
+    {
+      "path": "tomcat\\IfConstant.facts",
+      "bytes": 3177053,
+      "sha256": "dd3b8f66691f4b6efd2111b5aaec6829a7d1d0a62a93e8b2ed8e8501eeb664e1"
+    },
+    {
+      "path": "tomcat\\IfVar.facts",
+      "bytes": 12865707,
+      "sha256": "f2fe92f9cbe5bd5df74d6065dbc236602002297191d5ae6a623a0418541b27e8"
+    },
+    {
+      "path": "tomcat\\InterfaceType.facts",
+      "bytes": 15313,
+      "sha256": "c243b266bd49e468b13330f072c3072c1ea29686c04d35db6026a2faadacccd0"
+    },
+    {
+      "path": "tomcat\\LayoutControl.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\LoadArrayIndex.facts",
+      "bytes": 2627948,
+      "sha256": "58f7d03d72e61417f4bf88327367aaafc76e78a3040a43587eb3517f4bf9f2d5"
+    },
+    {
+      "path": "tomcat\\LoadInstanceField.facts",
+      "bytes": 21814559,
+      "sha256": "8b1c95db4c519d63e047b3f0e35a03b61fe3e1769e6bd8ec919019d22cefcffd"
+    },
+    {
+      "path": "tomcat\\LoadStaticField.facts",
+      "bytes": 7181834,
+      "sha256": "e8066c0750334ac284381a7863bb01258227211689ff56342e881e38e99254da"
+    },
+    {
+      "path": "tomcat\\LookupSwitch-Default.facts",
+      "bytes": 32481,
+      "sha256": "93fbff64ef4cc9d6cc224a86c8603e92c60c62a33edae5e7b394cd8cefa5a1a8"
+    },
+    {
+      "path": "tomcat\\LookupSwitch-Target.facts",
+      "bytes": 145468,
+      "sha256": "f1a2be138bf003388ff0c5c4b8bedd05bb7b50ee2dad0f04689d2adad1a21bb2"
+    },
+    {
+      "path": "tomcat\\LookupSwitch.facts",
+      "bytes": 87729,
+      "sha256": "6d33428b691faa02098de5e34c61bd3ee112dc592365a90b09d2dd974e5f2b07"
+    },
+    {
+      "path": "tomcat\\MainClass.facts",
+      "bytes": 29,
+      "sha256": "04b378fe3b4b8985a2f2b9c681b9c874528be30c630f73bcc801a634e2384e62"
+    },
+    {
+      "path": "tomcat\\Method-Annotation.facts",
+      "bytes": 27421,
+      "sha256": "ec0c3389ecbe071df191ce0f83a9f9abb4fb3ab208b467bdf55202b67d1315a4"
+    },
+    {
+      "path": "tomcat\\Method-DeclaresException.facts",
+      "bytes": 956613,
+      "sha256": "b3ecb48eff7244a73a0e69cbd14f6cf333670353408f9d25aa1f31c0beafce54"
+    },
+    {
+      "path": "tomcat\\Method-Modifier.facts",
+      "bytes": 4980766,
+      "sha256": "f9062fe81d837a7383366814a4bbe256943552696c8c56b9f49c4698e35fb290"
+    },
+    {
+      "path": "tomcat\\Method.facts",
+      "bytes": 7828793,
+      "sha256": "f074ae965f6cca79289770246bcb937b3d05567c8eb03cd76836644a4e473079"
+    },
+    {
+      "path": "tomcat\\MethodHandleConstant.facts",
+      "bytes": 91952,
+      "sha256": "31803d4d3795752e95f3413c4c28694b269b951613a307da5229a4c2d8fbe1be"
+    },
+    {
+      "path": "tomcat\\MethodInvocation-Line.facts",
+      "bytes": 17947949,
+      "sha256": "e21280c8ae9b639ddc3f11e494bdf172e34382189787cbed8d537d65ba2f28c3"
+    },
+    {
+      "path": "tomcat\\MethodTypeConstant.facts",
+      "bytes": 51034,
+      "sha256": "87757c33537e442818b9950cb92a43f164092886c97897d0acaa98f1fe30e603"
+    },
+    {
+      "path": "tomcat\\MethodTypeConstantParam.facts",
+      "bytes": 48960,
+      "sha256": "58c4ad231322fe28d8769f45521fba11168b95b3450d64abe3133ec1b98c3bfc"
+    },
+    {
+      "path": "tomcat\\NativeLibEntryPoint.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\NativeMethodId.facts",
+      "bytes": 58495,
+      "sha256": "ffc8349e9c88862562f47955a588c9dbd4b35dfb4d06e049a022dc5d8e99d595"
+    },
+    {
+      "path": "tomcat\\NativeMethodTypeCandidate.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\NativeNameCandidate.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\NativeReturnVar.facts",
+      "bytes": 52044,
+      "sha256": "50725523b0c007f4ffe7f57becd0a8ded30ced8e84050263cfcc0483c69123ec"
+    },
+    {
+      "path": "tomcat\\NativeXRef.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\NormalHeap.facts",
+      "bytes": 4175680,
+      "sha256": "f7151c3c57ce42f919c8e3a29db245e0fdf400d5e67c3e8ec2a336c2b055c956"
+    },
+    {
+      "path": "tomcat\\NumConstantRaw.facts",
+      "bytes": 66199,
+      "sha256": "d4f39cff15745a9c60cdd32908bbc8e0af5b5c9c492ab3f7e0243a73b2997d9d"
+    },
+    {
+      "path": "tomcat\\OperatorAt.facts",
+      "bytes": 8440207,
+      "sha256": "4c95111b42c166fa3a0e763c819596816f98bf7ba3bd41ae47bbc4c85a6a6381"
+    },
+    {
+      "path": "tomcat\\Param-Annotation.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\PhantomBasedMethod.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\PhantomMethod.facts",
+      "bytes": 4802,
+      "sha256": "063d7041233515c9343117ff7047b1f446ff118d0b94fcbd0f0f7036c21a3c00"
+    },
+    {
+      "path": "tomcat\\PhantomType.facts",
+      "bytes": 178,
+      "sha256": "9cf3eeeeb7078a780eb3cf333672a5a2a3cac9bbac26e7fd27c2d0acb22b9cf5"
+    },
+    {
+      "path": "tomcat\\PolymorphicInvocation.facts",
+      "bytes": 48050,
+      "sha256": "debadb3d34170cbd2c19a21193fd89fba39ab4a655df9d331257a383bb1884eb"
+    },
+    {
+      "path": "tomcat\\Properties.facts",
+      "bytes": 73079,
+      "sha256": "4703c52c5684cfe88bcb9927d8c942c672768772e388d7d8f404517b12b4f57b"
+    },
+    {
+      "path": "tomcat\\Return.facts",
+      "bytes": 8752886,
+      "sha256": "4fe4de5b15165b5aa109ac3a0eb6beb7f55c5b0ec6b720285e4cf3387d996a27"
+    },
+    {
+      "path": "tomcat\\ReturnVoid.facts",
+      "bytes": 2635364,
+      "sha256": "a4794ca3828ba9a5e6d2209ccd90fbeaf9e5ce7c5e7dfbe952d2ea66751ce3c0"
+    },
+    {
+      "path": "tomcat\\SensitiveLayoutControl.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\Service.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\SpecialMethodInvocation.facts",
+      "bytes": 14110757,
+      "sha256": "fd204915beae364cab09563321feb3f38c3df3696672900c163005af7cec9638"
+    },
+    {
+      "path": "tomcat\\StatementType.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\StaticMethodInvocation.facts",
+      "bytes": 6902418,
+      "sha256": "ae5dd02a6a0e4c77c116423173392c1275e64b6a707162394cde4607bdddba58"
+    },
+    {
+      "path": "tomcat\\StoreArrayIndex.facts",
+      "bytes": 5803368,
+      "sha256": "c8d8c52c92caf29df02a1c5942c35b2a2f7b55d703baf0b1959b7b9fb2f4b0e6"
+    },
+    {
+      "path": "tomcat\\StoreInstanceField.facts",
+      "bytes": 8564859,
+      "sha256": "04cc80a6b086fc0e6975c1928cfc0d400bb80c415c0e2d75eb687867ebcfeef2"
+    },
+    {
+      "path": "tomcat\\StoreStaticField.facts",
+      "bytes": 1468426,
+      "sha256": "1d5e220c133b61dd38772a2743103ead4e099400b88fbadf9fa5a5d41ba667d8"
+    },
+    {
+      "path": "tomcat\\StringConstant.facts",
+      "bytes": 660892,
+      "sha256": "ef453c942c337799d72a4e4554c6d7a3d72282b67b9dd5345083f59a008561ec"
+    },
+    {
+      "path": "tomcat\\StringRaw.facts",
+      "bytes": 8114374,
+      "sha256": "0bffc2a368f554cd0be36bc03c14f7eb1c6b4cbe684cbff8c615a65dcc175058"
+    },
+    {
+      "path": "tomcat\\SuperMethodInvocation.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\TableSwitch-Default.facts",
+      "bytes": 36454,
+      "sha256": "e206b39696af6da8dac0e89aed22d58959d819dd0526931c58ce28d83a55a533"
+    },
+    {
+      "path": "tomcat\\TableSwitch-Target.facts",
+      "bytes": 380484,
+      "sha256": "76772a3bd73bf01a2a18d5386be3139b6ead6131bb96f470d250a37ad8e9baef"
+    },
+    {
+      "path": "tomcat\\TableSwitch.facts",
+      "bytes": 99901,
+      "sha256": "2df9f64e5f65f25b4cfcf352a8fa5dc67750497e3c026fc5b9ce34f84d4bb47d"
+    },
+    {
+      "path": "tomcat\\ThisVar.facts",
+      "bytes": 5498014,
+      "sha256": "4075698e09c2addc39080bbb4dc04bdff0a3a88537c01aed5931facd84ce3753"
+    },
+    {
+      "path": "tomcat\\Throw.facts",
+      "bytes": 3128699,
+      "sha256": "f2a608f25fa7e1c0b40466ddd692113e31d759847418ef2b710a275318dbb2c6"
+    },
+    {
+      "path": "tomcat\\ThrowNull.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tomcat\\Type-Annotation.facts",
+      "bytes": 6885,
+      "sha256": "21f2c023ab3a7d7868282f30f010f747c3939607ff5ae1aaa710014c05955e5d"
+    },
+    {
+      "path": "tomcat\\Type-SimpleName.facts",
+      "bytes": 287085,
+      "sha256": "ddf83327c4ab88711eb0c3c43a1f9ecf5c00c7c4a5cd05846938cec33c33abb4"
+    },
+    {
+      "path": "tomcat\\UnsupportedInstruction.facts",
+      "bytes": 797923,
+      "sha256": "4c632ca4d1e1cb8ece73d4a370e617579d9aca3a00430d74884639cdf5d01860"
+    },
+    {
+      "path": "tomcat\\Var-DeclaringMethod.facts",
+      "bytes": 84520517,
+      "sha256": "3fa5ec45d3bde9f5fa2c059e694e73781e1b7c67b67287156d9adf115a1a9c08"
+    },
+    {
+      "path": "tomcat\\Var-SimpleName.facts",
+      "bytes": 39968637,
+      "sha256": "f8319ab643a69a148317522bee3e9c490448b65954f0d9ed13152f4878c22201"
+    },
+    {
+      "path": "tomcat\\Var-Type.facts",
+      "bytes": 53078585,
+      "sha256": "aa3d119c3ab1dcf2bedf6c93bf74d1ebc4f4875e76cc0effd6579e7c5ce11529"
+    },
+    {
+      "path": "tomcat\\VirtualMethodInvocation.facts",
+      "bytes": 31264752,
+      "sha256": "564fa16a864d268cdc9d5b9335dec9e5997f42b317d9f558f271c7d61de66d59"
+    },
+    {
+      "path": "tomcat\\XMLNode.facts",
+      "bytes": 287335,
+      "sha256": "e4162b50033afbcfd29191de448384a283d854baec249a5ade7ad12c78930a0c"
+    },
+    {
+      "path": "tomcat\\XMLNodeAttribute.facts",
+      "bytes": 752344,
+      "sha256": "79e7d8cdc85a41ff423e38d60b76f63815a454aa363ca95a0e2a08369e788926"
+    },
+    {
+      "path": "tomcat\\XMLNodeData.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "semantic_scope": "Public extracted facts. Application source-to-fact extraction was not reproduced locally."
+}

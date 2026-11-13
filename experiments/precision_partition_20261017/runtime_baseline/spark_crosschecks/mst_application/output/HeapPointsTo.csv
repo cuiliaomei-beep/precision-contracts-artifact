@@ -1,0 +1,14 @@
+a20	<Hashtable: HashEntry[] array>	a21
+a21	<array_element>	a22
+a22	<HashEntry: java.lang.Object key>	a24
+a22	<HashEntry: java.lang.Object entry>	a25
+a22	<HashEntry: HashEntry next>	a22
+a23	<array_element>	a24
+a24	<Vertex: Vertex next>	a24
+a24	<Vertex: Hashtable neighbors>	a20
+a27	<Graph: Vertex[] nodes>	a23
+a32	<array_element>	a33
+a34	<BlueReturn: Vertex vert>	a24
+a36	<java.lang.Throwable: java.lang.StackTraceElement[] stackTrace>	a2
+a36	<java.lang.Throwable: java.lang.Throwable cause>	a36
+a36	<java.lang.Throwable: java.lang.String detailMessage>	a33

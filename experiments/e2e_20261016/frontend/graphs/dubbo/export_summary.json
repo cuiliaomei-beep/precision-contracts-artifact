@@ -1,0 +1,40 @@
+{
+  "manifest": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\manifest.json",
+  "manifest_sha256": "db0e18a275693134b93d18d04fb177fdc093d301a50163ad7c76aed34496b3f6",
+  "exporter_sha256": "fdd2693681e8cf46f30602f1d1d3fa4287744cb7b587e495f2e29167dcf29b63",
+  "results": [
+    {
+      "scenario": "positive",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\positive.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\positive.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\positive.export.log",
+      "graph_sha256": "a7bafcce0ae0b6e765bc698d7282b1917269cabadff8f5984606eab6e0c0350b"
+    },
+    {
+      "scenario": "clean_sink",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\clean_sink.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\clean_sink.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\clean_sink.export.log",
+      "graph_sha256": "2942c64fb8dbafd84af8615ac1a89af2e98291e8e993d7d6b8ba40cae5d8c289"
+    },
+    {
+      "scenario": "constant_reply",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\constant_reply.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\constant_reply.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\constant_reply.export.log",
+      "graph_sha256": "1266f26dc90abccb0bb2c129a8cb8f758e4b5172b1c497611ef986defdafcefd"
+    },
+    {
+      "scenario": "two_calls",
+      "exit_code": 0,
+      "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\two_calls.graph.json",
+      "config": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\two_calls.config.json",
+      "log": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\graphs\\dubbo\\two_calls.export.log",
+      "graph_sha256": "2e2987997e76916de6239bf93887e27ab653f921274b5b2bbb46bac3438d3059"
+    }
+  ],
+  "success": true
+}

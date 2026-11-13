@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "cases": 8,
+  "configurations": 368,
+  "rows": [
+    {
+      "case": "dubbo/clean_sink",
+      "runs": 46,
+      "graph_sha256": "bff83049c1eab8e047342c31e501e3e5871e5c3977594ff58e5e89e199735100",
+      "exact": true
+    },
+    {
+      "case": "dubbo/constant_reply",
+      "runs": 46,
+      "graph_sha256": "09f43b720464c1121a1f4853da708591add5601ff88e9aa3ed7c621b833791db",
+      "exact": true
+    },
+    {
+      "case": "dubbo/positive",
+      "runs": 46,
+      "graph_sha256": "33edf6fc8cc4d503cce5622decc2cd47baf155c022b193c4515c433b327ff218",
+      "exact": true
+    },
+    {
+      "case": "dubbo/two_calls",
+      "runs": 46,
+      "graph_sha256": "c7e8fbcb9e5d8fe75f751755e0f21e92fca1d76d9d76d36e1d090e75e7791e17",
+      "exact": true
+    },
+    {
+      "case": "grpc/clean_sink",
+      "runs": 46,
+      "graph_sha256": "991eeba4c9b8a76afcd7ad96bbe256451d4b0a1eed230f6a64f3fc5f229d272d",
+      "exact": true
+    },
+    {
+      "case": "grpc/constant_reply",
+      "runs": 46,
+      "graph_sha256": "90b3e9a800462869fb5854d12fda93371206d2513d0a262e05cf8f180a51e29c",
+      "exact": true
+    },
+    {
+      "case": "grpc/positive",
+      "runs": 46,
+      "graph_sha256": "413fae9d2145ed0bd144d299203d22f5bc507ae0bb95132692b1cbd37f778b0a",
+      "exact": true
+    },
+    {
+      "case": "grpc/two_calls",
+      "runs": 46,
+      "graph_sha256": "4f28115373b34fb2f68c7ccaf2aa3b113b10d640a4a2d37d582245451a12a420",
+      "exact": true
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "dubbo": {
+    "repository": "https://github.com/apache/dubbo-samples",
+    "commit": "0ef8eaeb534fdeb0158e07229b4cb01cb4b21918",
+    "dependencies": [
+      {
+        "filename": "dubbo-3.3.0-beta.1.jar",
+        "sha256": "6f9a871f6eb00fcc391569da95a1d4933c63b7f69c81885e9ecc4334922749ff",
+        "artifactId": "dubbo",
+        "groupId": "org.apache.dubbo",
+        "version": "3.3.0-beta.1",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/dubbo/dubbo/3.3.0-beta.1/dubbo-3.3.0-beta.1.jar"
+      },
+      {
+        "filename": "fastjson2-2.0.40.jar",
+        "sha256": "0093f29ccce3949eaa9773b25db9a674d2ac7b75b5126356d05cf2da9ecc16dd",
+        "artifactId": "fastjson2",
+        "groupId": "com.alibaba.fastjson2",
+        "version": "2.0.40",
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.40/fastjson2-2.0.40.jar"
+      },
+      {
+        "filename": "hessian-lite-3.2.13.jar",
+        "sha256": "691967b560a6bd0e4719cfbe24a47febb0a3d18ef8779f7b4f8b72537080befd",
+        "version": "3.2.13",
+        "groupId": "com.alibaba",
+        "artifactId": "hessian-lite",
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/hessian-lite/3.2.13/hessian-lite-3.2.13.jar"
+      },
+      {
+        "filename": "javassist-3.29.2-GA.jar",
+        "sha256": "a90ddb25135df9e57ea9bd4e224e219554929758f9bae9965f29f81d60a3293f",
+        "artifactId": "javassist",
+        "groupId": "org.javassist",
+        "version": "3.29.2-GA",
+        "url": "https://repo.maven.apache.org/maven2/org/javassist/javassist/3.29.2-GA/javassist-3.29.2-GA.jar"
+      },
+      {
+        "filename": "log4j-api-2.20.0.jar",
+        "sha256": "2f43eea679ea66f14ca0f13fec2a8600ac124f5a5231dcb4df8393eddcb97550",
+        "artifactId": "log4j-api",
+        "groupId": "org.apache.logging.log4j",
+        "version": "2.20.0",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar"
+      },
+      {
+        "filename": "log4j-core-2.20.0.jar",
+        "sha256": "6137df848cdaed9f4d5076f75513c6c85da80b953f4e7acca38098b770763f55",
+        "artifactId": "log4j-core",
+        "groupId": "org.apache.logging.log4j",
+        "version": "2.20.0",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar"
+      },
+      {
+        "filename": "log4j-slf4j-impl-2.20.0.jar",
+        "sha256": "776e3f6087bb82ec34ab6dd795a6dca6733b965ad0da0fa92cbe370fa9aac7bc",
+        "artifactId": "log4j-slf4j-impl",
+        "groupId": "org.apache.logging.log4j",
+        "version": "2.20.0",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar"
+      },
+      {
+        "filename": "netty-all-4.1.97.Final.jar",
+        "sha256": "4f8f2f5a8bd3935a00cc58f3d2cebfeb75f53a68a225f172611a8658d54ffdfb",
+        "version": "4.1.97.Final",
+        "groupId": "io.netty",
+        "artifactId": "netty-all",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-all/4.1.97.Final/netty-all-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-buffer-4.1.97.Final.jar",
+        "sha256": "a4393f5b395486cc74d0325c9b41311abb9513ba0fd7ef8cf46e9345c3bffbea",
+        "artifactId": "netty-buffer",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-4.1.97.Final.jar",
+        "sha256": "bcc96737a0f912fcf031cf8c45ebda352a90a40437db0832caad3d5a63618b38",
+        "artifactId": "netty-codec",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.97.Final/netty-codec-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-dns-4.1.97.Final.jar",
+        "sha256": "c6752cb85574ac6cd54307287c2d699be8956522aa04231b07a018f2e3c42fcc",
+        "artifactId": "netty-codec-dns",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-dns/4.1.97.Final/netty-codec-dns-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-haproxy-4.1.97.Final.jar",
+        "sha256": "994d8cd2ae5b7d68d69836016cf9d13e906bd427fc446888fe21b5ef960485fb",
+        "artifactId": "netty-codec-haproxy",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-haproxy/4.1.97.Final/netty-codec-haproxy-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-http-4.1.97.Final.jar",
+        "sha256": "7d6cad9cbd015e41f69787ce6a34beeba032b381e32e88207908431dc812778a",
+        "artifactId": "netty-codec-http",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.97.Final/netty-codec-http-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-http2-4.1.97.Final.jar",
+        "sha256": "51fabf675563b59dc51dde22d29dbc5a20f836469cf48b8d53a07d3db0d775ad",
+        "artifactId": "netty-codec-http2",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.97.Final/netty-codec-http2-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-memcache-4.1.97.Final.jar",
+        "sha256": "5ad49017dc249e3a5bfa7143040a18cab10252256aa21ffe747c3ce14f29fbe7",
+        "artifactId": "netty-codec-memcache",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-memcache/4.1.97.Final/netty-codec-memcache-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-mqtt-4.1.97.Final.jar",
+        "sha256": "99d6c40ca0719edf4bfabca0e102135de9d8452832ab3ffbf83ea638c02ae551",
+        "artifactId": "netty-codec-mqtt",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-mqtt/4.1.97.Final/netty-codec-mqtt-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-redis-4.1.97.Final.jar",
+        "sha256": "21b2275ef5dce387be5b622541067f21d7674baf56b0e97fb7252194a191ada9",
+        "artifactId": "netty-codec-redis",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-redis/4.1.97.Final/netty-codec-redis-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-smtp-4.1.97.Final.jar",
+        "sha256": "e49994da42b2252fc00036e568a29ab7d3ecbb36ef4524a046635d56d0629bc1",
+        "artifactId": "netty-codec-smtp",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-smtp/4.1.97.Final/netty-codec-smtp-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-socks-4.1.97.Final.jar",
+        "sha256": "24081cae8a9685ff3fcde141f5050f28589c22e2ae6c447854e044df6d308028",
+        "artifactId": "netty-codec-socks",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.97.Final/netty-codec-socks-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-stomp-4.1.97.Final.jar",
+        "sha256": "ccc224a29e727d5a89489c616da29dd8ced2fc28077bb461c3067b2c066e3ecb",
+        "artifactId": "netty-codec-stomp",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-stomp/4.1.97.Final/netty-codec-stomp-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-codec-xml-4.1.97.Final.jar",
+        "sha256": "f8144d0cd53296e023b60ab1becfa5017262c70728405ccf9dbfcf2c3ed9f32d",
+        "artifactId": "netty-codec-xml",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-xml/4.1.97.Final/netty-codec-xml-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-common-4.1.97.Final.jar",
+        "sha256": "a8aca0c8e9347acc75c885ecc749195d9775369aa520b9276f2d1128210a6c17",
+        "artifactId": "netty-common",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-handler-4.1.97.Final.jar",
+        "sha256": "bd4771d19149cbc9c7464ed2d58035d79cdfed7adb59d38718b0d8e7a3dcc2de",
+        "artifactId": "netty-handler",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.97.Final/netty-handler-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-handler-proxy-4.1.97.Final.jar",
+        "sha256": "c789f30d0905a09b2a17c4cf397e1b57b0d63db714624eb0dec2282b9619e206",
+        "artifactId": "netty-handler-proxy",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.97.Final/netty-handler-proxy-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-handler-ssl-ocsp-4.1.97.Final.jar",
+        "sha256": "c237ef28da29170a8b9712ee9160e09c72cdb41f638f00244c01e5130b3c6215",
+        "artifactId": "netty-handler-ssl-ocsp",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-ssl-ocsp/4.1.97.Final/netty-handler-ssl-ocsp-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-resolver-4.1.97.Final.jar",
+        "sha256": "38a018c6d9fb2cb11b72881354782b45080bbd20b9a0ad6cde28b80d431ed0b1",
+        "artifactId": "netty-resolver",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.97.Final/netty-resolver-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-resolver-dns-4.1.97.Final.jar",
+        "sha256": "6dd2fec118664198e502962357b22454911dfeb7eae272575ba30b059a1fcff4",
+        "artifactId": "netty-resolver-dns",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver-dns/4.1.97.Final/netty-resolver-dns-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-resolver-dns-classes-macos-4.1.97.Final.jar",
+        "sha256": "0ca34b5f2f5c80cc507104e8f5c5f0d24effc86e97d54c20bee4a7fb4294dc3a",
+        "artifactId": "netty-resolver-dns-classes-macos",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver-dns-classes-macos/4.1.97.Final/netty-resolver-dns-classes-macos-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-resolver-dns-native-macos-4.1.97.Final-osx-aarch_64.jar",
+        "sha256": "20770a0b2ec9010a2e1e454f3212f2beb1203b3747b832400a20ddbf578cb98d",
+        "artifactId": "netty-resolver-dns-native-macos",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver-dns-native-macos/4.1.97.Final/netty-resolver-dns-native-macos-4.1.97.Final-osx-aarch_64.jar"
+      },
+      {
+        "filename": "netty-resolver-dns-native-macos-4.1.97.Final-osx-x86_64.jar",
+        "sha256": "eeb727de7d0312177741529fbd44c301420864e6a0e388bc2d3ca5cabeb4d1e2",
+        "artifactId": "netty-resolver-dns-native-macos",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver-dns-native-macos/4.1.97.Final/netty-resolver-dns-native-macos-4.1.97.Final-osx-x86_64.jar"
+      },
+      {
+        "filename": "netty-transport-4.1.97.Final.jar",
+        "sha256": "197fd2d6c6b4afe677d9e95bf2e36b49a0bcabdfce0583683fb73f29a3f5a407",
+        "artifactId": "netty-transport",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-classes-epoll-4.1.97.Final.jar",
+        "sha256": "ee65fa17fe65f18fd22269f92bddad85bfb3a263cf65eba01e116a2f30b86ff5",
+        "artifactId": "netty-transport-classes-epoll",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-epoll/4.1.97.Final/netty-transport-classes-epoll-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-classes-kqueue-4.1.97.Final.jar",
+        "sha256": "964ef63eb24a5c979f0af473da13f9574497e11bd41543a66d10609d34013b9f",
+        "artifactId": "netty-transport-classes-kqueue",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-kqueue/4.1.97.Final/netty-transport-classes-kqueue-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar",
+        "sha256": "93b5fe8f3829dcb5e033d8d40d59159366ff4cf8266c903bbd6a4aeed9e59bac",
+        "artifactId": "netty-transport-native-epoll",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar"
+      },
+      {
+        "filename": "netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar",
+        "sha256": "1e83fc9f82e5415cdbb688c6a5c6bbbd7d198e9fdd6fdf64b3dc5d54dd1acfd0",
+        "artifactId": "netty-transport-native-epoll",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar"
+      },
+      {
+        "filename": "netty-transport-native-kqueue-4.1.97.Final-osx-aarch_64.jar",
+        "sha256": "1a7d23ad342c8042c433b3959644cc5d3d0bf7f14d77f062529de1d29060e777",
+        "artifactId": "netty-transport-native-kqueue",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-kqueue/4.1.97.Final/netty-transport-native-kqueue-4.1.97.Final-osx-aarch_64.jar"
+      },
+      {
+        "filename": "netty-transport-native-kqueue-4.1.97.Final-osx-x86_64.jar",
+        "sha256": "6870051aca7fa4dc5d0f2938036215a269504c50d2e36c4af38fd00d22ad7d95",
+        "artifactId": "netty-transport-native-kqueue",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-kqueue/4.1.97.Final/netty-transport-native-kqueue-4.1.97.Final-osx-x86_64.jar"
+      },
+      {
+        "filename": "netty-transport-native-unix-common-4.1.97.Final.jar",
+        "sha256": "412fe140257c2dda5a5e15bee911298bd61928d03ee6be4db588e82c196c5dc6",
+        "artifactId": "netty-transport-native-unix-common",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.97.Final/netty-transport-native-unix-common-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-rxtx-4.1.97.Final.jar",
+        "sha256": "1b3b40a81b33e2bb42bd5ad044ac953e48de7a51b0f185529170ad1340fdbc4e",
+        "artifactId": "netty-transport-rxtx",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-rxtx/4.1.97.Final/netty-transport-rxtx-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-sctp-4.1.97.Final.jar",
+        "sha256": "1dfd9acee949e8bf801d0fd5a1442549c27e04499098e095f1c0f80a213a0835",
+        "artifactId": "netty-transport-sctp",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-sctp/4.1.97.Final/netty-transport-sctp-4.1.97.Final.jar"
+      },
+      {
+        "filename": "netty-transport-udt-4.1.97.Final.jar",
+        "sha256": "a4a70cb66830091bb26f0bb676e599f84e39fb1d585dcc873e79c317929b8992",
+        "artifactId": "netty-transport-udt",
+        "groupId": "io.netty",
+        "version": "4.1.97.Final",
+        "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-udt/4.1.97.Final/netty-transport-udt-4.1.97.Final.jar"
+      },
+      {
+        "filename": "slf4j-api-1.7.30.jar",
+        "sha256": "cdba07964d1bb40a0761485c6b1e8c2f8fd9eb1d19c53928ac0d7f9510105c57",
+        "version": "1.7.30",
+        "groupId": "org.slf4j",
+        "artifactId": "slf4j-api",
+        "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar"
+      },
+      {
+        "filename": "snakeyaml-2.2.jar",
+        "sha256": "1467931448a0817696ae2805b7b8b20bfb082652bf9c4efaed528930dc49389b",
+        "groupId": "org.yaml",
+        "artifactId": "snakeyaml",
+        "version": "2.2",
+        "url": "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"
+      },
+      {
+        "filename": "spring-aop-5.3.25.jar",
+        "sha256": "66286d471010391908e76c7248bbc877d01985f983f6bfe3733dd7078a45aafb"
+      },
+      {
+        "filename": "spring-beans-5.3.25.jar",
+        "sha256": "1f867f11e940fe7aa3959e92a1ae4e49b741e011ee063a743500f91f01b1af0b"
+      },
+      {
+        "filename": "spring-context-5.3.25.jar",
+        "sha256": "11fd1f648ac26acacf5adfdfc22a545dc25bf9bbbf894ac2c0aa2d90950d8dac"
+      },
+      {
+        "filename": "spring-context-support-1.0.11.jar",
+        "sha256": "227719b2063c0b93064ec34358d4a4e3b59d63c619ba9eb679095d287133ea92",
+        "version": "1.0.11",
+        "groupId": "com.alibaba.spring",
+        "artifactId": "spring-context-support",
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/spring/spring-context-support/1.0.11/spring-context-support-1.0.11.jar"
+      },
+      {
+        "filename": "spring-core-5.3.25.jar",
+        "sha256": "7c04129894aaf1a7b51de3afd0160469084edd5ef96dc9b516aca75de9d40627"
+      },
+      {
+        "filename": "spring-expression-5.3.25.jar",
+        "sha256": "95b4462bbce7193fc2bd2ac953d6b474b1c26b92d4a90c5a06dfc214562fa559"
+      },
+      {
+        "filename": "spring-jcl-5.3.25.jar",
+        "sha256": "21305099486ff70535d2939dc236e8ec179ae23fa9ac98b510c89d8287eba4ae"
+      }
+    ]
+  },
+  "grpc": {
+    "repository": "https://github.com/grpc/grpc-java",
+    "commit": "64ac792b5e6e57268b69abb6979ca0f389af1d9d",
+    "dependencies": [
+      {
+        "filename": "grpc-api-1.66.0-SNAPSHOT.jar",
+        "sha256": "3d8b4919267e1c4ff0c3763a0f01dd6956fa69e4d5ae6cd30488aa70130b151b"
+      },
+      {
+        "filename": "grpc-context-1.66.0-SNAPSHOT.jar",
+        "sha256": "25ea7b48f1c657d21fb9ff988639a6165938b1d9177e166bd90f04a8361f4d0c"
+      },
+      {
+        "filename": "grpc-core-1.66.0-SNAPSHOT.jar",
+        "sha256": "d54d37939987ecdf1db216ff37d5240f720edc6012169d46294fea4cb66dc63a"
+      },
+      {
+        "filename": "grpc-util-1.66.0-SNAPSHOT.jar",
+        "sha256": "13aded6deb1f5df31eae23f5e1004e92dea991973ef45eafc83d1d264402c46d"
+      },
+      {
+        "filename": "grpc-netty-shaded-1.66.0-SNAPSHOT.jar",
+        "sha256": "68de98b193c0c223ab9f24b9af2b10f3118c6e94398c62dc9874e7402a21b840"
+      },
+      {
+        "filename": "grpc-protobuf-1.66.0-SNAPSHOT.jar",
+        "sha256": "5233801762e9cf06ea1672d8875a4aaefcbf343d43305aa5fddf76b84eb7bec6"
+      },
+      {
+        "filename": "grpc-protobuf-lite-1.66.0-SNAPSHOT.jar",
+        "sha256": "4df7dc4d83808c0a883c1d6573c6ba71e825397b115c37df005f935589210a94"
+      },
+      {
+        "filename": "grpc-stub-1.66.0-SNAPSHOT.jar",
+        "sha256": "d7aa6b5d9ce987ce3dadec6231bc1b44a8a224715a488dd9e5a505df53415381"
+      },
+      {
+        "filename": "protobuf-java-3.25.3.jar",
+        "sha256": "e90d8ddb963b20a972a6a59b5093ade2b07cbe546cab3279aaf4383260385f58",
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-java",
+        "version": "3.25.3",
+        "url": "https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.3/protobuf-java-3.25.3.jar"
+      },
+      {
+        "filename": "guava-33.2.1-jre.jar",
+        "sha256": "452b2d9787b7d366fa8cf5ed9a1c40404542d05effa7a598da03bbbbb76d9f31",
+        "groupId": "com.google.guava",
+        "artifactId": "guava",
+        "version": "33.2.1-jre",
+        "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar"
+      },
+      {
+        "filename": "failureaccess-1.0.2.jar",
+        "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
+        "groupId": "com.google.guava",
+        "artifactId": "failureaccess",
+        "version": "1.0.2",
+        "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar"
+      },
+      {
+        "filename": "perfmark-api-0.27.0.jar",
+        "sha256": "c7b478503ec524e55df19b424d46d27c8a68aeb801664fadd4f069b71f52d0f6",
+        "groupId": "io.perfmark",
+        "artifactId": "perfmark-api",
+        "version": "0.27.0",
+        "url": "https://repo.maven.apache.org/maven2/io/perfmark/perfmark-api/0.27.0/perfmark-api-0.27.0.jar"
+      },
+      {
+        "filename": "jsr305-3.0.2.jar",
+        "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+        "version": "3.0.2",
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "url": "https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"
+      },
+      {
+        "filename": "error_prone_annotations-2.28.0.jar",
+        "sha256": "f3fc8a3a0a4020706a373b00e7f57c2512dd26d1f83d28c7d38768f8682b231e",
+        "artifactId": "error_prone_annotations",
+        "groupId": "com.google.errorprone",
+        "version": "2.28.0",
+        "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar"
+      },
+      {
+        "filename": "checker-qual-3.42.0.jar",
+        "sha256": "ccaedd33af0b7894d9f2f3b644f4d19e43928e32902e61ac4d10777830f5aac7",
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-qual",
+        "version": "3.42.0",
+        "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar"
+      },
+      {
+        "filename": "j2objc-annotations-3.0.0.jar",
+        "sha256": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64",
+        "artifactId": "j2objc-annotations",
+        "groupId": "com.google.j2objc",
+        "version": "3.0.0",
+        "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar"
+      },
+      {
+        "filename": "animal-sniffer-annotations-1.24.jar",
+        "sha256": "c720e6e5bcbe6b2f48ded75a47bccdb763eede79d14330102e0d352e3d89ed92",
+        "artifactId": "animal-sniffer-annotations",
+        "groupId": "org.codehaus.mojo",
+        "version": "1.24",
+        "url": "https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.24/animal-sniffer-annotations-1.24.jar"
+      }
+    ],
+    "runtime_asset": {
+      "file": "grpc-runtime-1.66.0-snapshot.zip",
+      "repository": "cuiliaomei-beep/precision-contracts-artifact",
+      "release_tag": "artifact-20261113",
+      "sha256": "3a1fec0d177843abdab1c70f62d43bf36a5b8980c0f0f27d5fb6e1e6782200b0",
+      "bytes": 10251845,
+      "contents": [
+        "grpc-api-1.66.0-SNAPSHOT.jar",
+        "grpc-context-1.66.0-SNAPSHOT.jar",
+        "grpc-core-1.66.0-SNAPSHOT.jar",
+        "grpc-util-1.66.0-SNAPSHOT.jar",
+        "grpc-netty-shaded-1.66.0-SNAPSHOT.jar",
+        "grpc-protobuf-1.66.0-SNAPSHOT.jar",
+        "grpc-protobuf-lite-1.66.0-SNAPSHOT.jar",
+        "grpc-stub-1.66.0-SNAPSHOT.jar"
+      ],
+      "upstream_license": "Apache-2.0",
+      "source_commit": "64ac792b5e6e57268b69abb6979ca0f389af1d9d"
+    }
+  }
+}

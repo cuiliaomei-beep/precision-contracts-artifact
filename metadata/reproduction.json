@@ -1,0 +1,18 @@
+{
+  "notes": [
+    "Analysis rules, abstract domains, inputs, and recorded results retain their original meanings.",
+    "New command-line entry points select the paper cases and write new outputs under runs.",
+    "Dependency paths are arguments or environment variables rather than workstation-specific constants.",
+    "The Em3d adapter constant was renamed INPUT_DIR and descriptive messages were reworded; the built-in frozenset and propagation operations are unchanged.",
+    "The RPC partition implementation used by the paper is included under artifact/real for a self-contained import."
+  ],
+  "validation": [
+    "docs/finite-validation.json",
+    "validation/points-to-python.json",
+    "validation/points-to-souffle.json",
+    "validation/spark-frontend.json",
+    "validation/em3d-run.json",
+    "verification/rpc_hdfs/index.json",
+    "experiments/tomcat/results/archive_verification.json"
+  ]
+}

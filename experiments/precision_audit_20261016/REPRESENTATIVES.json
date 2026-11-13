@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "id": "RMA_Gen_001",
+      "family": "rma",
+      "baseline_exact": false,
+      "may_alias": true,
+      "observation_points": 1,
+      "imprecise_points": 1,
+      "categories": [
+        "initial_actual_region_retained_by_weak_write",
+        "initial_other_region_from_read_alias"
+      ],
+      "variants": {
+        "precise_reads": {
+          "exact": false,
+          "imprecise_points": 1
+        },
+        "precise_writes": {
+          "exact": false,
+          "imprecise_points": 1
+        },
+        "precise_all": {
+          "exact": true,
+          "imprecise_points": 0
+        }
+      },
+      "case_file": "cases/RMA_Gen_001.json"
+    },
+    {
+      "id": "RMA_Gen_003",
+      "family": "rma",
+      "baseline_exact": false,
+      "may_alias": true,
+      "observation_points": 2,
+      "imprecise_points": 2,
+      "categories": [
+        "initial_other_region_from_read_alias",
+        "other_concrete_region_write_from_alias"
+      ],
+      "variants": {
+        "precise_reads": {
+          "exact": false,
+          "imprecise_points": 2
+        },
+        "precise_writes": {
+          "exact": false,
+          "imprecise_points": 2
+        },
+        "precise_all": {
+          "exact": true,
+          "imprecise_points": 0
+        }
+      },
+      "case_file": "cases/RMA_Gen_003.json"
+    },
+    {
+      "id": "RMA_Gen_027",
+      "family": "rma",
+      "baseline_exact": false,
+      "may_alias": true,
+      "observation_points": 1,
+      "imprecise_points": 1,
+      "categories": [
+        "initial_actual_region_retained_by_weak_write",
+        "initial_other_region_from_read_alias"
+      ],
+      "variants": {
+        "precise_reads": {
+          "exact": false,
+          "imprecise_points": 1
+        },
+        "precise_writes": {
+          "exact": false,
+          "imprecise_points": 1
+        },
+        "precise_all": {
+          "exact": true,
+          "imprecise_points": 0
+        }
+      },
+      "case_file": "cases/RMA_Gen_027.json"
+    },
+    {
+      "id": "Mixed_Gen_001",
+      "family": "mixed",
+      "baseline_exact": false,
+      "may_alias": true,
+      "observation_points": 2,
+      "imprecise_points": 1,
+      "categories": [
+        "initial_other_region_from_read_alias"
+      ],
+      "variants": {
+        "precise_reads": {
+          "exact": true,
+          "imprecise_points": 0
+        },
+        "precise_writes": {
+          "exact": false,
+          "imprecise_points": 1
+        },
+        "precise_all": {
+          "exact": true,
+          "imprecise_points": 0
+        }
+      },
+      "case_file": "cases/Mixed_Gen_001.json"
+    }
+  ],
+  "note": "Full machine-readable program, oracle, per-extra-value/taint origin and counterfactuals in each linked case"
+}

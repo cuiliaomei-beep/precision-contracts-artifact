@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "cases": 1,
+  "configurations": 5,
+  "rows": [
+    {
+      "case": "grpc/positive",
+      "configurations": 5
+    }
+  ]
+}

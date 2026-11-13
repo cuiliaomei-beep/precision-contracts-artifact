@@ -1,0 +1,115 @@
+{
+  "framework": "Apache Hadoop HDFS",
+  "version": "3.3.6",
+  "revision": "1be78238728da9266a4f88195058f08fd012bf9c",
+  "execution": "Hadoop3.3.6 MiniDFSCluster with a separate Java client and two DFSClient instances",
+  "mocking": "No mock or spy in experiment fixture. Mockito jars satisfy pre-existing Hadoop test-utility class signatures.",
+  "original_run_record": "runs/run_001_original/run_record.json",
+  "original_run_record_sha256": "5851497e74141dc97d1537991c18dd40e1d8a2a7679d1ecd1437b1ac63413bcf",
+  "mutant_run_record": "runs/run_001_holder_check_removed/run_record.json",
+  "mutant_run_record_sha256": "70f6d98155b75c513bb71346274b3c2cd7d2c19584a637199c7d971bf4fe2411",
+  "paired_cases": [
+    {
+      "id": "matching_holder_a",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "matching_holder_b",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "cross_holder",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "normal",
+      "changed": true
+    },
+    {
+      "id": "cross_valid_file_id_matching_second_holder",
+      "original": "normal",
+      "mutant": "normal",
+      "changed": false
+    },
+    {
+      "id": "cross_valid_file_id_wrong_holder",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "normal",
+      "changed": true
+    },
+    {
+      "id": "unknown_file_id",
+      "original": "java.io.FileNotFoundException",
+      "mutant": "java.io.FileNotFoundException",
+      "changed": false
+    },
+    {
+      "id": "closed_file_rejected",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "changed": false
+    },
+    {
+      "id": "directory_rejected",
+      "original": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "mutant": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "changed": false
+    }
+  ],
+  "paired_changed_cases": [
+    "cross_holder",
+    "cross_valid_file_id_wrong_holder"
+  ],
+  "paired_expected_changed_cases": [
+    "cross_holder",
+    "cross_valid_file_id_wrong_holder"
+  ],
+  "original_cases": 8,
+  "mutant_cases": 8,
+  "original_server_off": {
+    "pid": 898,
+    "uri": "hdfs://localhost:34769",
+    "attempted_fsync": true,
+    "proxy_class": "com.sun.proxy.$Proxy13",
+    "outcome": "java.net.ConnectException",
+    "message": "Call From DESKTOP-QS2HPSB/127.0.1.1 to localhost:34769 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused",
+    "network_failure": true,
+    "remote_server_exception": false,
+    "pass": true
+  },
+  "mutant_server_off": {
+    "pid": 1276,
+    "uri": "hdfs://localhost:37359",
+    "attempted_fsync": true,
+    "proxy_class": "com.sun.proxy.$Proxy13",
+    "outcome": "java.net.ConnectException",
+    "message": "Call From DESKTOP-QS2HPSB/127.0.1.1 to localhost:37359 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused",
+    "network_failure": true,
+    "remote_server_exception": false,
+    "pass": true
+  },
+  "all_pass": true,
+  "mutation_manifest": "mutation/mutation_manifest.json",
+  "mutation_manifest_sha256": "693b86261eaa57b3a1567aa7ac7821b7f9ffded88d5cf6fb4b7923545e29690a",
+  "preserved_attempts": [
+    {
+      "path": "runs/run_001_holder_check_removed/run_record.json",
+      "sha256": "70f6d98155b75c513bb71346274b3c2cd7d2c19584a637199c7d971bf4fe2411",
+      "mode": "holder_check_removed",
+      "all_pass": true,
+      "error": null,
+      "client_cases": 8
+    },
+    {
+      "path": "runs/run_001_original/run_record.json",
+      "sha256": "5851497e74141dc97d1537991c18dd40e1d8a2a7679d1ecd1437b1ac63413bcf",
+      "mode": "original",
+      "all_pass": true,
+      "error": null,
+      "client_cases": 8
+    }
+  ],
+  "scope": "Runtime ground truth for these typed requests and constructed heap states only; not a general Java/Hadoop soundness proof or a newly discovered production vulnerability."
+}

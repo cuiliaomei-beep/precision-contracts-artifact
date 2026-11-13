@@ -1,0 +1,26 @@
+{
+  "repository": "cuiliaomei-beep/precision-contracts-artifact",
+  "release_tag": "artifact-20261113",
+  "assets": [
+    {
+      "file": "tomcat-phase_w1-relations.tar.gz",
+      "bytes": 143315832,
+      "sha256": "5a1d7e53d50590bbf6561820a7226b0520989299c5e7070dc1172556dc411b8e",
+      "run": "phase_w1",
+      "threads": 1,
+      "relations": 71,
+      "tuples": 11618755,
+      "uncompressed_relation_bytes": 2076206212
+    },
+    {
+      "file": "tomcat-phase_w4-relations.tar.gz",
+      "bytes": 143315832,
+      "sha256": "3d359dfcd8270ab31fa350b12e6d80f5103bdeab199a713fdfe82a8d8d1dc190",
+      "run": "phase_w4",
+      "threads": 4,
+      "relations": 71,
+      "tuples": 11618755,
+      "uncompressed_relation_bytes": 2076206212
+    }
+  ]
+}

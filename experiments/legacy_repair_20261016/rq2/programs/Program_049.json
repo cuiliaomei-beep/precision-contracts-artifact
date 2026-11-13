@@ -1,0 +1,324 @@
+{
+  "id": "Program_049",
+  "family": "rma",
+  "program_sha256": "a98eb09f2deabf9e3365d017f8028cd3073f4b6e40af2d263279d977a2356dd2",
+  "implementation_sha256": "dc05e50db361039660c8d184d8a39d80bea0ab1e2ee105a718352cd48471093d",
+  "reference_hash": "9ff564481716453fb3a7ef114516c3c5e17faab049c26eec34d38f2db24fb939",
+  "reference_states": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "w0_source": {
+              "kind": "set",
+              "constants": [
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "c0": {
+          "component": "c0",
+          "values": {
+            "w0_source": {
+              "kind": "set",
+              "constants": [
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {
+        "R": {
+          "name": "R",
+          "owner": "",
+          "values": {
+            "data": {
+              "kind": "set",
+              "constants": [
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        },
+        "S": {
+          "name": "S",
+          "owner": "",
+          "values": {
+            "data": {
+              "kind": "set",
+              "constants": [
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "read0": {
+              "kind": "set",
+              "constants": [
+                -25,
+                -32,
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "c1": {
+          "component": "c1",
+          "values": {
+            "read0": {
+              "kind": "set",
+              "constants": [
+                -25,
+                -32,
+                619399
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          -25,
+          -32,
+          619399
+        ],
+        "tainted": false
+      }
+    }
+  },
+  "reference_statistics": {
+    "iterations": 4,
+    "converged": true,
+    "nodes_analyzed": 4,
+    "max_iterations": 100000,
+    "residual_nodes": [],
+    "constant_universe": {
+      "integer_interval": [
+        -15485000,
+        15485000
+      ],
+      "string_alphabet": [],
+      "maximum_string_length": 5,
+      "null": true,
+      "booleans": [
+        false,
+        true
+      ],
+      "finite_ieee_floats": true,
+      "out_of_universe": "top",
+      "maximum_finite_set_size": 64,
+      "initialized_before_iteration": true
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "e0",
+        "event_type": "LocalAssign",
+        "component": "c0"
+      },
+      {
+        "id": "e1",
+        "event_type": "RemoteWrite",
+        "component": "c0"
+      },
+      {
+        "id": "e2",
+        "event_type": "RemoteRead",
+        "component": "c1"
+      },
+      {
+        "id": "e3",
+        "event_type": "Observe",
+        "component": "c1"
+      }
+    ],
+    "edges": [
+      {
+        "src": "e0",
+        "dst": "e1",
+        "type": "control"
+      },
+      {
+        "src": "e0",
+        "dst": "e1",
+        "type": "ordering"
+      },
+      {
+        "src": "e1",
+        "dst": "e2",
+        "type": "memory"
+      },
+      {
+        "src": "e2",
+        "dst": "e3",
+        "type": "control"
+      },
+      {
+        "src": "e2",
+        "dst": "e3",
+        "type": "ordering"
+      }
+    ],
+    "statistics": {
+      "nodes": 4,
+      "edges": 5,
+      "components": 2,
+      "cross_component_edges": 1,
+      "edge_density": 0.4166666666666667,
+      "max_fan_out": 1,
+      "max_fan_in": 1,
+      "query_points": 1
+    }
+  },
+  "planned": 400,
+  "attempted": 400,
+  "successes": 400,
+  "errors": 0,
+  "mismatches": 0,
+  "distinct_schedule_traces": 130,
+  "runs_with_cut_edges": 240,
+  "duplicate_messages": 54,
+  "serialized_messages": 587,
+  "by_configuration": {
+    "1:single": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "1:component": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "1:random": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "1:scc": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "1:communication": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "2:single": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "2:component": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "2:random": {
+      "passed": 20,
+      "distinct_schedule_traces": 16
+    },
+    "2:scc": {
+      "passed": 20,
+      "distinct_schedule_traces": 20
+    },
+    "2:communication": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "4:single": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "4:component": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "4:random": {
+      "passed": 20,
+      "distinct_schedule_traces": 20
+    },
+    "4:scc": {
+      "passed": 20,
+      "distinct_schedule_traces": 20
+    },
+    "4:communication": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "8:single": {
+      "passed": 20,
+      "distinct_schedule_traces": 17
+    },
+    "8:component": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    },
+    "8:random": {
+      "passed": 20,
+      "distinct_schedule_traces": 20
+    },
+    "8:scc": {
+      "passed": 20,
+      "distinct_schedule_traces": 20
+    },
+    "8:communication": {
+      "passed": 20,
+      "distinct_schedule_traces": 18
+    }
+  },
+  "runs_path": "rq2/runs/Program_049.jsonl.gz",
+  "runs_sha256": "ffddfae2a8f6f57ae6bcc6dc8b4703c23e12a697a207e64711c5122d9a740520",
+  "seconds": 0.8016236000003119,
+  "status": "passed"
+}

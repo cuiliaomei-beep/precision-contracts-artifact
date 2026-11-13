@@ -1,0 +1,195 @@
+{
+  "session_date": "2026-10-16",
+  "generated_at_utc": "2026-10-16T05:37:58.874172+00:00",
+  "status": "passed",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "stages": [
+    {
+      "stage": "solver_tests",
+      "command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-m",
+        "unittest",
+        "artifact.real.test_fact_solver",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.41954699999951117
+    }
+  ],
+  "runtime": {
+    "dubbo": {
+      "cases": 4,
+      "passed": 4,
+      "provider_off_passed": true,
+      "result_file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\runtime_results.json",
+      "result_sha256": "15f062fb2c59e2e66621fb52cb46190eeba87b1a7986793961d9903dbc432d74"
+    },
+    "grpc": {
+      "cases": 4,
+      "passed": 4,
+      "provider_off_passed": true,
+      "result_file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\runtime_results.json",
+      "result_sha256": "3bbf3343e2994e171f49840a1cf628b2928d0fd9307ebb97be428ce3fd9e9a4b"
+    }
+  },
+  "cases": [
+    {
+      "framework": "dubbo",
+      "scenario": "positive",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 21,
+      "edges": 18,
+      "mutation_checks": 2,
+      "sink_taints": {
+        "positive": true
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\dubbo\\positive\\summary.json"
+    },
+    {
+      "framework": "dubbo",
+      "scenario": "clean_sink",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 19,
+      "edges": 15,
+      "mutation_checks": 0,
+      "sink_taints": {
+        "clean_sink": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\dubbo\\clean_sink\\summary.json"
+    },
+    {
+      "framework": "dubbo",
+      "scenario": "constant_reply",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 16,
+      "edges": 12,
+      "mutation_checks": 0,
+      "sink_taints": {
+        "constant_reply": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\dubbo\\constant_reply\\summary.json"
+    },
+    {
+      "framework": "dubbo",
+      "scenario": "two_calls",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 38,
+      "edges": 34,
+      "mutation_checks": 2,
+      "sink_taints": {
+        "two_calls_source": true,
+        "two_calls_clean": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\dubbo\\two_calls\\summary.json"
+    },
+    {
+      "framework": "grpc",
+      "scenario": "positive",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 50,
+      "edges": 47,
+      "mutation_checks": 2,
+      "sink_taints": {
+        "response": true
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\grpc\\positive\\summary.json"
+    },
+    {
+      "framework": "grpc",
+      "scenario": "clean_sink",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 45,
+      "edges": 41,
+      "mutation_checks": 0,
+      "sink_taints": {
+        "clean": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\grpc\\clean_sink\\summary.json"
+    },
+    {
+      "framework": "grpc",
+      "scenario": "constant_reply",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 32,
+      "edges": 28,
+      "mutation_checks": 0,
+      "sink_taints": {
+        "response": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\grpc\\constant_reply\\summary.json"
+    },
+    {
+      "framework": "grpc",
+      "scenario": "two_calls",
+      "status": "passed",
+      "planned": 46,
+      "passed": 46,
+      "failed": 0,
+      "nodes": 97,
+      "edges": 92,
+      "mutation_checks": 2,
+      "sink_taints": {
+        "first": true,
+        "second": false
+      },
+      "result": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\results\\grpc\\two_calls\\summary.json"
+    }
+  ],
+  "arguments": {
+    "reuse_runtime": true,
+    "reuse_export": true,
+    "workers": "1,2,4,8",
+    "seeds": "0,1"
+  },
+  "totals": {
+    "planned": 368,
+    "passed": 368,
+    "failed": 0,
+    "mutation_checks": 8
+  },
+  "auxiliary_checks": {
+    "frontend": {
+      "passed": 9,
+      "planned": 9,
+      "file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\frontend\\regression\\results.json"
+    },
+    "flowdroid": {
+      "dubbo": {
+        "passed": 4,
+        "planned": 4,
+        "file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\flowdroid\\crosscheck_results.json",
+        "sha256": "7e23ef9eae7fa88cd532adae8b1796b6f8649d034fdea1df88bfe64ff52bda7f"
+      },
+      "grpc": {
+        "passed": 4,
+        "planned": 4,
+        "file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\flowdroid\\summary.json",
+        "sha256": "0270a3f15e761dddc376bbdff3e742c0db822fda38fd165f110af48795e4d0eb"
+      }
+    }
+  },
+  "completed_at_utc": "2026-10-16T05:42:54.941212+00:00"
+}

@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "id": "RPC-02",
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "origin",
+      "target"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "origin",
+        "attributes": {
+          "var": "x",
+          "value": 10,
+          "tainted": false
+        }
+      },
+      {
+        "id": "e1",
+        "type": "LocalAssign",
+        "component": "origin",
+        "attributes": {
+          "var": "y",
+          "value": 20,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Send",
+        "component": "origin",
+        "attributes": {
+          "destination": "target",
+          "msg_type": "REQ_process",
+          "data": {
+            "x": {
+              "var": "x"
+            },
+            "y": {
+              "var": "y"
+            }
+          },
+          "message_id": "rpc2_origin_target_process:request",
+          "call_id": "rpc2_origin_target_process"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "Receive",
+        "component": "target",
+        "attributes": {
+          "source": "origin",
+          "msg_type": "REQ_process",
+          "message_id": "rpc2_origin_target_process:request",
+          "bindings": {
+            "x": "x",
+            "y": "y"
+          },
+          "call_id": "rpc2_origin_target_process"
+        }
+      },
+      {
+        "id": "e4",
+        "type": "LocalAssign",
+        "component": "target",
+        "attributes": {
+          "var": "_return_rpc2_origin_target_process",
+          "value": {
+            "var": "y"
+          },
+          "tainted": false,
+          "call_id": "rpc2_origin_target_process"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Send",
+        "component": "target",
+        "attributes": {
+          "destination": "origin",
+          "msg_type": "RESP_process",
+          "data": {
+            "result": {
+              "var": "_return_rpc2_origin_target_process"
+            }
+          },
+          "message_id": "rpc2_origin_target_process:response",
+          "call_id": "rpc2_origin_target_process"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "Receive",
+        "component": "origin",
+        "attributes": {
+          "source": "target",
+          "msg_type": "RESP_process",
+          "message_id": "rpc2_origin_target_process:response",
+          "bindings": {
+            "result": "result"
+          },
+          "call_id": "rpc2_origin_target_process"
+        }
+      },
+      {
+        "id": "e7",
+        "type": "Observe",
+        "component": "target",
+        "attributes": {
+          "point": "x",
+          "expr": {
+            "var": "x"
+          }
+        }
+      },
+      {
+        "id": "e8",
+        "type": "Observe",
+        "component": "target",
+        "attributes": {
+          "point": "y",
+          "expr": {
+            "var": "y"
+          }
+        }
+      },
+      {
+        "id": "e9",
+        "type": "Observe",
+        "component": "origin",
+        "attributes": {
+          "point": "result",
+          "expr": {
+            "var": "result"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "origin": {},
+        "target": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e2",
+          "e6"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e5",
+          "e7"
+        ],
+        [
+          "e6",
+          "e9"
+        ],
+        [
+          "e7",
+          "e8"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "2eaa38975a9957621d8c795cd514b12f2254e2a7c12150a445769f8ebabe2e69",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 3,
+      "Send": 2,
+      "Receive": 2,
+      "Observe": 3
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": false,
+    "sync": false,
+    "may_alias": false,
+    "observations": 3,
+    "events": 10
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "9c20a9434ebca5f9b63d73a051241e76093a8ad04ac93859c01af013d072910e",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "target::x": {
+      "values": [
+        10
+      ],
+      "may_tainted": false
+    },
+    "target::y": {
+      "values": [
+        20
+      ],
+      "may_tainted": true
+    },
+    "origin::result": {
+      "values": [
+        20
+      ],
+      "may_tainted": true
+    }
+  },
+  "expected_pending": []
+}

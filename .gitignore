@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+/runs/
+/release-assets/
+/subjects/
+/deps/
+/dependencies/
+/build/
+/downloads/
+*.class
+*.jar
+*.exe
+*.pid
+Thumbs.db
+.DS_Store

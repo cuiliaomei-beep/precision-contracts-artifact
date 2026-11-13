@@ -1,0 +1,93 @@
+[
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/NameNodeRpcServer.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\NameNodeRpcServer.java",
+    "sha256": "aefeb3031de9e4a2184aeb83a55282b02c2433e5e945aa6777f0ed141ddcd4b1"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/INodeFile.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\INodeFile.java",
+    "sha256": "843e80497863ce50f1db31a9d313b3d1a9d5f0fca8a44ace38e4101bfde0a9e2"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/INode.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\INode.java",
+    "sha256": "920873954aab71024dd95df5c479dadb7953096be37b38cd19433b1785476c3a"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/INodesInPath.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\INodesInPath.java",
+    "sha256": "df5495010a7152d1219cfeb3dc414b85a687352fedc5689e25c3a58155e7688f"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/INodeMap.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\INodeMap.java",
+    "sha256": "228af5bc2b07d9dd55912cdec75a27644a0104ddf80194fed71c9f1b896432ad"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/FSNamesystem.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\FSNamesystem.java",
+    "sha256": "df562c7d74d0df20b4a3ec40e16f423895d5516713ad013db37ee343663cb870"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/FSDirectory.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\FSDirectory.java",
+    "sha256": "c4f7f13a02dc8f67b44c913226a5ba9b41a2f432aaed85c41f509a5aa77bc6cb"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/snapshot/Snapshot.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\snapshot\\Snapshot.java",
+    "sha256": "3e336f6118f28ff6f4098e3d6639f1b42ef7340c3f0ed9060f8a47970a6c8c0a"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/FileUnderConstructionFeature.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\FileUnderConstructionFeature.java",
+    "sha256": "830db09ff5acb85e8b3b9f742c00ec1f496cb357bbea8d3e1efbaecd1de511e9"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/server/namenode/FSDirWriteFileOp.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\server\\namenode\\FSDirWriteFileOp.java",
+    "sha256": "4bc2a47c92856081bbbc2cb681fa169333401884e1c1041c24446f0ecb6986c4"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-3.3.6-sources.jar",
+    "jar_sha256": "e34a9929eb814a58b4b6c5dc407a43bc215f91c7fef62f74217e6ae1fbf1841c",
+    "entry": "org/apache/hadoop/hdfs/protocolPB/ClientNamenodeProtocolServerSideTranslatorPB.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\protocolPB\\ClientNamenodeProtocolServerSideTranslatorPB.java",
+    "sha256": "f1e9b74a2a57ce89b754bc9fa2f820c7096e40c35ec11f16306da0f69186b5ab"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-client-3.3.6-sources.jar",
+    "jar_sha256": "7eda83209058a7df09d0df69ea43bd39de3a3d4d6fdd988b4a6b158df9fca556",
+    "entry": "org/apache/hadoop/hdfs/protocolPB/ClientNamenodeProtocolTranslatorPB.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\protocolPB\\ClientNamenodeProtocolTranslatorPB.java",
+    "sha256": "089b33874effa5d992aede865e7c5452d00553f9953a89fbb29250272b1e6994"
+  },
+  {
+    "jar": "D:\\wsl\\realsystems\\extracted\\hadoop\\hadoop-3.3.6\\share\\hadoop\\hdfs\\sources\\hadoop-hdfs-client-3.3.6-sources.jar",
+    "jar_sha256": "7eda83209058a7df09d0df69ea43bd39de3a3d4d6fdd988b4a6b158df9fca556",
+    "entry": "org/apache/hadoop/hdfs/protocol/ClientProtocol.java",
+    "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\m0_hdfs_20261016\\novelty_audit\\sources\\org\\apache\\hadoop\\hdfs\\protocol\\ClientProtocol.java",
+    "sha256": "8456babc22dee5dd36072fb095372699476ef0a4f7e21a28f0dad3361864da56"
+  }
+]

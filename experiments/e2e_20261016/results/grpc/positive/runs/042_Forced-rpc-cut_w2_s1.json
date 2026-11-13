@@ -1,0 +1,243 @@
+{
+  "id": "042_Forced-rpc-cut_w2_s1",
+  "strategy": "Forced-rpc-cut",
+  "workers": 2,
+  "seed": 1,
+  "schedule": "BSP with randomized local/receive order and finite duplicates",
+  "status": "passed",
+  "partition_seconds": 0.00010119999933522195,
+  "metrics": {
+    "wall_seconds": 0.521706900000936,
+    "rounds": 22,
+    "active_workers": 2,
+    "worker_metrics": [
+      {
+        "updates": 20,
+        "records": 20,
+        "batches": 10,
+        "payload_bytes": 260,
+        "serialized_envelope_bytes": 698,
+        "control_envelopes": 12,
+        "duplicate_records": 10,
+        "rounds": 22,
+        "compute_seconds": 0.0018511999969632598,
+        "peak_rss_mb": 28.684288
+      },
+      {
+        "updates": 20,
+        "records": 22,
+        "batches": 11,
+        "payload_bytes": 286,
+        "serialized_envelope_bytes": 726,
+        "control_envelopes": 11,
+        "duplicate_records": 11,
+        "rounds": 22,
+        "compute_seconds": 0.0020200000017212005,
+        "peak_rss_mb": 28.471296
+      }
+    ],
+    "residual_equations": 0,
+    "cut_edges": 26,
+    "updates": 40,
+    "records": 42,
+    "batches": 21,
+    "payload_bytes": 546,
+    "serialized_envelope_bytes": 1424,
+    "control_envelopes": 23,
+    "duplicate_records": 21,
+    "peak_worker_rss_mb": 28.684288,
+    "sum_peak_worker_rss_mb": 57.155584,
+    "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+    "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+    "coordinator_round_control_messages": 88,
+    "coordinator_final_state_messages": 2
+  },
+  "placement": {
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@0:entry_param0": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:definition": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:value[input]": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:definition": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:value[$stack13]": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:definition": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:request_object": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:request_send": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:response_receive": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:value[request]": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:definition": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:value[response]": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@14:sink": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@14:value[$stack14]": 1,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:definition": 0,
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:observer_identity": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:definition": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:value[$stack8]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:value[virtualinvoke $stack9.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>($stack8)]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:definition": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:value[$stack10]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:value[virtualinvoke $stack10.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@12:onNext": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@12:value[reply]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@1:definition": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@1:value[@parameter0: io.grpc.examples.helloworld.HelloRequest]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[new java.lang.StringBuilder]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:definition": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[\"Hello \"]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[$stack4]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(\"Hello \")]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:definition": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:value[req]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:value[virtualinvoke req.<io.grpc.examples.helloworld.HelloRequest: java.lang.String getName()>()]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:definition": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[$stack5]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[$stack6]": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack5)]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:definition": 1,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:value[$stack7]": 0,
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:value[virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.String toString()>()]": 1
+  },
+  "states": {
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@0:entry_param0": [],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:value[input]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@10:value[virtualinvoke $stack12.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest$Builder setName(java.lang.String)>(input)]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:value[$stack13]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@11:value[virtualinvoke $stack13.<io.grpc.examples.helloworld.HelloRequest$Builder: io.grpc.examples.helloworld.HelloRequest build()>()]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:request_object": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:request_send": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:response_receive": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:value[request]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12:value[virtualinvoke stub.<io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub: io.grpc.examples.helloworld.HelloReply sayHello(io.grpc.examples.helloworld.HelloRequest)>(request)]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:value[response]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@13:value[virtualinvoke response.<io.grpc.examples.helloworld.HelloReply: java.lang.String getMessage()>()]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@14:sink": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@14:value[$stack14]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>($stack11)]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:observer_identity": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_object": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:request_receive": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@0:response_object": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:value[$stack8]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@10:value[virtualinvoke $stack9.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply$Builder setMessage(java.lang.String)>($stack8)]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:value[$stack10]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@11:value[virtualinvoke $stack10.<io.grpc.examples.helloworld.HelloReply$Builder: io.grpc.examples.helloworld.HelloReply build()>()]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@12:onNext": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@12:value[reply]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@1:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@1:value[@parameter0: io.grpc.examples.helloworld.HelloRequest]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:definition": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@4:value[new java.lang.StringBuilder]": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:definition": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[\"Hello \"]": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[$stack4]": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@6:value[virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(\"Hello \")]": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:value[req]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@7:value[virtualinvoke req.<io.grpc.examples.helloworld.HelloRequest: java.lang.String getName()>()]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[$stack5]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[$stack6]": [],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@8:value[virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack5)]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:definition": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:value[$stack7]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ],
+    "rpc[entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@12]|<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>@9:value[virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.String toString()>()]": [
+      "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+    ]
+  },
+  "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+  "mismatched_nodes": []
+}

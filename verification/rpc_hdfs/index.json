@@ -1,0 +1,55 @@
+{
+  "rpc_saved": {
+    "source": "runs/rpc-check-1794536127365892400/report.json",
+    "sha256": "bf6f999f401db02c8882bf5fabfe1f31cebad61976a2ba6072e1cd99d68c0884"
+  },
+  "hdfs_saved": {
+    "source": "runs/hdfs-check-1794536127324978900/report.json",
+    "sha256": "b3448f27ceb618ce3877cdd569cddf82d1261947f2193f7b20ef9bc68e6f140d"
+  },
+  "hdfs_replay": {
+    "source": "runs/hdfs-replay-1794535702300515200/report.json",
+    "sha256": "0bc41ab209a0ad71fee797abf3affe123f243bcf39429a65e716df368172fca3"
+  },
+  "rpc_small": {
+    "source": "runs/rpc-analyze-1794535752709085300/report.json",
+    "sha256": "58e00e26c096aa1c7c88aa5a321b3ce992aa74b2fcb1e43272c72a8ffa1aeb01"
+  },
+  "grpc_runtime": {
+    "source": "runs/rpc-runtime-1794535888327616500/report.json",
+    "sha256": "ae945e44e4af74b23cfef0fb1a9b8f986f8e6f67465541063b7a5db53b14aaba"
+  },
+  "dubbo_runtime": {
+    "source": "runs/rpc-runtime-1794535888328510300/report.json",
+    "sha256": "2a5729c401420e59098fb70ae2879d15d3fd782417b299a955bf112543396ac8"
+  },
+  "grpc_export": {
+    "source": "runs/rpc-export-1794536070411342400/report.json",
+    "sha256": "07ac43f7e8f7eef2a79227a8b0977ea3b0dc6a3202b41d05c5c0fa339f3962a0"
+  },
+  "grpc_reexport_solve": {
+    "source": "runs/rpc-reexport-positive/summary.json",
+    "sha256": "bb2bf809ba7501fb84422be89dde80560dc6d411d2453e2ea68895618de2aaa7"
+  },
+  "hdfs_runtime": {
+    "source": "runs/hdfs-runtime-1794535914222584568/report.json",
+    "sha256": "632361712c093727bdc602f5a87045574a9042e3c088de8aa85365979ee4bd25"
+  },
+  "hdfs_export": {
+    "source": "runs/hdfs-export-1794536070372864200/report.json",
+    "sha256": "693ebabdc1997294d4ec2fab140308d21ca22584b888822df830d1e35f5d7eef"
+  },
+  "hdfs_export_methods_equal_saved": true,
+  "grpc_dependency_fetch": {
+    "source": "verification/rpc_hdfs/grpc_dependency_fetch.json",
+    "sha256": "888047f5526104d224d3fdb63c7e50f997e7624a268b6ee0afd7b8cea7194244"
+  },
+  "hdfs_dependency_fetch": {
+    "source": "verification/rpc_hdfs/hdfs_dependency_fetch.json",
+    "sha256": "95f0efceb54b3d6e56bebc1a9858fbf0bdf30d9a74d72bf797a34e2ca047b85e"
+  },
+  "hdfs_dependency_download": {
+    "source": "verification/rpc_hdfs/hdfs_dependency_download.json",
+    "sha256": "098aac20ec5a7d80c1ac995814169765b192f3f551b09c5ddf907efd85b138d1"
+  }
+}

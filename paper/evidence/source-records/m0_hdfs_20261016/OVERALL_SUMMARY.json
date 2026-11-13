@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-16",
+  "verification_status": "passed",
+  "M0": {
+    "status": "completed",
+    "real_rpc_cases": 16,
+    "offline_network_controls": 2,
+    "synthetic_cases": 11,
+    "declared_input_worlds": 348,
+    "enumerated_configurations": 10971,
+    "complete_schedule_paths": 62296,
+    "randomized_runs": 2088,
+    "counterexample_groups": 7
+  },
+  "M1": {
+    "status": "restricted_source_reference_completed; full planned M1 not claimed",
+    "real_methods_extracted_per_variant": 11,
+    "original_jimple_units": 239,
+    "mutant_jimple_units": 223,
+    "actual_runtime_outcomes_matched": 16,
+    "held_out_rows_checked": 504,
+    "backedges_traversed": 144,
+    "fail_closed_controls": 10,
+    "source_projection_rows_equal": 520,
+    "scope": "Finite input collecting execution under explicit heap/library/environment contracts; no generic Java abstract solver or CFG-to-relation-IR compiler."
+  },
+  "decision": "NO_GO_FOR_CURRENT_NOVELTY_ARGUMENT",
+  "candidate_status": "Baseline-equivalent control, not an implemented new synthesizer",
+  "strict_extra_schema_reduction_over_strong_baseline": 0,
+  "decision_reason": "All proposed challenges have classical tuple-preserving demand/cache/closure solutions; actual fsync slice introduces no demonstrated missing algorithmic task.",
+  "next_stages": {
+    "M2": "not entered: M0 scientific stop gate",
+    "M3": "not entered: M2 premise absent",
+    "M4": "not entered: evidence gates absent",
+    "paper_writing": "excluded by user; untouched"
+  },
+  "limits": [
+    "No impossibility claim about future scalable semantic synthesis",
+    "No physical distributed speedup claimed by synthetic scheduling or local-variable cell counts",
+    "Classical local liveness is not an optimal general query-demand baseline",
+    "HDFS heap construction facts are explicit contracts, not full JVM heap dumps"
+  ],
+  "baseline_files_unchanged": 5652,
+  "source_snapshot_files": 30,
+  "evidence": [
+    "RUNTIME_VERIFICATION.json",
+    "RELATION_INDEPENDENT_VERIFICATION.json",
+    "M1_INDEPENDENT_VERIFICATION.json",
+    "M1_SOURCE_PROJECTION_COMPARISON.json",
+    "explicit_quotient/VERIFICATION.json",
+    "PRESERVATION_VERIFICATION.json"
+  ]
+}

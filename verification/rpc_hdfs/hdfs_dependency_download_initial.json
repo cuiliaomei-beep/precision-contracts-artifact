@@ -1,0 +1,18 @@
+{
+  "status": "failed",
+  "dependencies": 151,
+  "seconds": 53.328909500007285,
+  "downloaded_bytes": 82196412,
+  "failures": [
+    {
+      "file": "share/hadoop/common/lib/audience-annotations-0.5.0.jar",
+      "passed": false,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+    },
+    {
+      "file": "share/hadoop/common/lib/commons-collections-3.2.2.jar",
+      "passed": false,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+    }
+  ]
+}

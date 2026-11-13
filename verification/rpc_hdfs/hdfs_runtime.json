@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "real_runtime_cases": 16,
+  "paired_changed_cases": [
+    "cross_holder",
+    "cross_valid_file_id_wrong_holder"
+  ],
+  "harness": "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/paper-artifact-20261113/runs/hdfs-runtime-1794535914222584568/harness"
+}

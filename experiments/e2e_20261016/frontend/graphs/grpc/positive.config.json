@@ -1,0 +1,27 @@
+{
+  "protocol": "grpc",
+  "classpath": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classes;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-api-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-context-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-core-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-util-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-netty-shaded-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-lite-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-stub-1.66.0-SNAPSHOT.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\protobuf-java-3.25.3.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\guava-33.2.1-jre.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\failureaccess-1.0.2.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\perfmark-api-0.27.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\jsr305-3.0.2.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\error_prone_annotations-2.28.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\checker-qual-3.42.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\j2objc-annotations-3.0.0.jar;D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\animal-sniffer-annotations-1.24.jar",
+  "process_dirs": [
+    "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classes"
+  ],
+  "entry": "<e2e.grpc.PositiveClient: void main(java.lang.String[])>",
+  "handler": "<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+  "registration_class": "io.grpc.examples.helloworld.OfficialServerHarness",
+  "rpc_owner": "io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub",
+  "rpc_method": "sayHello",
+  "manifest_sha256": "0799af5fa0ffab70ab3538a7d5fcc8a926124603e52a9b3776ac642d2bda93ea",
+  "resolution_method": "closed-world deployment manifest, validated against compiled RPC signatures, handler class and actual bootstrap registration",
+  "protobuf": {
+    "request": {
+      "class": "io.grpc.examples.helloworld.HelloRequest",
+      "field": "name"
+    },
+    "response": {
+      "class": "io.grpc.examples.helloworld.HelloReply",
+      "field": "message"
+    },
+    "descriptor_class": "io.grpc.examples.helloworld.HelloWorldProto",
+    "service": "Greeter",
+    "method": "SayHello"
+  }
+}

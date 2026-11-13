@@ -1,0 +1,348 @@
+2026-10-16 18:42:59,722 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: starting cluster: numNameNodes=1, numDataNodes=1
+2026-10-16 18:43:00,816 WARN  [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-10-16 18:43:01,379 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: Formatting using clusterid: testClusterID
+2026-10-16 18:43:01,498 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2026-10-16 18:43:01,599 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2026-10-16 18:43:01,610 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2026-10-16 18:43:01,613 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2026-10-16 18:43:01,644 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner                = clm (auth:SIMPLE)
+2026-10-16 18:43:01,644 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup             = supergroup
+2026-10-16 18:43:01,645 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled    = false
+2026-10-16 18:43:01,645 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isStoragePolicyEnabled = true
+2026-10-16 18:43:01,645 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2026-10-16 18:43:01,919 INFO  [main] org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2026-10-16 18:43:02,564 INFO  [main] org.apache.hadoop.conf.Configuration.deprecation: hadoop.configured.node.mapping is deprecated. Instead, use net.topology.configured.node.mapping
+2026-10-16 18:43:02,564 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit : configured=1000, counted=20, effected=1000
+2026-10-16 18:43:02,564 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2026-10-16 18:43:02,590 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2026-10-16 18:43:02,591 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2026 Oct 16 18:43:02
+2026-10-16 18:43:02,599 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2026-10-16 18:43:02,600 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:02,604 INFO  [main] org.apache.hadoop.util.GSet: 2.0% max memory 2 GB = 41.0 MB
+2026-10-16 18:43:02,604 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^22 = 4194304 entries
+2026-10-16 18:43:02,650 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Storage policy satisfier is disabled
+2026-10-16 18:43:02,651 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2026-10-16 18:43:02,688 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2026-10-16 18:43:02,688 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2026-10-16 18:43:02,688 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 0
+2026-10-16 18:43:02,692 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 1
+2026-10-16 18:43:02,692 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2026-10-16 18:43:02,692 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2026-10-16 18:43:02,692 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2026-10-16 18:43:02,692 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2026-10-16 18:43:02,693 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2026-10-16 18:43:02,693 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2026-10-16 18:43:02,898 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2026-10-16 18:43:02,898 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2026-10-16 18:43:02,898 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2026-10-16 18:43:02,899 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2026-10-16 18:43:02,991 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2026-10-16 18:43:02,991 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:02,991 INFO  [main] org.apache.hadoop.util.GSet: 1.0% max memory 2 GB = 20.5 MB
+2026-10-16 18:43:02,992 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2026-10-16 18:43:02,997 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? true
+2026-10-16 18:43:02,998 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2026-10-16 18:43:02,998 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2026-10-16 18:43:02,998 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2026-10-16 18:43:03,022 INFO  [main] org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2026-10-16 18:43:03,027 INFO  [main] org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: SkipList is disabled
+2026-10-16 18:43:03,045 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2026-10-16 18:43:03,045 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:03,046 INFO  [main] org.apache.hadoop.util.GSet: 0.25% max memory 2 GB = 5.1 MB
+2026-10-16 18:43:03,046 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^19 = 524288 entries
+2026-10-16 18:43:03,103 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2026-10-16 18:43:03,104 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2026-10-16 18:43:03,104 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2026-10-16 18:43:03,126 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache on namenode is enabled
+2026-10-16 18:43:03,126 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2026-10-16 18:43:03,140 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map NameNodeRetryCache
+2026-10-16 18:43:03,141 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:03,141 INFO  [main] org.apache.hadoop.util.GSet: 0.029999999329447746% max memory 2 GB = 629.1 KB
+2026-10-16 18:43:03,141 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^16 = 65536 entries
+2026-10-16 18:43:03,254 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImage: Allocated new BlockPoolId: BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:03,464 INFO  [main] org.apache.hadoop.hdfs.server.common.Storage: Storage directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1 has been successfully formatted.
+2026-10-16 18:43:03,555 INFO  [main] org.apache.hadoop.hdfs.server.common.Storage: Storage directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2 has been successfully formatted.
+2026-10-16 18:43:03,666 INFO  [FSImageSaver for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1 of type IMAGE_AND_EDITS] org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/fsimage.ckpt_0000000000000000000 using no compression
+2026-10-16 18:43:03,666 INFO  [FSImageSaver for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2 of type IMAGE_AND_EDITS] org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/current/fsimage.ckpt_0000000000000000000 using no compression
+2026-10-16 18:43:04,272 INFO  [FSImageSaver for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1 of type IMAGE_AND_EDITS] org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/fsimage.ckpt_0000000000000000000 of size 398 bytes saved in 0 seconds .
+2026-10-16 18:43:04,272 INFO  [FSImageSaver for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2 of type IMAGE_AND_EDITS] org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/current/fsimage.ckpt_0000000000000000000 of size 398 bytes saved in 0 seconds .
+2026-10-16 18:43:04,450 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2026-10-16 18:43:04,513 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Stopping services started for active state
+2026-10-16 18:43:04,513 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Stopping services started for standby state
+2026-10-16 18:43:04,523 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: createNameNode []
+2026-10-16 18:43:04,919 WARN  [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-namenode.properties,hadoop-metrics2.properties
+2026-10-16 18:43:05,095 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNodeUtils: fs.defaultFS is hdfs://127.0.0.1:0
+2026-10-16 18:43:05,250 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@644abb8f] org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2026-10-16 18:43:05,312 INFO  [main] org.apache.hadoop.hdfs.DFSUtil: Filter initializers set : org.apache.hadoop.http.lib.StaticUserWebFilter,org.apache.hadoop.hdfs.web.AuthFilterInitializer
+2026-10-16 18:43:05,334 INFO  [main] org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for hdfs at: http://localhost:0
+2026-10-16 18:43:05,822 WARN  [main] org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/clm/hadoop-http-auth-signature-secret
+2026-10-16 18:43:05,841 INFO  [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.namenode is not defined
+2026-10-16 18:43:05,853 INFO  [main] org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2026-10-16 18:43:05,860 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2026-10-16 18:43:05,860 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2026-10-16 18:43:05,867 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context hdfs
+2026-10-16 18:43:05,867 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context static
+2026-10-16 18:43:06,022 INFO  [main] org.apache.hadoop.http.HttpServer2: addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2026-10-16 18:43:06,060 INFO  [main] org.apache.hadoop.http.HttpServer2: Jetty bound to port 42501
+2026-10-16 18:43:06,219 WARN  [main] org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/clm/hadoop-http-auth-signature-secret
+2026-10-16 18:43:06,846 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2026-10-16 18:43:06,863 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2026-10-16 18:43:06,863 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2026-10-16 18:43:06,864 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2026-10-16 18:43:06,864 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner                = clm (auth:SIMPLE)
+2026-10-16 18:43:06,864 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup             = supergroup
+2026-10-16 18:43:06,864 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled    = false
+2026-10-16 18:43:06,864 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isStoragePolicyEnabled = true
+2026-10-16 18:43:06,865 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2026-10-16 18:43:06,865 INFO  [main] org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2026-10-16 18:43:06,865 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit : configured=1000, counted=20, effected=1000
+2026-10-16 18:43:06,865 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2026-10-16 18:43:06,866 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2026-10-16 18:43:06,866 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2026 Oct 16 18:43:06
+2026-10-16 18:43:06,866 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2026-10-16 18:43:06,866 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:06,867 INFO  [main] org.apache.hadoop.util.GSet: 2.0% max memory 2 GB = 41.0 MB
+2026-10-16 18:43:06,867 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^22 = 4194304 entries
+2026-10-16 18:43:06,867 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Storage policy satisfier is disabled
+2026-10-16 18:43:06,868 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2026-10-16 18:43:06,868 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2026-10-16 18:43:06,868 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2026-10-16 18:43:06,868 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 0
+2026-10-16 18:43:06,868 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 1
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2026-10-16 18:43:06,869 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2026-10-16 18:43:06,870 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2026-10-16 18:43:06,870 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:06,870 INFO  [main] org.apache.hadoop.util.GSet: 1.0% max memory 2 GB = 20.5 MB
+2026-10-16 18:43:06,870 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2026-10-16 18:43:06,875 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? true
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: SkipList is disabled
+2026-10-16 18:43:06,876 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2026-10-16 18:43:06,877 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:06,877 INFO  [main] org.apache.hadoop.util.GSet: 0.25% max memory 2 GB = 5.1 MB
+2026-10-16 18:43:06,877 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^19 = 524288 entries
+2026-10-16 18:43:06,878 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2026-10-16 18:43:06,879 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2026-10-16 18:43:06,879 INFO  [main] org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2026-10-16 18:43:06,879 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache on namenode is enabled
+2026-10-16 18:43:06,879 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2026-10-16 18:43:06,879 INFO  [main] org.apache.hadoop.util.GSet: Computing capacity for map NameNodeRetryCache
+2026-10-16 18:43:06,880 INFO  [main] org.apache.hadoop.util.GSet: VM type       = 64-bit
+2026-10-16 18:43:06,880 INFO  [main] org.apache.hadoop.util.GSet: 0.029999999329447746% max memory 2 GB = 629.1 KB
+2026-10-16 18:43:06,880 INFO  [main] org.apache.hadoop.util.GSet: capacity      = 2^16 = 65536 entries
+2026-10-16 18:43:06,896 INFO  [main] org.apache.hadoop.hdfs.server.common.Storage: Lock on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/in_use.lock acquired by nodename 494@DESKTOP-QS2HPSB
+2026-10-16 18:43:06,912 INFO  [main] org.apache.hadoop.hdfs.server.common.Storage: Lock on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/in_use.lock acquired by nodename 494@DESKTOP-QS2HPSB
+2026-10-16 18:43:06,936 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Recovering unfinalized segments in /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current
+2026-10-16 18:43:06,938 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Recovering unfinalized segments in /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/current
+2026-10-16 18:43:06,942 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImage: No edit log streams selected.
+2026-10-16 18:43:06,942 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImage: Planning to load image: FSImageFile(file=/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2026-10-16 18:43:07,076 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Loading 1 INodes.
+2026-10-16 18:43:07,080 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Successfully loaded 1 inodes
+2026-10-16 18:43:07,106 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Completed update blocks map and name cache, total waiting duration 0ms.
+2026-10-16 18:43:07,119 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2026-10-16 18:43:07,120 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSImage: Loaded image for txid 0 from /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/fsimage_0000000000000000000
+2026-10-16 18:43:07,139 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2026-10-16 18:43:07,142 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 1
+2026-10-16 18:43:07,445 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameCache: initialized with 0 entries 0 lookups
+2026-10-16 18:43:07,446 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Finished loading FSImage in 562 msecs
+2026-10-16 18:43:08,329 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: RPC server is binding to localhost:0
+2026-10-16 18:43:08,329 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: Enable NameNode state context:false
+2026-10-16 18:43:08,393 INFO  [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 200, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2026-10-16 18:43:08,443 INFO  [main] org.apache.hadoop.ipc.Server: Listener at localhost:42015
+2026-10-16 18:43:08,446 INFO  [Socket Reader #1 for port 0] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 0
+2026-10-16 18:43:08,607 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: Clients are to use localhost:42015 to access this namenode/service.
+2026-10-16 18:43:08,609 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2026-10-16 18:43:08,636 INFO  [main] org.apache.hadoop.hdfs.server.namenode.LeaseManager: Number of blocks under construction: 0
+2026-10-16 18:43:08,674 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeAdminDefaultMonitor: Initialized the Default Decommission and Maintenance monitor
+2026-10-16 18:43:08,675 INFO  [MarkedDeleteBlockScrubberThread] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Start MarkedDeleteBlockScrubber thread
+2026-10-16 18:43:08,680 INFO  [main] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: initializing replication queues
+2026-10-16 18:43:08,681 INFO  [main] org.apache.hadoop.hdfs.StateChange: STATE* Leaving safe mode after 0 secs
+2026-10-16 18:43:08,681 INFO  [main] org.apache.hadoop.hdfs.StateChange: STATE* Network topology has 0 racks and 0 datanodes
+2026-10-16 18:43:08,681 INFO  [main] org.apache.hadoop.hdfs.StateChange: STATE* UnderReplicatedBlocks has 0 blocks
+2026-10-16 18:43:08,684 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Total number of blocks            = 0
+2026-10-16 18:43:08,684 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of invalid blocks          = 0
+2026-10-16 18:43:08,685 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of under-replicated blocks = 0
+2026-10-16 18:43:08,685 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+2026-10-16 18:43:08,685 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of blocks being written    = 0
+2026-10-16 18:43:08,685 INFO  [Reconstruction Queue Initializer] org.apache.hadoop.hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 5 msec
+2026-10-16 18:43:08,874 INFO  [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2026-10-16 18:43:08,874 INFO  [IPC Server listener on 0] org.apache.hadoop.ipc.Server: IPC Server listener on 0: starting
+2026-10-16 18:43:08,881 INFO  [main] org.apache.hadoop.hdfs.server.namenode.NameNode: NameNode RPC up at: localhost/127.0.0.1:42015
+2026-10-16 18:43:08,890 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Starting services required for active state
+2026-10-16 18:43:08,890 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: Initializing quota with 12 thread(s)
+2026-10-16 18:43:08,894 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSDirectory: Quota initialization completed in 3 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2026-10-16 18:43:08,926 INFO  [CacheReplicationMonitor(190620463)] org.apache.hadoop.hdfs.server.blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 30000 milliseconds
+2026-10-16 18:43:08,967 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Starting DataNode 0 with dfs.datanode.data.dir: [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1,[DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2
+2026-10-16 18:43:09,233 INFO  [main] org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1
+2026-10-16 18:43:09,308 INFO  [main] org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2
+2026-10-16 18:43:09,365 INFO  [main] org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2026-10-16 18:43:09,384 INFO  [main] org.apache.hadoop.hdfs.server.datanode.BlockScanner: Initialized block scanner with targetBytesPerSec 1048576
+2026-10-16 18:43:09,409 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Configured hostname is 127.0.0.1
+2026-10-16 18:43:09,413 INFO  [main] org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2026-10-16 18:43:09,431 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Starting DataNode with maxLockedMemory = 0
+2026-10-16 18:43:09,444 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Opened streaming server at /127.0.0.1:43031
+2026-10-16 18:43:09,455 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Balancing bandwidth is 104857600 bytes/s
+2026-10-16 18:43:09,455 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Number threads for balancing is 100
+2026-10-16 18:43:09,479 WARN  [main] org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/clm/hadoop-http-auth-signature-secret
+2026-10-16 18:43:09,480 INFO  [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.datanode is not defined
+2026-10-16 18:43:09,483 INFO  [main] org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2026-10-16 18:43:09,483 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context datanode
+2026-10-16 18:43:09,484 INFO  [main] org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2026-10-16 18:43:09,496 INFO  [main] org.apache.hadoop.http.HttpServer2: Jetty bound to port 36195
+2026-10-16 18:43:10,149 WARN  [main] org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer: Got null for restCsrfPreventionFilter - will not do any filtering.
+2026-10-16 18:43:10,465 INFO  [main] org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer: Listening HTTP traffic on /127.0.0.1:33271
+2026-10-16 18:43:10,465 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@3b4825f0] org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2026-10-16 18:43:10,469 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: dnUserName = clm
+2026-10-16 18:43:10,469 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: supergroup = supergroup
+2026-10-16 18:43:10,546 INFO  [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 200, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2026-10-16 18:43:10,547 INFO  [main] org.apache.hadoop.ipc.Server: Listener at localhost:34689
+2026-10-16 18:43:10,547 INFO  [Socket Reader #1 for port 0] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 0
+2026-10-16 18:43:10,567 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Opened IPC server at /127.0.0.1:34689
+2026-10-16 18:43:10,621 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Refresh request received for nameservices: null
+2026-10-16 18:43:10,630 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Starting BPOfferServices for nameservices: <default>
+2026-10-16 18:43:10,666 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:42015 starting to offer service
+2026-10-16 18:43:10,684 INFO  [IPC Server listener on 0] org.apache.hadoop.ipc.Server: IPC Server listener on 0: starting
+2026-10-16 18:43:10,684 INFO  [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2026-10-16 18:43:11,388 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DataNode: Acknowledging ACTIVE Namenode during handshakeBlock pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:42015
+2026-10-16 18:43:11,397 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Using 2 threads to upgrade data directories (dfs.datanode.parallel.volumes.load.threads.num=2, dataDirs=2)
+2026-10-16 18:43:11,404 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Lock on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/in_use.lock acquired by nodename 494@DESKTOP-QS2HPSB
+2026-10-16 18:43:11,409 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Storage directory with location [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1 is not formatted for namespace 889603690. Formatting...
+2026-10-16 18:43:11,413 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Generated new storageID DS-580424cd-272f-4110-9ad1-8262dbf6fcfe for directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1 
+2026-10-16 18:43:11,429 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Lock on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/in_use.lock acquired by nodename 494@DESKTOP-QS2HPSB
+2026-10-16 18:43:11,431 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Storage directory with location [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2 is not formatted for namespace 889603690. Formatting...
+2026-10-16 18:43:11,432 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Generated new storageID DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965 for directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2 
+2026-10-16 18:43:11,503 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Analyzing storage directories for bpid BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:11,507 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Locking is disabled for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/current/BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:11,515 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Block pool storage directory for location [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1 and block pool id BP-1074309469-127.0.1.1-1792147383206 is not formatted. Formatting ...
+2026-10-16 18:43:11,515 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Formatting block pool BP-1074309469-127.0.1.1-1792147383206 directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/current/BP-1074309469-127.0.1.1-1792147383206/current
+2026-10-16 18:43:11,564 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Analyzing storage directories for bpid BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:11,569 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Locking is disabled for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/current/BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:11,576 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Block pool storage directory for location [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2 and block pool id BP-1074309469-127.0.1.1-1792147383206 is not formatted. Formatting ...
+2026-10-16 18:43:11,576 INFO  [Thread-54] org.apache.hadoop.hdfs.server.common.Storage: Formatting block pool BP-1074309469-127.0.1.1-1792147383206 directory /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/current/BP-1074309469-127.0.1.1-1792147383206/current
+2026-10-16 18:43:11,589 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DataNode: Setting up storage: nsid=889603690;bpid=BP-1074309469-127.0.1.1-1792147383206;lv=-57;nsInfo=lv=-66;cid=testClusterID;nsid=889603690;c=1792147383207;bpid=BP-1074309469-127.0.1.1-1792147383206;dnuuid=null
+2026-10-16 18:43:11,594 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DataNode: Generated and persisted new Datanode UUID d8c107f2-688e-458c-a1f2-ee9e46727cc0
+2026-10-16 18:43:11,638 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: The datanode lock is a read write lock
+2026-10-16 18:43:11,966 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added new volume: DS-580424cd-272f-4110-9ad1-8262dbf6fcfe
+2026-10-16 18:43:11,967 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added volume - [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1, StorageType: DISK
+2026-10-16 18:43:11,968 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added new volume: DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965
+2026-10-16 18:43:11,969 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added volume - [DISK]file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2, StorageType: DISK
+2026-10-16 18:43:11,995 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.MemoryMappableBlockLoader: Initializing cache loader: MemoryMappableBlockLoader.
+2026-10-16 18:43:12,016 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Registered FSDatasetState MBean
+2026-10-16 18:43:12,051 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Adding block pool BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:12,052 INFO  [Thread-62] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Scanning block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1...
+2026-10-16 18:43:12,053 INFO  [Thread-63] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Scanning block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2...
+2026-10-16 18:43:12,105 WARN  [Thread-62] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: dfsUsed file missing in /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/current/BP-1074309469-127.0.1.1-1792147383206/current, will proceed with Du for space computation calculation, 
+2026-10-16 18:43:12,105 WARN  [Thread-63] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: dfsUsed file missing in /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/current/BP-1074309469-127.0.1.1-1792147383206/current, will proceed with Du for space computation calculation, 
+2026-10-16 18:43:12,170 INFO  [Thread-62] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time taken to scan block pool BP-1074309469-127.0.1.1-1792147383206 on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1: 117ms
+2026-10-16 18:43:12,170 INFO  [Thread-63] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time taken to scan block pool BP-1074309469-127.0.1.1-1792147383206 on /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2: 117ms
+2026-10-16 18:43:12,171 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Total time to scan all replicas for block pool BP-1074309469-127.0.1.1-1792147383206: 120ms
+2026-10-16 18:43:12,172 INFO  [Thread-66] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Adding replicas to map for block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1...
+2026-10-16 18:43:12,172 INFO  [Thread-67] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Adding replicas to map for block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2...
+2026-10-16 18:43:12,175 INFO  [Thread-66] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.BlockPoolSlice: Replica Cache file: /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/current/BP-1074309469-127.0.1.1-1792147383206/current/replicas doesn't exist 
+2026-10-16 18:43:12,176 INFO  [Thread-67] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.BlockPoolSlice: Replica Cache file: /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/current/BP-1074309469-127.0.1.1-1792147383206/current/replicas doesn't exist 
+2026-10-16 18:43:12,181 INFO  [Thread-67] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time to add replicas to map for block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2: 9ms
+2026-10-16 18:43:12,181 INFO  [Thread-66] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time to add replicas to map for block pool BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1: 9ms
+2026-10-16 18:43:12,182 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Total time to add all replicas to map for block pool BP-1074309469-127.0.1.1-1792147383206: 10ms
+2026-10-16 18:43:12,182 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1
+2026-10-16 18:43:12,245 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.checker.DatasetVolumeChecker: Scheduled health check for volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1
+2026-10-16 18:43:12,259 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2
+2026-10-16 18:43:12,259 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.checker.DatasetVolumeChecker: Scheduled health check for volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2
+2026-10-16 18:43:12,300 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: Now scanning bpid BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1
+2026-10-16 18:43:12,301 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: Now scanning bpid BP-1074309469-127.0.1.1-1792147383206 on volume /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2
+2026-10-16 18:43:12,309 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2, DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965): finished scanning block pool BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:12,309 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1, DS-580424cd-272f-4110-9ad1-8262dbf6fcfe): finished scanning block pool BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:12,312 WARN  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: dfs.datanode.directoryscan.throttle.limit.ms.per.sec set to value above 1000 ms/sec. Assuming default value of -1
+2026-10-16 18:43:12,313 INFO  [Thread-54] org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Periodic Directory Tree Verification scan starting in 17248015ms with interval of 21600000ms and throttle limit of -1ms/s
+2026-10-16 18:43:12,340 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool BP-1074309469-127.0.1.1-1792147383206 (Datanode Uuid d8c107f2-688e-458c-a1f2-ee9e46727cc0) service to localhost/127.0.0.1:42015 beginning handshake with NN
+2026-10-16 18:43:12,412 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:43031, datanodeUuid=d8c107f2-688e-458c-a1f2-ee9e46727cc0, infoPort=33271, infoSecurePort=0, ipcPort=34689, storageInfo=lv=-57;cid=testClusterID;nsid=889603690;c=1792147383207) storage d8c107f2-688e-458c-a1f2-ee9e46727cc0
+2026-10-16 18:43:12,422 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.net.NetworkTopology: Adding a new node: /default-rack/127.0.0.1:43031
+2026-10-16 18:43:12,422 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.blockmanagement.BlockReportLeaseManager: Registered DN d8c107f2-688e-458c-a1f2-ee9e46727cc0 (127.0.0.1:43031).
+2026-10-16 18:43:12,445 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool BP-1074309469-127.0.1.1-1792147383206 (Datanode Uuid d8c107f2-688e-458c-a1f2-ee9e46727cc0) service to localhost/127.0.0.1:42015 successfully registered with NN
+2026-10-16 18:43:12,450 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: For namenode localhost/127.0.0.1:42015 using BLOCKREPORT_INTERVAL of 21600000msecs CACHEREPORT_INTERVAL of 10000msecs Initial delay: 0msecs; heartBeatInterval=1000
+2026-10-16 18:43:12,450 INFO  [ibr-executor-0] org.apache.hadoop.hdfs.server.datanode.DataNode: Starting IBR Task Handler.
+2026-10-16 18:43:12,476 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1, DS-580424cd-272f-4110-9ad1-8262dbf6fcfe): no suitable block pools found to scan.  Waiting 1814399824 ms.
+2026-10-16 18:43:12,477 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2, DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965): no suitable block pools found to scan.  Waiting 1814399824 ms.
+2026-10-16 18:43:12,626 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Adding new storage ID DS-580424cd-272f-4110-9ad1-8262dbf6fcfe for DN 127.0.0.1:43031
+2026-10-16 18:43:12,627 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Adding new storage ID DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965 for DN 127.0.0.1:43031
+2026-10-16 18:43:12,677 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: After receiving heartbeat response, updating state of namenode localhost:42015 to active
+2026-10-16 18:43:12,721 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2026-10-16 18:43:12,735 INFO  [Block report processor] BlockStateChange: BLOCK* processReport 0xf0db4ca3e631e57b with lease ID 0xaccaa79f2f141c62: Processing first storage report for DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965 from datanode DatanodeRegistration(127.0.0.1:43031, datanodeUuid=d8c107f2-688e-458c-a1f2-ee9e46727cc0, infoPort=33271, infoSecurePort=0, ipcPort=34689, storageInfo=lv=-57;cid=testClusterID;nsid=889603690;c=1792147383207)
+2026-10-16 18:43:12,744 INFO  [Block report processor] BlockStateChange: BLOCK* processReport 0xf0db4ca3e631e57b with lease ID 0xaccaa79f2f141c62: from storage DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965 node DatanodeRegistration(127.0.0.1:43031, datanodeUuid=d8c107f2-688e-458c-a1f2-ee9e46727cc0, infoPort=33271, infoSecurePort=0, ipcPort=34689, storageInfo=lv=-57;cid=testClusterID;nsid=889603690;c=1792147383207), blocks: 0, hasStaleStorage: true, processing time: 8 msecs, invalidatedBlocks: 0
+2026-10-16 18:43:12,745 INFO  [Block report processor] BlockStateChange: BLOCK* processReport 0xf0db4ca3e631e57b with lease ID 0xaccaa79f2f141c62: Processing first storage report for DS-580424cd-272f-4110-9ad1-8262dbf6fcfe from datanode DatanodeRegistration(127.0.0.1:43031, datanodeUuid=d8c107f2-688e-458c-a1f2-ee9e46727cc0, infoPort=33271, infoSecurePort=0, ipcPort=34689, storageInfo=lv=-57;cid=testClusterID;nsid=889603690;c=1792147383207)
+2026-10-16 18:43:12,745 INFO  [Block report processor] BlockStateChange: BLOCK* processReport 0xf0db4ca3e631e57b with lease ID 0xaccaa79f2f141c62: from storage DS-580424cd-272f-4110-9ad1-8262dbf6fcfe node DatanodeRegistration(127.0.0.1:43031, datanodeUuid=d8c107f2-688e-458c-a1f2-ee9e46727cc0, infoPort=33271, infoSecurePort=0, ipcPort=34689, storageInfo=lv=-57;cid=testClusterID;nsid=889603690;c=1792147383207), blocks: 0, hasStaleStorage: false, processing time: 1 msecs, invalidatedBlocks: 0
+2026-10-16 18:43:12,796 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Cluster is active
+2026-10-16 18:43:12,808 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2026-10-16 18:43:12,809 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Cluster is active
+2026-10-16 18:43:12,819 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xf0db4ca3e631e57b with lease ID 0xaccaa79f2f141c62 to namenode: localhost/127.0.0.1:42015,  containing 2 storage report(s), of which we sent 2. The reports had 0 total blocks and used 1 RPC(s). This took 24 msecs to generate and 116 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2026-10-16 18:43:12,820 INFO  [Command processor] org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1074309469-127.0.1.1-1792147383206
+E2E_HDFS_READY {pid=494, uri=hdfs://localhost:42015, rpc_address=localhost/127.0.0.1:42015, name_node_class=org.apache.hadoop.hdfs.server.namenode.NameNode, rpc_server_class=org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer, fsnamesystem_code_source=file:/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/mutation/classes/, hadoop_version=3.3.6, hadoop_revision=1be78238728da9266a4f88195058f08fd012bf9c}
+2026-10-16 18:43:16,447 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/m0-file-a	dst=null	perm=clm:supergroup:rw-r--r--	proto=rpc
+2026-10-16 18:43:16,568 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/m0-file-b	dst=null	perm=clm:supergroup:rw-r--r--	proto=rpc
+2026-10-16 18:43:16,573 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/m0-file-a	dst=null	perm=null	proto=rpc
+2026-10-16 18:43:16,578 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/m0-file-b	dst=null	perm=null	proto=rpc
+2026-10-16 18:43:16,581 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,591 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-b for DFSClient_NONMAPREDUCE_-391018369_1
+2026-10-16 18:43:16,593 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-391018369_1
+2026-10-16 18:43:16,597 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-391018369_1
+2026-10-16 18:43:16,599 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,603 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,603 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.ipc.Server: IPC Server handler 1 on default port 42015, call Call#9 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.fsync from localhost:55532 / 127.0.0.1:55532: java.io.FileNotFoundException: File does not exist: /m0-file-a (inode 9223372036854775790) [Lease.  Holder: DFSClient_NONMAPREDUCE_-361008449_1, pending creates: 1]
+2026-10-16 18:43:16,633 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /m0-file-b is closed by DFSClient_NONMAPREDUCE_-391018369_1
+2026-10-16 18:43:16,648 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /m0-file-a is closed by DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,650 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /m0-file-a for DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,651 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.ipc.Server: IPC Server handler 0 on default port 42015, call Call#12 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.fsync from localhost:55532 / 127.0.0.1:55532: org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException: File is not open for writing: /m0-file-a (inode 16386) Holder DFSClient_NONMAPREDUCE_-361008449_1 does not have any open files.
+2026-10-16 18:43:16,652 INFO  [IPC Server handler 1 on default port 42015] org.apache.hadoop.hdfs.server.namenode.FSNamesystem.audit: allowed=true	ugi=clm (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/	dst=null	perm=null	proto=rpc
+2026-10-16 18:43:16,655 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: / for DFSClient_NONMAPREDUCE_-361008449_1
+2026-10-16 18:43:16,656 INFO  [IPC Server handler 0 on default port 42015] org.apache.hadoop.ipc.Server: IPC Server handler 0 on default port 42015, call Call#14 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.fsync from localhost:55532 / 127.0.0.1:55532: org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException: INode is not a regular file: / (inode 16385) Holder DFSClient_NONMAPREDUCE_-361008449_1 does not have any open files.
+2026-10-16 18:43:16,870 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Shutting down the Mini HDFS Cluster
+2026-10-16 18:43:16,871 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Shutting down DataNode 0
+2026-10-16 18:43:16,872 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Shutdown has been called
+2026-10-16 18:43:16,872 INFO  [org.apache.hadoop.hdfs.server.datanode.DataXceiverServer@4483d35] org.apache.hadoop.hdfs.server.datanode.DataNode: Closing all peers.
+2026-10-16 18:43:16,877 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1, DS-580424cd-272f-4110-9ad1-8262dbf6fcfe) exiting.
+2026-10-16 18:43:16,877 INFO  [VolumeScannerThread(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2)] org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2, DS-ccf7b0c9-4e59-4bbc-bfb0-5a8c85e36965) exiting.
+2026-10-16 18:43:16,915 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Waiting up to 30 seconds for transfer threads to complete
+2026-10-16 18:43:16,915 INFO  [main] org.apache.hadoop.ipc.Server: Stopping server on 34689
+2026-10-16 18:43:16,916 INFO  [IPC Server listener on 0] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 0
+2026-10-16 18:43:16,916 INFO  [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2026-10-16 18:43:16,917 ERROR [Command processor] org.apache.hadoop.hdfs.server.datanode.DataNode: Command processor encountered interrupt and exit.
+2026-10-16 18:43:16,917 WARN  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.IncrementalBlockReportManager: IncrementalBlockReportManager interrupted
+2026-10-16 18:43:16,917 WARN  [Command processor] org.apache.hadoop.hdfs.server.datanode.DataNode: Ending command processor service for: Thread[Command processor,5,main]
+2026-10-16 18:43:16,917 WARN  [ibr-executor-0] org.apache.hadoop.hdfs.server.datanode.IncrementalBlockReportManager: IncrementalBlockReportManager interrupted
+2026-10-16 18:43:16,917 WARN  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: Ending block pool service for: Block pool BP-1074309469-127.0.1.1-1792147383206 (Datanode Uuid d8c107f2-688e-458c-a1f2-ee9e46727cc0) service to localhost/127.0.0.1:42015
+2026-10-16 18:43:16,919 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.DataNode: Removed Block pool BP-1074309469-127.0.1.1-1792147383206 (Datanode Uuid d8c107f2-688e-458c-a1f2-ee9e46727cc0)
+2026-10-16 18:43:16,919 INFO  [BP-1074309469-127.0.1.1-1792147383206 heartbeating to localhost/127.0.0.1:42015] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Removing block pool BP-1074309469-127.0.1.1-1792147383206
+2026-10-16 18:43:16,924 WARN  [refreshUsed-/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data1/current/BP-1074309469-127.0.1.1-1792147383206] org.apache.hadoop.fs.CachingGetSpaceUsed: Thread Interrupted waiting to refresh disk information: sleep interrupted
+2026-10-16 18:43:16,929 WARN  [refreshUsed-/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/data/data2/current/BP-1074309469-127.0.1.1-1792147383206] org.apache.hadoop.fs.CachingGetSpaceUsed: Thread Interrupted waiting to refresh disk information: sleep interrupted
+2026-10-16 18:43:16,932 INFO  [main] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetAsyncDiskService: Shutting down all async disk service threads
+2026-10-16 18:43:16,932 INFO  [main] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetAsyncDiskService: All async disk service threads have been shut down
+2026-10-16 18:43:16,933 INFO  [main] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.RamDiskAsyncLazyPersistService: Shutting down all async lazy persist service threads
+2026-10-16 18:43:16,933 INFO  [main] org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.RamDiskAsyncLazyPersistService: All async lazy persist service threads have been shut down
+2026-10-16 18:43:16,934 INFO  [main] org.apache.hadoop.hdfs.server.datanode.DataNode: Shutdown complete.
+2026-10-16 18:43:16,934 INFO  [main] org.apache.hadoop.hdfs.MiniDFSCluster: Shutting down the namenode
+2026-10-16 18:43:16,935 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Stopping services started for active state
+2026-10-16 18:43:16,935 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 1, 10
+2026-10-16 18:43:16,935 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$LazyPersistFileScrubber@16a9eb2e] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: LazyPersistFileScrubber was interrupted, exiting
+2026-10-16 18:43:16,937 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 11 Total time for transactions(ms): 86 Number of transactions batched in Syncs: 0 Number of syncs: 12 SyncTimes(ms): 12 8 
+2026-10-16 18:43:16,942 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/edits_inprogress_0000000000000000001 -> /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-1/current/edits_0000000000000000001-0000000000000000011
+2026-10-16 18:43:16,945 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$NameNodeEditLogRoller@3fba233d] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: NameNodeEditLogRoller was interrupted, exiting
+2026-10-16 18:43:16,947 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/current/edits_inprogress_0000000000000000001 -> /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/m0_hdfs_20261016/hdfs_runtime/runs/run_001_holder_check_removed/state/name-0-2/current/edits_0000000000000000001-0000000000000000011
+2026-10-16 18:43:16,950 INFO  [FSEditLogAsync] org.apache.hadoop.hdfs.server.namenode.FSEditLog: FSEditLogAsync was interrupted, exiting
+2026-10-16 18:43:16,970 INFO  [CacheReplicationMonitor(190620463)] org.apache.hadoop.hdfs.server.blockmanagement.CacheReplicationMonitor: Shutting down CacheReplicationMonitor
+2026-10-16 18:43:16,974 INFO  [main] org.apache.hadoop.ipc.Server: Stopping server on 42015
+2026-10-16 18:43:16,975 INFO  [IPC Server listener on 0] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 0
+2026-10-16 18:43:16,975 INFO  [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2026-10-16 18:43:16,976 INFO  [MarkedDeleteBlockScrubberThread] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Stopping MarkedDeleteBlockScrubber.
+2026-10-16 18:43:16,976 INFO  [RedundancyMonitor] org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Stopping RedundancyMonitor.
+2026-10-16 18:43:16,980 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Stopping services started for active state
+2026-10-16 18:43:16,980 INFO  [main] org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Stopping services started for standby state

@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "equal_to_spark": true,
+  "mismatches": [],
+  "scope": "fixed native Spark PAG with supplied type masks; NOT proof of wholeJava soundness",
+  "input": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\real_workloads\\runs\\em3d_application_v2\\pag.json",
+  "input_sha256": "2d7f6a5e0b37d18052afe74431e202c5c6b529a98ebe980aa0f546e5afa7a8cb",
+  "rules_sha256": "ff1ef3130dcf682c0323bf5aa7d81f6431e3c4aee87bc2730c7c91f966498748",
+  "variable_cells": 332,
+  "heap_cells_including_empty": 722,
+  "var_points_to_tuples": 401,
+  "heap_points_to_tuples": 38,
+  "full_state_sha256": "5c43bd81f93806b297294b9c0973a4461510c404a86c01892c46c79c706afe8b",
+  "negative_controls": [
+    {
+      "control": "missing_key",
+      "rejected": true
+    },
+    {
+      "control": "dropped_tuple",
+      "rejected": true
+    },
+    {
+      "control": "extra_tuple",
+      "rejected": true
+    },
+    {
+      "control": "wrong_value",
+      "rejected": true
+    }
+  ],
+  "source_stable": true,
+  "execution": {
+    "name": "spark_em3d_application_v2",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/spark_em3d_application_v2/gnutime.txt",
+      "timeout",
+      "-k",
+      "3s",
+      "110s",
+      "souffle",
+      "-F",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/em3d_application_v2/facts",
+      "-D",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/em3d_application_v2/output",
+      "-j",
+      "1",
+      "/mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_points_to.dl"
+    ],
+    "command_shell": "/usr/bin/time -v -o /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/runs/spark_em3d_application_v2/gnutime.txt timeout -k 3s 110s souffle -F /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/em3d_application_v2/facts -D /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_crosschecks/em3d_application_v2/output -j 1 /mnt/d/wsl/personal/dr/paper/distributed_program_analysis/experiments/precision_partition_20261017/runtime_baseline/spark_points_to.dl",
+    "exit_code": 0,
+    "wall_seconds": 0.9820708000042941,
+    "timebox_seconds": 110,
+    "timeout": false,
+    "peak_rss_kib": 12544,
+    "complete": true,
+    "linux_metrics": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\runtime_baseline\\runs\\spark_em3d_application_v2\\gnutime.txt"
+  }
+}

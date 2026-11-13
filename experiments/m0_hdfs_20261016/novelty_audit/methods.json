@@ -1,0 +1,13 @@
+[
+  "<org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer: void fsync(java.lang.String,long,java.lang.String,long)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: void fsync(java.lang.String,long,java.lang.String,long)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: org.apache.hadoop.hdfs.server.namenode.INodeFile checkLease(org.apache.hadoop.hdfs.server.namenode.INodesInPath,java.lang.String,long)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INodesInPath resolvePath(org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker,java.lang.String,long)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSDirectory: org.apache.hadoop.hdfs.server.namenode.INode getInode(long)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp: void persistBlocks(org.apache.hadoop.hdfs.server.namenode.FSDirectory,java.lang.String,org.apache.hadoop.hdfs.server.namenode.INodeFile,boolean)>",
+  "<org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature: java.lang.String getClientName()>",
+  "<org.apache.hadoop.hdfs.server.namenode.INodesInPath: org.apache.hadoop.hdfs.server.namenode.INode getLastINode()>",
+  "<org.apache.hadoop.hdfs.server.namenode.FSNamesystem: boolean isFileDeleted(org.apache.hadoop.hdfs.server.namenode.INodeFile)>",
+  "<org.apache.hadoop.hdfs.server.namenode.INodeFile: boolean isUnderConstruction()>",
+  "<org.apache.hadoop.hdfs.server.namenode.INodeFile: org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature getFileUnderConstructionFeature()>"
+]

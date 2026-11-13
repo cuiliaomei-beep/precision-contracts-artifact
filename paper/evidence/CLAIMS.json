@@ -1,0 +1,104 @@
+{
+  "status": "SUPPORTED_WITH_EXPLICIT_SCOPES",
+  "sources": [
+    {
+      "path": "legacy_repair_20261016/OVERALL_SUMMARY.json",
+      "bytes": 271851,
+      "sha256": "30ab44c16d71e8b2e47f7d9044bf6553f75195e8cf6154cb6d1709dae85ebe8f"
+    },
+    {
+      "path": "precision_audit_20261016/CLASSIFICATION.json",
+      "bytes": 284699,
+      "sha256": "a35ac57c716c063532544a55e22999a3838e313f2ac61b423d6a6c8bc409bff9"
+    },
+    {
+      "path": "precision_audit_20261016/ALIAS_ORACLE_AUDIT.json",
+      "bytes": 2270082,
+      "sha256": "690241a074515d01f86858e360a7dac22ac7694fb3dc9cc452b5064f65d7989b"
+    },
+    {
+      "path": "e2e_20261016/OVERALL_SUMMARY.json",
+      "bytes": 6134,
+      "sha256": "9159eaea03682e72d77ed9b8b00dd234c4ed56a8f487dd8542bf7622715496fc"
+    },
+    {
+      "path": "m0_hdfs_20261016/OVERALL_SUMMARY.json",
+      "bytes": 2258,
+      "sha256": "09c4a1f5d61ffd0496057e1d8d873c504f008e62b3ad94ceffedd5889c628ddd"
+    },
+    {
+      "path": "precision_partition_20261017/runtime_baseline/RUNTIME_REPORT.json",
+      "bytes": 32742,
+      "sha256": "03225587a2eb2322d8ecbaa846479a80e0bf5a6d6720cbbcdab0faeb4bb863ce"
+    },
+    {
+      "path": "em3d_next_merge_20261110/OBSERVATIONS.json",
+      "bytes": 334343,
+      "sha256": "567fb13962cdf677fe0eae367bd5a8d388e21656a79ba31caad940abad85fe41"
+    },
+    {
+      "path": "em3d_next_merge_20261110/VERIFICATION.json",
+      "bytes": 349790,
+      "sha256": "e7d820e87d7f32a9de18b575aab11bc95b75c3b9324ef9ae3368d335d8fd2778"
+    },
+    {
+      "path": "precision_partition_20261017/measurements/em3d_final/graph.json",
+      "bytes": 71341,
+      "sha256": "72a3f621cd712a31f8421fba0cc82bb88e559fe3d2686877761469a37438e407"
+    }
+  ],
+  "generated_macros": {
+    "nSemanticPrograms": 450,
+    "nSemanticSchedules": 308895,
+    "nSemanticExact": 295,
+    "nSemanticConservative": 155,
+    "nSemanticViolations": 0,
+    "nEnvelopeChoices": 1044,
+    "nEnvelopeSchedules": 2553288,
+    "nLayoutPrograms": 400,
+    "nLayoutRuns": 160000,
+    "nLayoutPolicies": 5,
+    "nLayoutSeeds": 20,
+    "nLayoutWorkerCounts": 4,
+    "nLayoutMismatches": 0,
+    "nLayoutCutRuns": 96000,
+    "nLayoutMessages": 707927,
+    "nLayoutDuplicateMessages": 64130,
+    "nRpcCases": 8,
+    "nRpcConfigurations": 368,
+    "nRpcMutations": 8,
+    "nHdfsMethods": 11,
+    "nHdfsRuntime": 16,
+    "nHdfsSourceRows": 520,
+    "nHdfsHeldOut": 504,
+    "nTomcatRelations": 71,
+    "nTomcatTuples": 11618755,
+    "nEmRuns": 18,
+    "nEmMaps": 8,
+    "nEmCheckpoints": 333,
+    "nEmVariables": 332,
+    "nEmObjects": 38,
+    "nEmFields": 19,
+    "nEmWorkerStarts": 42,
+    "nEmNativeRuns": 4,
+    "nEmVariableFacts": 401,
+    "nEmHeapFacts": 38,
+    "nEmCandidates": 502,
+    "nEmDuplicateFacts": 63,
+    "nEmActivations": 98,
+    "nEmNextEdges": 4,
+    "nEmNextCandidates": 4,
+    "nEmNextAccepted": 3,
+    "nEmNextDuplicates": 1,
+    "nEmChainCandidates": 7,
+    "nEmChainAccepted": 5,
+    "nEmFullScanRules": 441
+  },
+  "constraints": [
+    "Finite semantic exactness is scalar/may-taint projected equality",
+    "Layout runs use discrete-event simulation",
+    "Tomcat uses one shared-memory process",
+    "Em3d uses independent processes on one physical host",
+    "No measured new-algorithm speedup or general merge-check bottleneck"
+  ]
+}

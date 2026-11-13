@@ -1,0 +1,143 @@
+{
+  "planned": 4,
+  "successful": 4,
+  "failed": 0,
+  "all_passed": true,
+  "cases": [
+    {
+      "scenario": "positive",
+      "server_pid": 16752,
+      "port": 24985,
+      "marker": "E2E_GRPC_20261016_9e74b2",
+      "expected_sink_values": {
+        "response": "Hello E2E_GRPC_20261016_9e74b2"
+      },
+      "expected_provenance": {
+        "response": true
+      },
+      "server_ready": true,
+      "passed": true,
+      "client_pid": 14584,
+      "exit_code": 0,
+      "stdout": "SINK\tresponse\tHello E2E_GRPC_20261016_9e74b2\n",
+      "stderr": "",
+      "sink_values": {
+        "response": "Hello E2E_GRPC_20261016_9e74b2"
+      },
+      "elapsed_seconds": 2.8439999999991414,
+      "server_exit_code_after_cleanup": 1,
+      "server_off": {
+        "passed": true,
+        "client_pid": 11952,
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Exception in thread \"main\" io.grpc.StatusRuntimeException: UNAVAILABLE: io exception\n\tat io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:268)\n\tat io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:249)\n\tat io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:167)\n\tat io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub.sayHello(GreeterGrpc.java:184)\n\tat e2e.grpc.PositiveClient.main(PositiveClient.java:18)\nCaused by: io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:24985\nCaused by: java.net.ConnectException: Connection refused: no further information\n\tat java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\n\tat java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)\n\tat io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+        "sink_values": {},
+        "elapsed_seconds": 2.313000000000102
+      },
+      "server_cleanup_confirmed": true
+    },
+    {
+      "scenario": "clean_sink",
+      "server_pid": 19416,
+      "port": 26064,
+      "marker": "E2E_GRPC_20261016_9e74b2",
+      "expected_sink_values": {
+        "clean": "clean-output"
+      },
+      "expected_provenance": {
+        "clean": false
+      },
+      "server_ready": true,
+      "passed": true,
+      "client_pid": 20412,
+      "exit_code": 0,
+      "stdout": "SINK\tclean\tclean-output\n",
+      "stderr": "",
+      "sink_values": {
+        "clean": "clean-output"
+      },
+      "elapsed_seconds": 2.3439999999991414,
+      "server_exit_code_after_cleanup": 1,
+      "server_off": {
+        "passed": true,
+        "client_pid": 16760,
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Exception in thread \"main\" io.grpc.StatusRuntimeException: UNAVAILABLE: io exception\n\tat io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:268)\n\tat io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:249)\n\tat io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:167)\n\tat io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub.sayHello(GreeterGrpc.java:184)\n\tat e2e.grpc.CleanSinkClient.main(CleanSinkClient.java:18)\nCaused by: io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:26064\nCaused by: java.net.ConnectException: Connection refused: no further information\n\tat java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\n\tat java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)\n\tat io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+        "sink_values": {},
+        "elapsed_seconds": 2.639999999999418
+      },
+      "server_cleanup_confirmed": true
+    },
+    {
+      "scenario": "constant_reply",
+      "server_pid": 17876,
+      "port": 36964,
+      "marker": "E2E_GRPC_20261016_9e74b2",
+      "expected_sink_values": {
+        "response": "fixed-response"
+      },
+      "expected_provenance": {
+        "response": false
+      },
+      "server_ready": true,
+      "passed": true,
+      "client_pid": 18032,
+      "exit_code": 0,
+      "stdout": "SINK\tresponse\tfixed-response\n",
+      "stderr": "",
+      "sink_values": {
+        "response": "fixed-response"
+      },
+      "elapsed_seconds": 2.7660000000014406,
+      "server_exit_code_after_cleanup": 1,
+      "server_off": {
+        "passed": true,
+        "client_pid": 19172,
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Exception in thread \"main\" io.grpc.StatusRuntimeException: UNAVAILABLE: io exception\n\tat io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:268)\n\tat io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:249)\n\tat io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:167)\n\tat io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub.sayHello(GreeterGrpc.java:184)\n\tat e2e.grpc.ConstantReplyClient.main(ConstantReplyClient.java:18)\nCaused by: io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:36964\nCaused by: java.net.ConnectException: Connection refused: no further information\n\tat java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\n\tat java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)\n\tat io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+        "sink_values": {},
+        "elapsed_seconds": 2.3289999999997235
+      },
+      "server_cleanup_confirmed": true
+    },
+    {
+      "scenario": "two_calls",
+      "server_pid": 4248,
+      "port": 1370,
+      "marker": "E2E_GRPC_20261016_9e74b2",
+      "expected_sink_values": {
+        "first": "Hello E2E_GRPC_20261016_9e74b2",
+        "second": "Hello clean-name"
+      },
+      "expected_provenance": {
+        "first": true,
+        "second": false
+      },
+      "server_ready": true,
+      "passed": true,
+      "client_pid": 10552,
+      "exit_code": 0,
+      "stdout": "SINK\tfirst\tHello E2E_GRPC_20261016_9e74b2\nSINK\tsecond\tHello clean-name\n",
+      "stderr": "",
+      "sink_values": {
+        "first": "Hello E2E_GRPC_20261016_9e74b2",
+        "second": "Hello clean-name"
+      },
+      "elapsed_seconds": 3.1409999999996217,
+      "server_exit_code_after_cleanup": 1,
+      "server_off": {
+        "passed": true,
+        "client_pid": 5392,
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Exception in thread \"main\" io.grpc.StatusRuntimeException: UNAVAILABLE: io exception\n\tat io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:268)\n\tat io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:249)\n\tat io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:167)\n\tat io.grpc.examples.helloworld.GreeterGrpc$GreeterBlockingStub.sayHello(GreeterGrpc.java:184)\n\tat e2e.grpc.TwoCallsClient.main(TwoCallsClient.java:18)\nCaused by: io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:1370\nCaused by: java.net.ConnectException: Connection refused: no further information\n\tat java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\n\tat java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)\n\tat io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+        "sink_values": {},
+        "elapsed_seconds": 2.9690000000009604
+      },
+      "server_cleanup_confirmed": true
+    }
+  ]
+}

@@ -1,0 +1,660 @@
+{
+  "schema_version": "e2e-valueflow-v1",
+  "nodes": [
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param0",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "service := @parameter0: org.apache.dubbo.samples.api.GreetingsService",
+      "line": -1,
+      "unit_index": 0,
+      "context": "entry",
+      "kind": "external_parameter"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@0:entry_param1",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "service := @parameter0: org.apache.dubbo.samples.api.GreetingsService",
+      "line": -1,
+      "unit_index": 0,
+      "context": "entry",
+      "kind": "external_parameter"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:sink",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"two_calls_source\", first)",
+      "line": 10,
+      "unit_index": 5,
+      "context": "entry",
+      "kind": "sink",
+      "sink_id": "two_calls_source"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:value[first]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"two_calls_source\", first)",
+      "line": 10,
+      "unit_index": 5,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)",
+      "line": 7,
+      "unit_index": 2,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "input = staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)",
+      "line": 7,
+      "unit_index": 2,
+      "context": "entry",
+      "kind": "source",
+      "seed": [
+        "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:source"
+      ]
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "rpc_request_send"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "rpc_request_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "first = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)",
+      "line": 8,
+      "unit_index": 3,
+      "context": "entry",
+      "kind": "rpc_response_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "rpc_response_object"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "return $stack2",
+      "line": 25,
+      "unit_index": 3,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "name := @parameter0: java.lang.String",
+      "line": -1,
+      "unit_index": 1,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "name := @parameter0: java.lang.String",
+      "line": -1,
+      "unit_index": 1,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:sink",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"two_calls_clean\", second)",
+      "line": 11,
+      "unit_index": 6,
+      "context": "entry",
+      "kind": "sink",
+      "sink_id": "two_calls_clean"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:value[second]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"two_calls_clean\", second)",
+      "line": 11,
+      "unit_index": 6,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:definition",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "definition"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "value"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_object",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[\"clean-literal\"]",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "constant"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_send",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "rpc_request_send"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "rpc_request_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "rpc_request_object"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:response_receive",
+      "component": "consumer",
+      "method": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "statement": "second = interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")",
+      "line": 9,
+      "unit_index": 4,
+      "context": "entry",
+      "kind": "rpc_response_receive"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "this := @this: org.apache.dubbo.samples.provider.GreetingsServiceImpl",
+      "line": -1,
+      "unit_index": 0,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "rpc_response_object"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "return $stack2",
+      "line": 25,
+      "unit_index": 3,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "$stack2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")",
+      "line": 25,
+      "unit_index": 2,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "value"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "name := @parameter0: java.lang.String",
+      "line": -1,
+      "unit_index": 1,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "definition"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "component": "provider",
+      "method": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "statement": "name := @parameter0: java.lang.String",
+      "line": -1,
+      "unit_index": 1,
+      "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]",
+      "kind": "value"
+    }
+  ],
+  "edges": [
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition#assignment",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:value[staticinvoke <e2e.shared.Inputs: java.lang.String source(java.lang.String)>(raw)]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]#local_use",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@2:definition",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object#request_payload",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[input]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object",
+      "kind": "request_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send#event_payload",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_object",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive#rpc_request",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:request_send",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "kind": "rpc_request",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object#event_payload",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]#formal_parameter",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "kind": "formal_parameter"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition#assignment",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]#local_use",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]#string_concat",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "kind": "string_concat"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition#assignment",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]#local_use",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object#handler_return",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "kind": "handler_return",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive#rpc_response",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive",
+      "kind": "rpc_response",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]#call_result",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:response_receive",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]",
+      "kind": "call_result"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition#assignment",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(input)]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:value[first]#local_use",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3:definition",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:value[first]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:value[first]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:sink#sink_argument",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:value[first]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@5:sink",
+      "kind": "sink_argument"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[\"clean-literal\"]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_object#request_payload",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[\"clean-literal\"]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_object",
+      "kind": "request_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_object->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_send#event_payload",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_object",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_send",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_send->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive#rpc_request",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:request_send",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "kind": "rpc_request",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object#event_payload",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_receive",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "kind": "event_payload",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]#formal_parameter",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:request_object",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "kind": "formal_parameter"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition#assignment",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:value[@parameter0: java.lang.String]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]#local_use",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@1:definition",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]#string_concat",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[name]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "kind": "string_concat"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition#assignment",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:value[dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(name) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"hi, \\u0001\")]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]#local_use",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@2:definition",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "kind": "local_use"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]->rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object#handler_return",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@3:value[$stack2]",
+      "dst": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "kind": "handler_return",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:response_receive#rpc_response",
+      "src": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]|<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>@0:response_object",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:response_receive",
+      "kind": "rpc_response",
+      "rpc_callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:response_receive->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")]#call_result",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:response_receive",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")]",
+      "kind": "call_result"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:definition#assignment",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:value[interfaceinvoke service.<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>(\"clean-literal\")]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:definition",
+      "kind": "assignment"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:definition->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:value[second]#local_use",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4:definition",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:value[second]",
+      "kind": "local_use"
+    },
+    {
+      "id": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:value[second]->entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:sink#sink_argument",
+      "src": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:value[second]",
+      "dst": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@6:sink",
+      "kind": "sink_argument"
+    }
+  ],
+  "metadata": {
+    "deployment_validation": "registration argument reaching definitions contain configured handler allocation; closed-world target selected by deployment manifest (not automatic RPCBridge discovery)",
+    "status": "complete_within_declared_scope",
+    "entry": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+    "protocol": "dubbo",
+    "source_policy": "return of e2e.shared.Inputs.source(String), source ID per real callsite and context",
+    "sink_policy": "argument 1 of e2e.shared.Outputs.sink(String,String), literal argument 0 labels query",
+    "abstraction": "finite powerset of source callsites; explicit flows; field-sensitive only for validated single-string-field protobuf types",
+    "scope": "query-projected application methods; synchronous one-argument unary RPC; normal returns; no implicit/control flows, exceptions-as-values, aliasing heap, recursion, or asynchronous streaming",
+    "local_definitions": "Soot SimpleLocalDefs on ExceptionalUnitGraph; each local assignment is a distinct definition; joins union reaching definitions",
+    "summaries": [
+      "StringConcatFactory: explicit result provenance is union of dynamic arguments; recipe constants contribute empty"
+    ],
+    "rpc_calls": 2,
+    "sinks": 2,
+    "evidence": [
+      {
+        "registration_method": "<e2e.dubbo.Provider: void main(java.lang.String[])>",
+        "registration_statement": "virtualinvoke $u2.<org.apache.dubbo.config.ServiceConfig: void setRef(java.lang.Object)>($stack8)",
+        "registered_allocation_types": [
+          "e2e.dubbo.ConstantGreetingsService",
+          "org.apache.dubbo.samples.provider.GreetingsServiceImpl"
+        ]
+      },
+      {
+        "callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3",
+        "rpc_signature": "<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>",
+        "handler": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+        "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@3]"
+      },
+      {
+        "callsite": "entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4",
+        "rpc_signature": "<org.apache.dubbo.samples.api.GreetingsService: java.lang.String sayHi(java.lang.String)>",
+        "handler": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+        "context": "rpc[entry|<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>@4]"
+      }
+    ],
+    "configuration": {
+      "protocol": "dubbo",
+      "classpath": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\classes;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\dubbo-3.3.0-beta.1.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\fastjson2-2.0.40.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\hessian-lite-3.2.13.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\javassist-3.29.2-GA.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-api-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-core-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\log4j-slf4j-impl-2.20.0.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-all-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-buffer-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-dns-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-haproxy-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-http-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-http2-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-memcache-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-mqtt-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-redis-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-smtp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-socks-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-stomp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-codec-xml-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-common-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-proxy-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-handler-ssl-ocsp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-classes-macos-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-native-macos-4.1.97.Final-osx-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-resolver-dns-native-macos-4.1.97.Final-osx-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-classes-epoll-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-classes-kqueue-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-kqueue-4.1.97.Final-osx-aarch_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-kqueue-4.1.97.Final-osx-x86_64.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-native-unix-common-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-rxtx-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-sctp-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\netty-transport-udt-4.1.97.Final.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\slf4j-api-1.7.30.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\snakeyaml-2.2.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-aop-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-beans-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-context-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-context-support-1.0.11.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-core-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-expression-5.3.25.jar;D:\\wsl\\realsystems\\src\\dubbo-bench-src\\1-basic\\dubbo-samples-api\\target\\deps\\spring-jcl-5.3.25.jar",
+      "process_dirs": [
+        "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\dubbo\\classes"
+      ],
+      "entry": "<e2e.dubbo.TwoCallsConsumer: void analyze(org.apache.dubbo.samples.api.GreetingsService,java.lang.String)>",
+      "handler": "<org.apache.dubbo.samples.provider.GreetingsServiceImpl: java.lang.String sayHi(java.lang.String)>",
+      "registration_class": "e2e.dubbo.Provider",
+      "rpc_owner": "org.apache.dubbo.samples.api.GreetingsService",
+      "rpc_method": "sayHi",
+      "manifest_sha256": "db0e18a275693134b93d18d04fb177fdc093d301a50163ad7c76aed34496b3f6",
+      "resolution_method": "closed-world deployment manifest, validated against compiled RPC signatures, handler class and actual bootstrap registration"
+    }
+  }
+}

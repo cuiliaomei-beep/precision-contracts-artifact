@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "dependencies": 151,
+  "downloaded_bytes": 82805186,
+  "all_sha256_equal": true,
+  "initial_attempt": "hdfs_dependency_download_initial.json",
+  "retry_report": "hdfs_dependency_fetch.json",
+  "note": "Two initial TLS EOF errors succeeded on retry."
+}

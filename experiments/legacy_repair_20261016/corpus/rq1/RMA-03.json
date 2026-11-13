@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "RMA-03",
+  "family": "rma",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "origin",
+      "target"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "RemoteRead",
+        "component": "origin",
+        "attributes": {
+          "region": "R",
+          "var": "x",
+          "destination": "read",
+          "target": "target"
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Sync",
+        "component": "origin",
+        "attributes": {
+          "scope": "component",
+          "kind": "wait"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Observe",
+        "component": "origin",
+        "attributes": {
+          "point": "read",
+          "expr": {
+            "var": "read"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "origin": {},
+        "target": {}
+      },
+      "memory_regions": {
+        "R": {
+          "owner": "target",
+          "values": {
+            "x": 42
+          }
+        }
+      },
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {
+        "R": {
+          "x": false
+        }
+      },
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "7010ec6615fd38935d41eb0b851fe7903c002d6aa62a884dc245da22b35ac7f5",
+  "coverage": {
+    "event_types": {
+      "RemoteRead": 1,
+      "Sync": 1,
+      "Observe": 1
+    },
+    "rpc_present": false,
+    "rma_present": true,
+    "actual_family": "rma",
+    "branch": false,
+    "sync": true,
+    "may_alias": false,
+    "observations": 1,
+    "events": 3
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "799dfd47439afc0507b5f261c0c8803e80595f46085d1d36998d8d11aa377e84",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "origin::read": {
+      "values": [
+        42
+      ],
+      "may_tainted": false
+    }
+  },
+  "expected_pending": []
+}

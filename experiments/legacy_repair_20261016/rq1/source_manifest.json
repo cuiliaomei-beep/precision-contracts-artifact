@@ -1,0 +1,25 @@
+{
+  "source_files": {
+    "artifact/analysis/__init__.py": "c92ff8669328961e735ed952a9c77a78288b7c44e2c2a2946548fdc5fa7c5a22",
+    "artifact/analysis/centralized_solver.py": "f82165b888ff04e2b86ff5825368d117364d41adf896d8d9603e3927f1e1efde",
+    "artifact/analysis/domain.py": "482b828ad7afca8e8374ef55bde80fff1869e79d0f4f66f21f8eb1381a908a6a",
+    "artifact/analysis/projection.py": "e88638c35f1e9a4232cfeadc7021818d406fa0b072be61e07c2c0aa73a837ccc",
+    "artifact/analysis/semantic_graph.py": "d35f8faf4ad14df3af31c235ee98c4145cb5236b9c6b3817bbfa194c56f0c848",
+    "artifact/core/__init__.py": "89ba9fd9a8b1cb6d839673b15382eeca108576c3ae4b697631e5d1db548ed67b",
+    "artifact/core/ir.py": "c78c353d4eff2e6069cdd4f733b516eca3b24c815afc999c9c09bc5f920ae8dc",
+    "artifact/core/semantics.py": "6531fd57c596ae2615b8abc2b50e49203b12c3b10f9bf93223ccf8a6c7078cae",
+    "artifact/experiments/rq1.py": "d2d8fcf8d2b14ec0b95edfc98d4b14639e02d8ce1acefb7117985d17d6aa4e3f",
+    "artifact/generator/__init__.py": "1bcb0eb7ef3cb55fbd1b7f5e5dcfda41e4db9ef61277b67b0a8efaa3560afdc5",
+    "artifact/generator/litmus_generator.py": "9b3cad2f4ea51f710110d7f16b7e839f52ef9d63bdacb96aadb7a3d3f0ce30c4",
+    "artifact/instantiations/__init__.py": "6dbba6b62e15d332ef25894c0b34c9fc74c1672806b3ebaddfd2590b47408b89",
+    "artifact/instantiations/rma.py": "5534c30c2bb5f8ece6e561f8b97e02bbf8a79ab46f4b0bdbbb145db1376921b6",
+    "artifact/instantiations/rpc.py": "e3c0378d4e6f83faf7c83eba9fddbd3ec6e0e3135bbd73118ae6a3cd384d6571",
+    "artifact/oracle/__init__.py": "aae6426f60d80e0b6f7d103109190fe1a5a6f62aab8f3437db00b65ba735808c",
+    "artifact/oracle/exhaustive.py": "ac4246898482cecf4c5ec039d5ccfb7fc2b4ee6180624b2931b9dad451d397f6",
+    "scripts/build_legacy_repair_corpus.py": "140ab92268810527b350e35cc8dc59d11f6599949d3c170323bf0b17da49f04e",
+    "scripts/run_repaired_rq1.py": "960169c038212478b081fd6f226c7af98615f6bb384d05866c16765572dd1e53"
+  },
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045",
+  "corpus_sha256": "6c4eb0faad0f92ea21967e96d16093f666700fd3854bee49b6fac0bae0445f7e",
+  "note": "Every checkpoint is recomputed in this invocation, no previous success checkpoint reused"
+}

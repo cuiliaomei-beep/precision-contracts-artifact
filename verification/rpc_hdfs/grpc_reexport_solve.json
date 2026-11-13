@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "graph": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\paper-artifact-20261113\\runs\\rpc-export-1794536070411342400\\positive.graph.json",
+  "graph_sha256": "62d48db06a838d30eac4682366248764b8da3a8d459b5e76b5cfae69530dc9a8",
+  "expectation_file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\paper-artifact-20261113\\experiments\\e2e_20261016\\results\\grpc\\positive\\expected.json",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "nodes": 50,
+  "edges": 47,
+  "source_ids": [
+    "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+  ],
+  "sinks": [
+    {
+      "sink_id": "response",
+      "node": "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@14:sink",
+      "sources": [
+        "entry|<e2e.grpc.PositiveClient: void main(java.lang.String[])>@8:source"
+      ],
+      "method": "<e2e.grpc.PositiveClient: void main(java.lang.String[])>",
+      "statement": "staticinvoke <e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>(\"response\", $stack14)",
+      "line": 19
+    }
+  ],
+  "mutations": [
+    {
+      "removed_kind": "rpc_request",
+      "detected": true,
+      "actual_sinks": {
+        "response": false
+      },
+      "removed_edges": 1
+    },
+    {
+      "removed_kind": "rpc_response",
+      "detected": true,
+      "actual_sinks": {
+        "response": false
+      },
+      "removed_edges": 1
+    }
+  ],
+  "centralized_equals_independent_reference": true,
+  "planned": 5,
+  "attempted": 5,
+  "passed": 5,
+  "failed": 0,
+  "runs": [
+    {
+      "id": "001_Single_w1_s0",
+      "strategy": "Single",
+      "workers": 1,
+      "seed": 0,
+      "schedule": "BSP",
+      "status": "passed",
+      "partition_seconds": 0.06788839999353513,
+      "metrics": {
+        "wall_seconds": 0.19147760000487324,
+        "rounds": 2,
+        "active_workers": 1,
+        "worker_metrics": [
+          {
+            "updates": 40,
+            "records": 0,
+            "batches": 0,
+            "payload_bytes": 0,
+            "serialized_envelope_bytes": 0,
+            "control_envelopes": 0,
+            "duplicate_records": 0,
+            "rounds": 2,
+            "compute_seconds": 3.2899988582357764e-05,
+            "peak_rss_mb": 28.946432
+          }
+        ],
+        "residual_equations": 0,
+        "cut_edges": 0,
+        "updates": 40,
+        "records": 0,
+        "batches": 0,
+        "payload_bytes": 0,
+        "serialized_envelope_bytes": 0,
+        "control_envelopes": 0,
+        "duplicate_records": 0,
+        "peak_worker_rss_mb": 28.946432,
+        "sum_peak_worker_rss_mb": 28.946432,
+        "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+        "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+        "coordinator_round_control_messages": 4,
+        "coordinator_final_state_messages": 1
+      },
+      "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+      "mismatched_nodes": []
+    },
+    {
+      "id": "002_Single_w2_s0",
+      "strategy": "Single",
+      "workers": 2,
+      "seed": 0,
+      "schedule": "BSP",
+      "status": "passed",
+      "partition_seconds": 4.910001007374376e-05,
+      "metrics": {
+        "wall_seconds": 0.16940780000004452,
+        "rounds": 2,
+        "active_workers": 1,
+        "worker_metrics": [
+          {
+            "updates": 40,
+            "records": 0,
+            "batches": 0,
+            "payload_bytes": 0,
+            "serialized_envelope_bytes": 0,
+            "control_envelopes": 0,
+            "duplicate_records": 0,
+            "rounds": 2,
+            "compute_seconds": 1.8399994587525725e-05,
+            "peak_rss_mb": 28.872704
+          }
+        ],
+        "residual_equations": 0,
+        "cut_edges": 0,
+        "updates": 40,
+        "records": 0,
+        "batches": 0,
+        "payload_bytes": 0,
+        "serialized_envelope_bytes": 0,
+        "control_envelopes": 0,
+        "duplicate_records": 0,
+        "peak_worker_rss_mb": 28.872704,
+        "sum_peak_worker_rss_mb": 28.872704,
+        "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+        "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+        "coordinator_round_control_messages": 4,
+        "coordinator_final_state_messages": 1
+      },
+      "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+      "mismatched_nodes": []
+    },
+    {
+      "id": "003_Random_w1_s0",
+      "strategy": "Random",
+      "workers": 1,
+      "seed": 0,
+      "schedule": "BSP",
+      "status": "passed",
+      "partition_seconds": 0.009791099990252405,
+      "metrics": {
+        "wall_seconds": 0.16623400000389665,
+        "rounds": 2,
+        "active_workers": 1,
+        "worker_metrics": [
+          {
+            "updates": 40,
+            "records": 0,
+            "batches": 0,
+            "payload_bytes": 0,
+            "serialized_envelope_bytes": 0,
+            "control_envelopes": 0,
+            "duplicate_records": 0,
+            "rounds": 2,
+            "compute_seconds": 2.1199986804276705e-05,
+            "peak_rss_mb": 28.889088
+          }
+        ],
+        "residual_equations": 0,
+        "cut_edges": 0,
+        "updates": 40,
+        "records": 0,
+        "batches": 0,
+        "payload_bytes": 0,
+        "serialized_envelope_bytes": 0,
+        "control_envelopes": 0,
+        "duplicate_records": 0,
+        "peak_worker_rss_mb": 28.889088,
+        "sum_peak_worker_rss_mb": 28.889088,
+        "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+        "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+        "coordinator_round_control_messages": 4,
+        "coordinator_final_state_messages": 1
+      },
+      "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+      "mismatched_nodes": []
+    },
+    {
+      "id": "004_Random_w2_s0",
+      "strategy": "Random",
+      "workers": 2,
+      "seed": 0,
+      "schedule": "BSP",
+      "status": "passed",
+      "partition_seconds": 0.00016849998792167753,
+      "metrics": {
+        "wall_seconds": 0.19406949999392964,
+        "rounds": 21,
+        "active_workers": 2,
+        "worker_metrics": [
+          {
+            "updates": 20,
+            "records": 9,
+            "batches": 9,
+            "payload_bytes": 207,
+            "serialized_envelope_bytes": 624,
+            "control_envelopes": 12,
+            "duplicate_records": 0,
+            "rounds": 21,
+            "compute_seconds": 0.0009876000403892249,
+            "peak_rss_mb": 28.91776
+          },
+          {
+            "updates": 20,
+            "records": 10,
+            "batches": 10,
+            "payload_bytes": 230,
+            "serialized_envelope_bytes": 649,
+            "control_envelopes": 11,
+            "duplicate_records": 0,
+            "rounds": 21,
+            "compute_seconds": 0.0007875999726820737,
+            "peak_rss_mb": 28.680192
+          }
+        ],
+        "residual_equations": 0,
+        "cut_edges": 22,
+        "updates": 40,
+        "records": 19,
+        "batches": 19,
+        "payload_bytes": 437,
+        "serialized_envelope_bytes": 1273,
+        "control_envelopes": 23,
+        "duplicate_records": 0,
+        "peak_worker_rss_mb": 28.91776,
+        "sum_peak_worker_rss_mb": 57.59795200000001,
+        "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+        "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+        "coordinator_round_control_messages": 84,
+        "coordinator_final_state_messages": 2
+      },
+      "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+      "mismatched_nodes": []
+    },
+    {
+      "id": "005_Forced-rpc-cut_w2_s0",
+      "strategy": "Forced-rpc-cut",
+      "workers": 2,
+      "seed": 0,
+      "schedule": "BSP",
+      "status": "passed",
+      "partition_seconds": 3.290000313427299e-05,
+      "metrics": {
+        "wall_seconds": 0.19381430000066757,
+        "rounds": 22,
+        "active_workers": 2,
+        "worker_metrics": [
+          {
+            "updates": 20,
+            "records": 10,
+            "batches": 10,
+            "payload_bytes": 230,
+            "serialized_envelope_bytes": 668,
+            "control_envelopes": 12,
+            "duplicate_records": 0,
+            "rounds": 22,
+            "compute_seconds": 0.0009599999757483602,
+            "peak_rss_mb": 29.073408
+          },
+          {
+            "updates": 20,
+            "records": 11,
+            "batches": 11,
+            "payload_bytes": 253,
+            "serialized_envelope_bytes": 693,
+            "control_envelopes": 11,
+            "duplicate_records": 0,
+            "rounds": 22,
+            "compute_seconds": 0.0008003999973880127,
+            "peak_rss_mb": 29.028352
+          }
+        ],
+        "residual_equations": 0,
+        "cut_edges": 26,
+        "updates": 40,
+        "records": 21,
+        "batches": 21,
+        "payload_bytes": 483,
+        "serialized_envelope_bytes": 1361,
+        "control_envelopes": 23,
+        "duplicate_records": 0,
+        "peak_worker_rss_mb": 29.073408,
+        "sum_peak_worker_rss_mb": 58.10176,
+        "memory_note": "sum of per-process peaks, not simultaneous system RSS",
+        "communication_note": "pickle protocol-5 record/envelope lengths; queue framing, startup graph transfer and coordinator transport excluded",
+        "coordinator_round_control_messages": 88,
+        "coordinator_final_state_messages": 2
+      },
+      "states_sha256": "1dd1a7c801dad7daed25b903ffd3aa58b6124a6ab330a5dc5b5ced7f5c9d072f",
+      "mismatched_nodes": []
+    }
+  ],
+  "elapsed_seconds": 1.0878946000011638,
+  "scope": "Finite explicit provenance on exported query-projected bytecode graphs; BSP execution; no speedup claim",
+  "status": "passed"
+}

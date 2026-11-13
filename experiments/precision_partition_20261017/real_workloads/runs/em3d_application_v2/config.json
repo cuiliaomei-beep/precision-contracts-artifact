@@ -1,0 +1,19 @@
+{
+  "workload": "em3d",
+  "main_class": "Em3d",
+  "process_dirs": [
+    "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\real_workloads\\jolden\\em3d\\compiled"
+  ],
+  "classpath": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\precision_partition_20261017\\real_workloads\\jolden\\em3d\\compiled;C:\\Program Files\\Java\\jdk1.8.0_121\\jre\\lib\\rt.jar",
+  "analysis_jdk_library": "Java8 rt.jar; exporter JVM is Java17; input compiled --release8",
+  "scope": "application-only; JDK bodies excluded; not whole-Java sound",
+  "exclude": [
+    "java.*",
+    "javax.*",
+    "sun.*",
+    "jdk.*"
+  ],
+  "spark_options": {
+    "apponly": "true"
+  }
+}

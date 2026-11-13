@@ -1,0 +1,281 @@
+{
+  "program": "RPC-03",
+  "program_sha256": "765f1496ac9e79f5d5f3f7ca6e5c8208a95dd92b9895e7f5467e27dd941cefa4",
+  "status": "passed",
+  "concrete": {
+    "client::received": {
+      "kind": "set",
+      "values": [
+        42
+      ]
+    }
+  },
+  "concrete_outcomes": {
+    "client::received": [
+      {
+        "value": 42,
+        "tainted": false
+      }
+    ]
+  },
+  "abstract": {
+    "client::received": {
+      "kind": "set",
+      "constants": [
+        42
+      ],
+      "tainted": false
+    }
+  },
+  "soundness_violation": false,
+  "exact_match": true,
+  "exact_definition": "finite value sets and may-taint projection equal exhaustive observations; not relational equality of value/taint correlations",
+  "schedule_count": 2,
+  "state_count": 9,
+  "oracle_complete": true,
+  "oracle_truncated": false,
+  "deadlock_count": 0,
+  "converged": true,
+  "build_error": null,
+  "validation_errors": [],
+  "oracle": {
+    "observations": {
+      "client::received": [
+        42
+      ]
+    },
+    "observation_outcomes": {
+      "client::received": [
+        {
+          "value": 42,
+          "tainted": false
+        }
+      ]
+    },
+    "observation_taints": {
+      "client::received": [
+        false
+      ]
+    },
+    "schedule_count": 2,
+    "state_count": 9,
+    "transition_count": 9,
+    "complete": true,
+    "truncated": false,
+    "deadlock_count": 0,
+    "deadlock_schedules": 0,
+    "pending_event_ids": [],
+    "terminal_state_count": 1,
+    "max_events": 7
+  },
+  "abstract_state": {
+    "e0": {
+      "reachable": true,
+      "local_states": {
+        "server": {
+          "component": "server",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e1": {
+      "reachable": true,
+      "local_states": {
+        "client": {
+          "component": "client",
+          "values": {}
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e2": {
+      "reachable": true,
+      "local_states": {
+        "server": {
+          "component": "server",
+          "values": {
+            "x": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e3": {
+      "reachable": true,
+      "local_states": {
+        "server": {
+          "component": "server",
+          "values": {
+            "_return_rpc1_client_server_get_value": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e4": {
+      "reachable": true,
+      "local_states": {
+        "server": {
+          "component": "server",
+          "values": {
+            "_return_rpc1_client_server_get_value": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            },
+            "x": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {
+        "result": {
+          "kind": "set",
+          "constants": [
+            42
+          ],
+          "tainted": false
+        }
+      },
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e5": {
+      "reachable": true,
+      "local_states": {
+        "client": {
+          "component": "client",
+          "values": {
+            "received": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "bottom",
+        "constants": [],
+        "tainted": false
+      }
+    },
+    "e6": {
+      "reachable": true,
+      "local_states": {
+        "client": {
+          "component": "client",
+          "values": {
+            "received": {
+              "kind": "set",
+              "constants": [
+                42
+              ],
+              "tainted": false
+            }
+          }
+        }
+      },
+      "memory_regions": {},
+      "decisions": {},
+      "payload": {},
+      "observed": {
+        "kind": "set",
+        "constants": [
+          42
+        ],
+        "tainted": false
+      }
+    }
+  },
+  "abstract_state_sha256": "2e84edb83a7e88c4b4248774d67b55f34cfe8e8dae7424382c09e381cb58bc83",
+  "expected_hand_observations": {
+    "client::received": {
+      "values": [
+        42
+      ],
+      "may_tainted": false
+    }
+  },
+  "hand_expectation_match": true,
+  "expected_pending": [],
+  "pending_expectation_match": true,
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "seconds": 0.0007893000001786277,
+  "source_sha256": "65488ad4e560459bb515f0bcb850f138140389284755578db879ccf5b0751045"
+}

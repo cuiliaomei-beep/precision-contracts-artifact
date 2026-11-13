@@ -1,0 +1,19 @@
+case,mode,workers,rounds,base_activations,fact_candidates,duplicate_facts,cross_owner_events,cross_owner_next_events,next_heap_residual_rounds,next_load_residual_rounds
+hash_k2_s1_r0,drain,2,12,98,502,63,304,4,2,7
+hash_k2_s1_r0,frontier,2,28,98,502,63,304,4,3 4,14 15
+hash_k2_s2_r0,drain,2,17,98,502,63,299,4,2,9
+hash_k2_s2_r0,frontier,2,28,98,502,63,299,4,3 4,14 15
+hash_k4_s1_r0,drain,4,19,98,502,63,462,6,2 3 4,10
+hash_k4_s1_r0,frontier,4,28,98,502,63,462,6,3 4,14 15
+method_k2_s1_r0,drain,2,9,98,502,63,190,4,,4 5
+method_k2_s1_r0,frontier,2,28,98,502,63,190,4,3 4,14 15
+method_k2_s2_r0,drain,2,9,98,502,63,190,4,,4 5
+method_k2_s2_r0,frontier,2,28,98,502,63,190,4,3 4,14 15
+metis_cut_k2_s1_r0,drain,2,2,98,502,63,3,0,,
+metis_cut_k2_s1_r0,frontier,2,28,98,502,63,3,0,3 4,14 15
+metis_cut_k2_s2_r0,drain,2,2,98,502,63,3,0,,
+metis_cut_k2_s2_r0,frontier,2,28,98,502,63,3,0,3 4,14 15
+metis_cut_k4_s1_r0,drain,4,10,98,502,63,97,4,,4 5
+metis_cut_k4_s1_r0,frontier,4,28,98,502,63,97,4,3 4,14 15
+reference_k1,drain,1,1,98,502,63,0,0,,
+reference_k1,frontier,1,28,98,502,63,0,0,3 4,14 15

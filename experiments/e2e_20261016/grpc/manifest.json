@@ -1,0 +1,209 @@
+{
+  "framework": "grpc-java",
+  "upstream": "D:\\wsl\\realsystems\\src\\grpc-java-full",
+  "upstream_commit": "64ac792b5e6e57268b69abb6979ca0f389af1d9d",
+  "runtime_version": "1.66.0-SNAPSHOT (existing sibling module builds)",
+  "protobuf_version": "3.25.3",
+  "protoc_version": "3.25.3",
+  "grpc_codegen_version": "1.66.0 released generator; runtime remains pinned 1.66.0-SNAPSHOT",
+  "java_version": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-11.0.32.1+1 (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM Temurin-11.0.32.1+1 (build 11.0.32.1+1, mixed mode)",
+  "javac_release": 8,
+  "class_dir": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classes",
+  "source_dir": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\src",
+  "generated_source_dir": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\generated",
+  "proto": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\proto\\helloworld.proto",
+  "classpath_file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\classpath.txt",
+  "dependency_classpath_file": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\dependency_classpath.txt",
+  "source_signature": "<e2e.shared.Inputs: java.lang.String source(java.lang.String)>",
+  "sink_signature": "<e2e.shared.Outputs: void sink(java.lang.String,java.lang.String)>",
+  "sink_value_argument": 1,
+  "source_label": "input",
+  "scenarios": [
+    {
+      "id": "positive",
+      "consumer_entry": "<e2e.grpc.PositiveClient: void main(java.lang.String[])>",
+      "consumer_class": "e2e.grpc.PositiveClient",
+      "server_class": "io.grpc.examples.helloworld.OfficialServerHarness",
+      "server_entry": "<io.grpc.examples.helloworld.OfficialServerHarness: void main(java.lang.String[])>",
+      "handler_class": "io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl",
+      "handler_entry": "<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "expected_sink_provenance": {
+        "response": true
+      },
+      "expected_sink_values": {
+        "response": "Hello E2E_GRPC_20261016_9e74b2"
+      },
+      "derived_service": false
+    },
+    {
+      "id": "clean_sink",
+      "consumer_entry": "<e2e.grpc.CleanSinkClient: void main(java.lang.String[])>",
+      "consumer_class": "e2e.grpc.CleanSinkClient",
+      "server_class": "io.grpc.examples.helloworld.OfficialServerHarness",
+      "server_entry": "<io.grpc.examples.helloworld.OfficialServerHarness: void main(java.lang.String[])>",
+      "handler_class": "io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl",
+      "handler_entry": "<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "expected_sink_provenance": {
+        "clean": false
+      },
+      "expected_sink_values": {
+        "clean": "clean-output"
+      },
+      "derived_service": false
+    },
+    {
+      "id": "constant_reply",
+      "consumer_entry": "<e2e.grpc.ConstantReplyClient: void main(java.lang.String[])>",
+      "consumer_class": "e2e.grpc.ConstantReplyClient",
+      "server_class": "e2e.grpc.ConstantServerHarness",
+      "server_entry": "<e2e.grpc.ConstantServerHarness: void main(java.lang.String[])>",
+      "handler_class": "e2e.grpc.ConstantGreeter",
+      "handler_entry": "<e2e.grpc.ConstantGreeter: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "expected_sink_provenance": {
+        "response": false
+      },
+      "expected_sink_values": {
+        "response": "fixed-response"
+      },
+      "derived_service": true
+    },
+    {
+      "id": "two_calls",
+      "consumer_entry": "<e2e.grpc.TwoCallsClient: void main(java.lang.String[])>",
+      "consumer_class": "e2e.grpc.TwoCallsClient",
+      "server_class": "io.grpc.examples.helloworld.OfficialServerHarness",
+      "server_entry": "<io.grpc.examples.helloworld.OfficialServerHarness: void main(java.lang.String[])>",
+      "handler_class": "io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl",
+      "handler_entry": "<io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl: void sayHello(io.grpc.examples.helloworld.HelloRequest,io.grpc.stub.StreamObserver)>",
+      "expected_sink_provenance": {
+        "first": true,
+        "second": false
+      },
+      "expected_sink_values": {
+        "first": "Hello E2E_GRPC_20261016_9e74b2",
+        "second": "Hello clean-name"
+      },
+      "derived_service": false
+    }
+  ],
+  "upstream_copies": {
+    "D:\\wsl\\realsystems\\src\\grpc-java-full\\examples\\src\\main\\proto\\helloworld.proto": {
+      "copy": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\proto\\helloworld.proto",
+      "sha256": "ba5e02d9313a21569534be7de6d73d81925ba10e89bfb6b17cf4e8d05adda7d2"
+    },
+    "D:\\wsl\\realsystems\\src\\grpc-java-full\\examples\\src\\main\\java\\io\\grpc\\examples\\helloworld\\HelloWorldServer.java": {
+      "copy": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\src\\io\\grpc\\examples\\helloworld\\HelloWorldServer.java",
+      "sha256": "e8758920d8a2c79285d72929be8f57f31529eb88ee8032787e2d3cb8ad27a65c"
+    },
+    "D:\\wsl\\realsystems\\src\\grpc-java-full\\examples\\src\\main\\java\\io\\grpc\\examples\\helloworld\\HelloWorldClient.java": {
+      "copy": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\references\\HelloWorldClient.java",
+      "sha256": "cf81adb717f230d027184ff0bfbc7c0a85950bdaf65fdf5ebf1a8d37c3fc752c"
+    }
+  },
+  "dependencies": [
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-api-1.66.0-SNAPSHOT.jar",
+      "sha256": "3d8b4919267e1c4ff0c3763a0f01dd6956fa69e4d5ae6cd30488aa70130b151b"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-context-1.66.0-SNAPSHOT.jar",
+      "sha256": "25ea7b48f1c657d21fb9ff988639a6165938b1d9177e166bd90f04a8361f4d0c"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-core-1.66.0-SNAPSHOT.jar",
+      "sha256": "d54d37939987ecdf1db216ff37d5240f720edc6012169d46294fea4cb66dc63a"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-util-1.66.0-SNAPSHOT.jar",
+      "sha256": "13aded6deb1f5df31eae23f5e1004e92dea991973ef45eafc83d1d264402c46d"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-netty-shaded-1.66.0-SNAPSHOT.jar",
+      "sha256": "68de98b193c0c223ab9f24b9af2b10f3118c6e94398c62dc9874e7402a21b840"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-1.66.0-SNAPSHOT.jar",
+      "sha256": "5233801762e9cf06ea1672d8875a4aaefcbf343d43305aa5fddf76b84eb7bec6"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-protobuf-lite-1.66.0-SNAPSHOT.jar",
+      "sha256": "4df7dc4d83808c0a883c1d6573c6ba71e825397b115c37df005f935589210a94"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\grpc-stub-1.66.0-SNAPSHOT.jar",
+      "sha256": "d7aa6b5d9ce987ce3dadec6231bc1b44a8a224715a488dd9e5a505df53415381"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\protobuf-java-3.25.3.jar",
+      "sha256": "e90d8ddb963b20a972a6a59b5093ade2b07cbe546cab3279aaf4383260385f58"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\guava-33.2.1-jre.jar",
+      "sha256": "452b2d9787b7d366fa8cf5ed9a1c40404542d05effa7a598da03bbbbb76d9f31"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\failureaccess-1.0.2.jar",
+      "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\perfmark-api-0.27.0.jar",
+      "sha256": "c7b478503ec524e55df19b424d46d27c8a68aeb801664fadd4f069b71f52d0f6"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\jsr305-3.0.2.jar",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\error_prone_annotations-2.28.0.jar",
+      "sha256": "f3fc8a3a0a4020706a373b00e7f57c2512dd26d1f83d28c7d38768f8682b231e"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\checker-qual-3.42.0.jar",
+      "sha256": "ccaedd33af0b7894d9f2f3b644f4d19e43928e32902e61ac4d10777830f5aac7"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\j2objc-annotations-3.0.0.jar",
+      "sha256": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64"
+    },
+    {
+      "path": "D:\\wsl\\realsystems\\extracted\\grpc-bench-src\\lib\\animal-sniffer-annotations-1.24.jar",
+      "sha256": "c720e6e5bcbe6b2f48ded75a47bccdb763eede79d14330102e0d352e3d89ed92"
+    }
+  ],
+  "build_tools": [
+    {
+      "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\tools\\protoc-3.25.3-windows-x86_64.exe",
+      "sha256": "dcbd81ead852b7823b74e3b764e5edbcf087c9d1e6f236f7b7ed4bcf102addab"
+    },
+    {
+      "path": "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\tools\\protoc-gen-grpc-java-1.66.0-windows-x86_64.exe",
+      "sha256": "330fb16f3bd9692a0795007fcdcad8eb8b5dff0077c47097d00aa509c1b30746"
+    }
+  ],
+  "source_hashes": {
+    "src\\e2e\\grpc\\CleanSinkClient.java": "32359540edf1fb6b967424e858888dd76dd24acc2ed46e25be2c11c649766145",
+    "src\\e2e\\grpc\\ConstantGreeter.java": "427fba92e4c8d5a23ec012b6644e1f5b0810c0c1204b418459eea029538d652b",
+    "src\\e2e\\grpc\\ConstantReplyClient.java": "f97fc19ec9ef94d54b667f7947bf0c7a6f95bd6fcea10ab80d2e9963143dfe88",
+    "src\\e2e\\grpc\\ConstantServerHarness.java": "37ce043fcfe0b6bf81d02426ed49655fe25e77cd961ca631b646692179023358",
+    "src\\e2e\\grpc\\PositiveClient.java": "0b7be381f6759e584aad2f621a4aec6cec607be3ad25b107413eeb1e073e27b6",
+    "src\\e2e\\grpc\\TwoCallsClient.java": "4bb10b5e3ba17a0b14ea350e6d946e5b2c2c0a9d81f73e5b6d6b53db4355f1bc",
+    "src\\e2e\\shared\\Inputs.java": "1c991e9a2b544dead5a16fcd63e3d272266d7fd1d84011bac6dc1438230a6ef0",
+    "src\\e2e\\shared\\Outputs.java": "cc08ce42d3d487722685b349f39560a439de05037a64dedbe9123144cd3b6f41",
+    "src\\io\\grpc\\examples\\helloworld\\HelloWorldServer.java": "e8758920d8a2c79285d72929be8f57f31529eb88ee8032787e2d3cb8ad27a65c",
+    "src\\io\\grpc\\examples\\helloworld\\OfficialServerHarness.java": "5e71250378b527c4818ebc41e6ffcdec845d7118024b61cb8a0e8889f0f89724"
+  },
+  "generated_hashes": {
+    "generated\\io\\grpc\\examples\\helloworld\\GreeterGrpc.java": "607022c3169af6cfe2f0a7106713a181d368f9493f555c9d1d12e3a768ae0484",
+    "generated\\io\\grpc\\examples\\helloworld\\HelloReply.java": "a53f863ba58edfe00008bf39ee46a2492ca94b2109acfdf42d1330ac82d29ef2",
+    "generated\\io\\grpc\\examples\\helloworld\\HelloReplyOrBuilder.java": "29b1fe62a03428469f32e93da675c5519e272a29a9badbf90cf7f089d42ea93e",
+    "generated\\io\\grpc\\examples\\helloworld\\HelloRequest.java": "ecaa13d416b90dc295197f1ba4e5f77812255d67b8e0d1d6783468973763c13d",
+    "generated\\io\\grpc\\examples\\helloworld\\HelloRequestOrBuilder.java": "4f3969494865ef5a13d020e42b649beed0cfeb1f255bb479545e6475e03225fd",
+    "generated\\io\\grpc\\examples\\helloworld\\HelloWorldProto.java": "54ecb06faa6d50e1134e22be42caf4aca6a1cd84cb4e1f6b013c45a2d70e222b"
+  },
+  "scope": "Real unary RPC, separate JVMs, loopback TCP, String protobuf fields, explicit flows only.",
+  "compile_annotation_note": "Local SOURCE-retained javax.annotation.Generated compile stub has no runtime role.",
+  "reproduce": [
+    "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "D:\\wsl\\personal\\dr\\paper\\distributed_program_analysis\\experiments\\e2e_20261016\\grpc\\run_runtime.py"
+  ]
+}

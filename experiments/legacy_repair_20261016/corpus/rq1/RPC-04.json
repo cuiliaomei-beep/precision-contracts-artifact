@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "id": "RPC-04",
+  "family": "rpc",
+  "kind": "handwritten",
+  "seed": null,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "a",
+      "b",
+      "c"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "a",
+        "attributes": {
+          "var": "x",
+          "value": 10,
+          "tainted": true
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Send",
+        "component": "a",
+        "attributes": {
+          "destination": "b",
+          "msg_type": "REQ_forward",
+          "data": {
+            "x": {
+              "var": "x"
+            }
+          },
+          "message_id": "rpc1_a_b_forward:request",
+          "call_id": "rpc1_a_b_forward"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "Receive",
+        "component": "b",
+        "attributes": {
+          "source": "a",
+          "msg_type": "REQ_forward",
+          "message_id": "rpc1_a_b_forward:request",
+          "bindings": {
+            "x": "x"
+          },
+          "call_id": "rpc1_a_b_forward"
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "b",
+        "attributes": {
+          "var": "_return_rpc1_a_b_forward",
+          "value": {
+            "var": "x"
+          },
+          "tainted": false,
+          "call_id": "rpc1_a_b_forward"
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "b",
+        "attributes": {
+          "destination": "a",
+          "msg_type": "RESP_forward",
+          "data": {
+            "result": {
+              "var": "_return_rpc1_a_b_forward"
+            }
+          },
+          "message_id": "rpc1_a_b_forward:response",
+          "call_id": "rpc1_a_b_forward"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "a",
+        "attributes": {
+          "source": "b",
+          "msg_type": "RESP_forward",
+          "message_id": "rpc1_a_b_forward:response",
+          "bindings": {
+            "result": "response"
+          },
+          "call_id": "rpc1_a_b_forward"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "Send",
+        "component": "b",
+        "attributes": {
+          "destination": "c",
+          "msg_type": "REQ_process",
+          "data": {
+            "x": {
+              "var": "x"
+            }
+          },
+          "message_id": "rpc6_b_c_process:request",
+          "call_id": "rpc6_b_c_process"
+        }
+      },
+      {
+        "id": "e7",
+        "type": "Receive",
+        "component": "c",
+        "attributes": {
+          "source": "b",
+          "msg_type": "REQ_process",
+          "message_id": "rpc6_b_c_process:request",
+          "bindings": {
+            "x": "x"
+          },
+          "call_id": "rpc6_b_c_process"
+        }
+      },
+      {
+        "id": "e8",
+        "type": "LocalAssign",
+        "component": "c",
+        "attributes": {
+          "var": "_return_rpc6_b_c_process",
+          "value": {
+            "var": "x"
+          },
+          "tainted": false,
+          "call_id": "rpc6_b_c_process"
+        }
+      },
+      {
+        "id": "e9",
+        "type": "Send",
+        "component": "c",
+        "attributes": {
+          "destination": "b",
+          "msg_type": "RESP_process",
+          "data": {
+            "result": {
+              "var": "_return_rpc6_b_c_process"
+            }
+          },
+          "message_id": "rpc6_b_c_process:response",
+          "call_id": "rpc6_b_c_process"
+        }
+      },
+      {
+        "id": "e10",
+        "type": "Receive",
+        "component": "b",
+        "attributes": {
+          "source": "c",
+          "msg_type": "RESP_process",
+          "message_id": "rpc6_b_c_process:response",
+          "bindings": {
+            "result": "response"
+          },
+          "call_id": "rpc6_b_c_process"
+        }
+      },
+      {
+        "id": "e11",
+        "type": "Observe",
+        "component": "c",
+        "attributes": {
+          "point": "x",
+          "expr": {
+            "var": "x"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "a": {},
+        "b": {},
+        "c": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e1",
+          "e5"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e4",
+          "e6"
+        ],
+        [
+          "e6",
+          "e10"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ],
+        [
+          "e9",
+          "e10"
+        ],
+        [
+          "e9",
+          "e11"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {}
+  },
+  "program_sha256": "9c7fb169be0bd4bee517be0f396d87638585d696cafa4c1e8c9fc2bb22fde26c",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 3,
+      "Send": 4,
+      "Receive": 4,
+      "Observe": 1
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": false,
+    "sync": false,
+    "may_alias": false,
+    "observations": 1,
+    "events": 12
+  },
+  "generator_metadata": {},
+  "pre_repair_reconstruction": {
+    "program_sha256": "37379908eb8e7ba32a05d1672e72f5470c0eceff9f5c8b1228d5906c8ddcf878",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  },
+  "expected_observations": {
+    "c::x": {
+      "values": [
+        10
+      ],
+      "may_tainted": true
+    }
+  },
+  "expected_pending": []
+}

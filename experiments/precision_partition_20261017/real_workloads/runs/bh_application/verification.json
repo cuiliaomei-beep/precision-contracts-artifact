@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "variable_count": 698,
+  "allocation_count": 72,
+  "variable_fact_count": 1298,
+  "nonempty_heap_slots": 58,
+  "heap_fact_count": 93,
+  "rounds": 15,
+  "transfer_visits": 14764,
+  "elapsed_seconds": 0.015578499995172024,
+  "variable_mismatches": [],
+  "heap_mismatches": [],
+  "pag_sha256": "4dbecd130e7d5fe723c558846695c41397cdc4573ac1f367df3277352f21b913",
+  "solver_sha256": "34990ddc61c7dea36e5235df6584d5b06f7f7f64b1893c74f72093fd619bf491",
+  "scope": "Complete exported four-rule PAG least fixed point from allocation seeds; no final-points-to input is used in solve."
+}

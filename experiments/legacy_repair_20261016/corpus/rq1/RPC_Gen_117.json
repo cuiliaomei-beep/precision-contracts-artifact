@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "id": "RPC_Gen_117",
+  "family": "rpc",
+  "kind": "generated",
+  "seed": 159,
+  "program": {
+    "schema_version": 2,
+    "components": [
+      "c0",
+      "c1",
+      "c2"
+    ],
+    "events": [
+      {
+        "id": "e0",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_source",
+          "value": 413685,
+          "tainted": false
+        }
+      },
+      {
+        "id": "e1",
+        "type": "Branch",
+        "component": "c0",
+        "attributes": {
+          "condition": {
+            "op": "gt",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              413686
+            ]
+          },
+          "decision": "rpc0_decision"
+        }
+      },
+      {
+        "id": "e2",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_payload",
+          "value": {
+            "op": "add",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              2
+            ]
+          },
+          "tainted": false,
+          "guard": {
+            "decision": "rpc0_decision",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "e3",
+        "type": "LocalAssign",
+        "component": "c0",
+        "attributes": {
+          "var": "rpc0_payload",
+          "value": {
+            "op": "sub",
+            "args": [
+              {
+                "var": "rpc0_source"
+              },
+              2
+            ]
+          },
+          "tainted": false,
+          "guard": {
+            "decision": "rpc0_decision",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "e4",
+        "type": "Send",
+        "component": "c0",
+        "attributes": {
+          "destination": "c1",
+          "msg_type": "REQ_generated0",
+          "data": {
+            "arg0": {
+              "var": "rpc0_payload"
+            }
+          },
+          "message_id": "rpc4_c0_c1_generated0:request",
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e5",
+        "type": "Receive",
+        "component": "c1",
+        "attributes": {
+          "source": "c0",
+          "msg_type": "REQ_generated0",
+          "message_id": "rpc4_c0_c1_generated0:request",
+          "bindings": {
+            "arg0": "arg0"
+          },
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e6",
+        "type": "LocalAssign",
+        "component": "c1",
+        "attributes": {
+          "var": "_return_rpc4_c0_c1_generated0",
+          "value": {
+            "op": "add",
+            "args": [
+              {
+                "var": "arg0"
+              },
+              7
+            ]
+          },
+          "tainted": false,
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e7",
+        "type": "Send",
+        "component": "c1",
+        "attributes": {
+          "destination": "c0",
+          "msg_type": "RESP_generated0",
+          "data": {
+            "result": {
+              "var": "_return_rpc4_c0_c1_generated0"
+            }
+          },
+          "message_id": "rpc4_c0_c1_generated0:response",
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e8",
+        "type": "Receive",
+        "component": "c0",
+        "attributes": {
+          "source": "c1",
+          "msg_type": "RESP_generated0",
+          "message_id": "rpc4_c0_c1_generated0:response",
+          "bindings": {
+            "result": "result0"
+          },
+          "call_id": "rpc4_c0_c1_generated0"
+        }
+      },
+      {
+        "id": "e9",
+        "type": "Observe",
+        "component": "c0",
+        "attributes": {
+          "point": "rpc_result0",
+          "expr": {
+            "var": "result0"
+          }
+        }
+      },
+      {
+        "id": "e10",
+        "type": "Observe",
+        "component": "c1",
+        "attributes": {
+          "point": "rpc_argument0",
+          "expr": {
+            "var": "arg0"
+          }
+        }
+      }
+    ],
+    "initial_state": {
+      "local_states": {
+        "c0": {},
+        "c1": {},
+        "c2": {}
+      },
+      "memory_regions": {},
+      "pending_events": [],
+      "ordering_constraints": [
+        [
+          "e0",
+          "e1"
+        ],
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e4",
+          "e8"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e10"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ]
+      ],
+      "observations": {},
+      "local_taints": {},
+      "memory_taints": {},
+      "messages": {},
+      "decisions": {},
+      "observation_taints": {}
+    },
+    "metadata": {
+      "generator": {
+        "seed": 159,
+        "family": "rpc",
+        "synchronization": "sync",
+        "alias": "must",
+        "branch": true,
+        "requested_components": 3,
+        "requested_writers": 1,
+        "requested_readers": 2
+      }
+    }
+  },
+  "program_sha256": "9b0ba26ff98bbaf0c6fbe5e28d0d9c1ba085b8a3745fae90e6b0d602d904f55f",
+  "coverage": {
+    "event_types": {
+      "LocalAssign": 4,
+      "Branch": 1,
+      "Send": 2,
+      "Receive": 2,
+      "Observe": 2
+    },
+    "rpc_present": true,
+    "rma_present": false,
+    "actual_family": "rpc",
+    "branch": true,
+    "sync": false,
+    "may_alias": false,
+    "observations": 2,
+    "events": 11
+  },
+  "generator_metadata": {
+    "seed": 159,
+    "family": "rpc",
+    "synchronization": "sync",
+    "alias": "must",
+    "branch": true,
+    "requested_components": 3,
+    "requested_writers": 1,
+    "requested_readers": 2
+  },
+  "pre_repair_reconstruction": {
+    "program_sha256": "18ea8b6fb36ed339595272d0348e9c405807612886d8fc1e66e5cfd0fafa6585",
+    "historical_identity_proven": false,
+    "source": "archive_generator_reconstructed.json",
+    "comparison": "different"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "pid": 633,
+  "uri": "hdfs://localhost:42015",
+  "mutant": true,
+  "fixture": {
+    "file_a": "/m0-file-a",
+    "file_id_a": 16386,
+    "owner_a": "DFSClient_NONMAPREDUCE_-361008449_1",
+    "file_b": "/m0-file-b",
+    "file_id_b": 16387,
+    "owner_b": "DFSClient_NONMAPREDUCE_-391018369_1",
+    "both_files_open_under_construction": true,
+    "proxy_class_a": "com.sun.proxy.$Proxy13",
+    "proxy_class_b": "com.sun.proxy.$Proxy13"
+  },
+  "cases": [
+    {
+      "id": "matching_holder_a",
+      "path": "/m0-file-a",
+      "file_id": 16386,
+      "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+      "expected": "normal",
+      "outcome": "normal",
+      "pass": true
+    },
+    {
+      "id": "matching_holder_b",
+      "path": "/m0-file-b",
+      "file_id": 16387,
+      "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+      "expected": "normal",
+      "outcome": "normal",
+      "pass": true
+    },
+    {
+      "id": "cross_holder",
+      "path": "/m0-file-a",
+      "file_id": 16386,
+      "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+      "expected": "normal",
+      "outcome": "normal",
+      "pass": true
+    },
+    {
+      "id": "cross_valid_file_id_matching_second_holder",
+      "path": "/m0-file-a",
+      "file_id": 16387,
+      "holder": "DFSClient_NONMAPREDUCE_-391018369_1",
+      "expected": "normal",
+      "outcome": "normal",
+      "pass": true
+    },
+    {
+      "id": "cross_valid_file_id_wrong_holder",
+      "path": "/m0-file-a",
+      "file_id": 16387,
+      "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+      "expected": "normal",
+      "outcome": "normal",
+      "pass": true
+    },
+    {
+      "id": "unknown_file_id",
+      "path": "/m0-file-a",
+      "file_id": 9223372036854775790,
+      "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+      "expected": "java.io.FileNotFoundException",
+      "outcome": "java.io.FileNotFoundException",
+      "java_exception": "org.apache.hadoop.ipc.RemoteException",
+      "exception_message": "File does not exist: /m0-file-a (inode 9223372036854775790) [Lease.  Holder: DFSClient_NONMAPREDUCE_-361008449_1, pending creates: 1]\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkLease(FSNamesystem.java:3103)\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.fsync(FSNamesystem.java:3585)\n\tat org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.fsync(NameNodeRpcServer.java:1522)\n\tat org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.fsync(ClientNamenodeProtocolServerSideTranslatorPB.java:1121)\n\tat org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)\n\tat org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)\n\tat java.base/java.security.AccessController.doPrivileged(Native Method)\n\tat java.base/javax.security.auth.Subject.doAs(Subject.java:423)\n\tat org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)\n\tat org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)\n",
+      "pass": true
+    },
+    {
+      "id": "closed_file_rejected",
+      "path": "/m0-file-a",
+      "file_id": 16386,
+      "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+      "expected": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "outcome": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "java_exception": "org.apache.hadoop.ipc.RemoteException",
+      "exception_message": "File is not open for writing: /m0-file-a (inode 16386) Holder DFSClient_NONMAPREDUCE_-361008449_1 does not have any open files.\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkLease(FSNamesystem.java:3112)\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.fsync(FSNamesystem.java:3585)\n\tat org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.fsync(NameNodeRpcServer.java:1522)\n\tat org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.fsync(ClientNamenodeProtocolServerSideTranslatorPB.java:1121)\n\tat org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)\n\tat org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)\n\tat java.base/java.security.AccessController.doPrivileged(Native Method)\n\tat java.base/javax.security.auth.Subject.doAs(Subject.java:423)\n\tat org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)\n\tat org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)\n",
+      "pass": true
+    },
+    {
+      "id": "directory_rejected",
+      "path": "/",
+      "file_id": 16385,
+      "holder": "DFSClient_NONMAPREDUCE_-361008449_1",
+      "expected": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "outcome": "org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException",
+      "java_exception": "org.apache.hadoop.ipc.RemoteException",
+      "exception_message": "INode is not a regular file: / (inode 16385) Holder DFSClient_NONMAPREDUCE_-361008449_1 does not have any open files.\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkLease(FSNamesystem.java:3107)\n\tat org.apache.hadoop.hdfs.server.namenode.FSNamesystem.fsync(FSNamesystem.java:3585)\n\tat org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.fsync(NameNodeRpcServer.java:1522)\n\tat org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.fsync(ClientNamenodeProtocolServerSideTranslatorPB.java:1121)\n\tat org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)\n\tat org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)\n\tat org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)\n\tat org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)\n\tat java.base/java.security.AccessController.doPrivileged(Native Method)\n\tat java.base/javax.security.auth.Subject.doAs(Subject.java:423)\n\tat org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)\n\tat org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)\n",
+      "pass": true,
+      "inode_kind": "directory"
+    }
+  ],
+  "all_pass": true
+}

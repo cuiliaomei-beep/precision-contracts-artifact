@@ -1,0 +1,11 @@
+{
+  "pag_sha256": "1005412f3a00602544f38cf2601bdc604a03581c13628cfadbe32787c960f0f1",
+  "rules_sha256": "ff1ef3130dcf682c0323bf5aa7d81f6431e3c4aee87bc2730c7c91f966498748",
+  "facts": {
+    "Alloc.facts": "a229b6eeae9c4afb0aa31dc52430d1e2cff29b3a537d1ec0e564a15a0353d96d",
+    "Allowed.facts": "53d0015a03cb9c84d3717119972bd50176248c56aaab117c395db6253f1eda57",
+    "Assign.facts": "efe81bd38da6380a76c29e8b9b76e7681fa039d260c11c788a0f96fd484bf0d3",
+    "Load.facts": "d8afb990d40bf3a410689f2864da434be503b94c4ca667b42d7dc0a8ed79c44e",
+    "Store.facts": "562211a8a9f43116c184c061387b8d9d82f1bd6bdd19de898f5817084faae6e2"
+  }
+}

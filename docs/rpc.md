@@ -23,7 +23,7 @@ python scripts/rpc.py fetch --framework dubbo
 python scripts/rpc.py runtime --framework dubbo --java-home PATH_TO_JDK17
 ```
 
-For gRPC, the Release asset `grpc-runtime-1.66.0-snapshot.zip` contains exactly the eight original runtime jars plus upstream Apache license and notice files. The archive and each jar are checked against `dependencies.json`. The fetch command uses a local copy under `release-assets/` when available; otherwise it calls GitHub CLI to download the asset from this repository's `artifact-20261113` Release. A private repository requires the reader's own GitHub access. Public dependencies come from Maven Central.
+For gRPC, the [Release asset](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/download/artifact-20261113/grpc-runtime-1.66.0-snapshot.zip) `grpc-runtime-1.66.0-snapshot.zip` contains exactly the eight original runtime jars plus upstream Apache license and notice files. The archive size and SHA-256 and each jar's SHA-256 are checked against `dependencies.json`. The fetch command uses a local copy under `release-assets/` when available; otherwise it downloads the asset over public HTTPS from this repository's [artifact-20261113 Release](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/tag/artifact-20261113). No GitHub account, token, or GitHub CLI is needed. Public dependencies come from Maven Central.
 
 ```text
 python scripts/rpc.py fetch --framework grpc

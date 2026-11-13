@@ -10,6 +10,7 @@ import socket
 import subprocess
 import sys
 import time
+import urllib.parse
 import urllib.request
 import zipfile
 
@@ -126,9 +127,17 @@ def fetch(framework, destination):
             if not archive.exists():
                 archive = destination / asset["file"]
                 if not archive.exists():
-                    subprocess.run(["gh", "release", "download", asset["release_tag"], "--repo", asset["repository"],
-                                    "--pattern", asset["file"], "--dir", str(destination)], check=True)
-            assert sha(archive) == asset["sha256"], "Snapshot archive hash mismatch"
+                    tag = urllib.parse.quote(asset["release_tag"], safe="")
+                    name = urllib.parse.quote(asset["file"], safe="")
+                    url = f"https://github.com/{asset['repository']}/releases/download/{tag}/{name}"
+                    partial = archive.with_suffix(archive.suffix + ".part")
+                    with urllib.request.urlopen(url, timeout=120) as source, partial.open("wb") as output:
+                        shutil.copyfileobj(source, output)
+                    if partial.stat().st_size != asset["bytes"] or sha(partial) != asset["sha256"]:
+                        raise ValueError("Snapshot archive size or SHA-256 mismatch")
+                    partial.replace(archive)
+            if archive.stat().st_size != asset["bytes"] or sha(archive) != asset["sha256"]:
+                raise ValueError("Snapshot archive size or SHA-256 mismatch")
             with zipfile.ZipFile(archive) as bundle:
                 assert set(bundle.namelist()) == set(asset["contents"]) | {"LICENSE", "NOTICE.txt"}
                 for row in missing_snapshot:

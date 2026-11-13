@@ -21,7 +21,7 @@ python scripts/tomcat.py fetch
 python scripts/tomcat.py verify --output runs/tomcat/archive_verification.json
 ```
 
-`fetch` 默认使用 GitHub CLI 下载 `cuiliaomei-beep/precision-contracts-artifact` 的 `artifact-20261113` Release。先用 `gh auth login` 登录有该仓库访问权限的账号。下载完成后，脚本核对归档的长度和 SHA-256。已有归档也会重新核对。
+`fetch` 通过公开 HTTPS 链接下载 [artifact-20261113 Release](https://github.com/cuiliaomei-beep/precision-contracts-artifact/releases/tag/artifact-20261113)，不需要 GitHub 账号、token 或 GitHub CLI。下载完成后，脚本核对归档的长度和 SHA-256。已有归档也会重新核对。
 
 `verify` 直接读取两个压缩归档中的全部元组，不需要解压到磁盘。它检查 71 个关系的文件集合、元组个数、列数、排序及重复行，逐关系核对 SHA-256，并比较两份结果的实际内容。
 

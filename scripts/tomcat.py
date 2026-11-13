@@ -11,6 +11,7 @@ import shutil
 import subprocess
 import tarfile
 import time
+import urllib.parse
 import urllib.request
 import zipfile
 
@@ -76,19 +77,15 @@ def fetch(args):
     for asset in manifest["assets"]:
         path = args.directory / asset["file"]
         if not path.exists():
-            if args.base_url:
-                partial = path.with_suffix(path.suffix + ".part")
-                with urllib.request.urlopen(args.base_url.rstrip("/") + "/" + asset["file"]) as source:
-                    with partial.open("wb") as output:
-                        shutil.copyfileobj(source, output)
-                verify_file(partial, asset["sha256"], asset["bytes"])
-                partial.replace(path)
-            else:
-                subprocess.run([
-                    "gh", "release", "download", args.tag or manifest["release_tag"],
-                    "--repo", args.repo or manifest["repository"],
-                    "--pattern", asset["file"], "--dir", str(args.directory),
-                ], check=True)
+            repository = args.repo or manifest["repository"]
+            tag = urllib.parse.quote(args.tag or manifest["release_tag"], safe="")
+            base_url = args.base_url or f"https://github.com/{repository}/releases/download/{tag}"
+            url = base_url.rstrip("/") + "/" + urllib.parse.quote(asset["file"], safe="")
+            partial = path.with_suffix(path.suffix + ".part")
+            with urllib.request.urlopen(url, timeout=120) as source, partial.open("wb") as output:
+                shutil.copyfileobj(source, output)
+            verify_file(partial, asset["sha256"], asset["bytes"])
+            partial.replace(path)
         verify_file(path, asset["sha256"], asset["bytes"])
         print(f"Verified {asset['file']}", flush=True)
     return {"status": "PASS", "downloaded_or_checked": len(manifest["assets"])}
@@ -295,7 +292,7 @@ def main():
     download.add_argument("--directory", type=Path, default=ASSETS)
     download.add_argument("--repo")
     download.add_argument("--tag")
-    download.add_argument("--base-url", help="optional public URL instead of GitHub CLI")
+    download.add_argument("--base-url", help="optional asset directory URL")
     verify = commands.add_parser("verify", help="read every result tuple and compare the actual bytes")
     verify.add_argument("--directory", type=Path, default=ASSETS)
     verify.add_argument("--output", type=Path)
